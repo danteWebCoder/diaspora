@@ -5,7 +5,7 @@
 .backImage {
     width: 100vw;
     height: 100vh;
-    background-image: url("/src/assets/images/telasemana2.jpg");
+    background-image: url("./src/assets/images/telasemana2.jpg");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,7 +33,7 @@
         .wellcomeBox {
             position: absolute;
             bottom: 0;
-            left: 10%;
+            left: 12.5%;
             width: 800px;
             height: 370px;
 
@@ -81,7 +81,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: 200px;
+    height: 150px;
     overflow: hidden;
 
     .menuFAKEback {
@@ -91,11 +91,11 @@
         height: 100vh;
 
         border: 1px solid green;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 20%), url("/src/assets/images/telasemana2.jpg");
+        background-image: url("./src/assets/images/telasemana2.jpg");
         background-size: 100%;
         background-position: center;
         background-repeat: no-repeat;
-        mask-image: linear-gradient(to bottom, rgb(0, 0, 0, 1) 100px, rgba(0, 0, 0, 0) 250px);
+        mask-image: linear-gradient(to bottom, rgb(0, 0, 0, 1) 75px, rgba(0, 0, 0, 0) 200px);
     }
 
     .backFilter {
@@ -103,14 +103,14 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.5);
         backdrop-filter: grayscale(1);
     }
 
     .menuBox {
         position: absolute;
         top: 0;
-        width: 80%;
+        width: 75%;
         height: 100%;
         display: flex;
         justify-content: space-between;
