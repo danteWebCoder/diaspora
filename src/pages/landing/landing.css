@@ -1,0 +1,139 @@
+* {
+    font-family: "Ubuntu";
+}
+
+.backImage {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/src/assets/images/telasemana2.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(1);
+
+    /*     z-index: 1;
+ */
+    position: fixed;
+}
+
+.scrool {
+    position: absolute;
+    /*     z-index: 2;
+ */
+    width: 100%;
+
+
+
+    .wellcome {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+
+        .wellcomeBox {
+            position: absolute;
+            bottom: 0;
+            left: 10%;
+            width: 800px;
+            height: 370px;
+
+            /*             border: 1px solid red;
+ */
+            h1,
+            h4 {
+                color: var(--whiteBack);
+            }
+
+            h1 {
+                font-size: clamp(2.021rem, 2.021rem + ((1vw - 0.2rem) * 2.578), 3.6rem);
+                font-weight: 500;
+            }
+
+            h4 {
+                margin: 30px 0 50px 0;
+                width: 750px;
+                font-size: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.531), 1.2rem);
+                font-weight: normal;
+            }
+
+            a {
+                all: unset;
+                position: relative;
+                font-size: 16px;
+                color: var(--whiteBack);
+                font-weight: 700;
+                padding: 10px 20px;
+                border: 1px solid var(--whiteBack);
+                border-radius: 30px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    .info {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--whiteBack);
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+
+    .menuFAKEback {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+
+        border: 1px solid green;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 20%), url("/src/assets/images/telasemana2.jpg");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        mask-image: linear-gradient(to bottom, rgb(0, 0, 0, 1) 100px, rgba(0, 0, 0, 0) 250px);
+    }
+
+    .backFilter {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        backdrop-filter: grayscale(1);
+    }
+
+    .menuBox {
+        position: absolute;
+        top: 0;
+        width: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            width: 12vw;
+            aspect-ratio: 1/0.54;
+        }
+
+        .lista {
+            display: flex;
+            list-style: none;
+            color: var(--whiteBack);
+
+            li {
+                font-size: clamp(0.825rem, 0.825rem + ((1vw - 0.2rem) * 0.389), 1.0625rem);
+                margin: 20px;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+}
