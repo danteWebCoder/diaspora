@@ -5,14 +5,16 @@
 }
 
 :root {
-    --whiteBack: rgb(220, 220, 220);
+    --lightColor: rgb(220, 220, 220);
+    --textLight: rgb(200, 200, 200);
+    --textDark: rgb(40, 40, 40);
     --landingBack_1: url("../../../src/assets/images/landingBack.webp");
     --menuHeight: 160px;
 }
 
 body {
     width: 100vw;
-    height: 500vh;
+    height: auto;
 }
 
 .center {
