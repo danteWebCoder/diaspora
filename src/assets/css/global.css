@@ -6,11 +6,13 @@
 
 :root {
     --whiteBack: rgb(220, 220, 220);
+    --landingBack_1: url("../../../src/assets/images/landingBack.webp");
+    --menuHeight: 160px;
 }
 
 body {
     width: 100vw;
-    height: 100vh;
+    height: 500vh;
 }
 
 .center {
