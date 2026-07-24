@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 :root {
@@ -10,7 +11,7 @@
     --textDark: rgb(40, 40, 40);
     --enphasisColor:#fcc91f;
     --landingBack_1: url("../../../src/assets/images/landingBack.webp");
-    --menuHeight: 160px;
+    --menuHeight: 200px;
 }
 
 body {

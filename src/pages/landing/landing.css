@@ -71,10 +71,10 @@
 
         .titlesBox {
             position: absolute;
-            bottom: 0%;
+            bottom: 80px;
             left: 5%;
-            width: 45%;
-            height: 370px;
+            width: 650px;
+            height: auto;
             color: var(--lightColor);
 
             h1 {
@@ -84,17 +84,15 @@
                 font-weight: 500;
                 white-space: nowrap;
                 letter-spacing: 2px;
-
-                &:last-child {
-                    color: grey;
-                }
+                text-indent: -4px;
             }
 
             h4 {
-                margin: 30px 0 50px 0;
-                font-size: 18px;
+                margin: 10px 0 60px 0;
+                font-size: 20px;
                 font-weight: 400;
                 line-height: 25px;
+                opacity: 0.6;
             }
 
             span {
@@ -131,7 +129,6 @@
         width: 100%;
         height: 350px;
         background-color: var(--enphasisColor);
-        ;
         color: var(--textDark)
     }
 }
@@ -147,10 +144,13 @@ footer {
 .menu {
     position: fixed;
     z-index: 3;
+    display: flex;
+    justify-content: center;
     top: 0;
     width: 100%;
     height: var(--menuHeight);
     overflow: hidden;
+
 
     .background_ALPHA {
         position: absolute;
@@ -161,43 +161,69 @@ footer {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-    }
-
-    .menu_maxHeight {
-        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) calc(var(--menuHeight) / 1.6), rgba(0, 0, 0, 0) calc(var(--menuHeight) * 1));
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) calc(var(--menuHeight) / 2), rgba(0, 0, 0, 0) calc(var(--menuHeight) * 1));
     }
 
     .menuBox {
         position: absolute;
+        top: 40px;
         width: 90%;
-        height: 65px;
+        height: 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         border: 1px solid red;
 
-        .logo {
-            width: clamp(6.25rem, -1.5625rem + 25vw, 12.5rem);
-            aspect-ratio: 1.4/1;
+        .logoBox {
+            display: flex;
+            align-items: center;
+            /*             left: -15px;
+ */
+            width: 250px;
+            height: 100%;
+            border: 1px solid red;
+
+            .logo {
+                position: relative;
+                left: -14px;
+                top: 20px;
+                width: 90%;
+            }
         }
 
-        .lista {
-            position: relative;
-            top: -38%;
+        .menuLists {
             display: flex;
-            list-style: none;
-            color: grey;
+            justify-content: space-between;
+            width: 680px;
+            height: 100%;
 
-            li {
-                font-size: clamp(0.825rem, 0.825rem + ((1vw - 0.2rem) * 0.389), 1.0625rem);
-                padding: 5px 20px;
-                cursor: pointer;
-                transition: 200ms;
+            .textMenu {
+                display: flex;
+                justify-content: space-between;
+                width: 400px;
+                height: 100%;
+                list-style: none;
+                color: grey;
 
-                &:hover {
-                    color: var(--enphasisColor);
-                    ;
+                .text {
+                    width: auto;
+                    height: 100%;
+                    font-size: 16px;
+                    cursor: pointer;
+                    transition: 200ms;
+
+                    &:hover {
+                        color: var(--enphasisColor);
+                    }
                 }
+            }
+
+            .iconsMenu {
+                display: flex;
+                justify-content: space-between;
+
+                width: 200px;
+                border: 1px solid grey;
             }
         }
     }
