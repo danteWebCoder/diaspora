@@ -6,8 +6,9 @@
 
 :root {
     --lightColor: rgb(220, 220, 220);
-    --textLight: rgb(200, 200, 200);
+    --textLight: rgb(220, 220, 220);
     --textDark: rgb(40, 40, 40);
+    --enphasisColor:#fcc91f;
     --landingBack_1: url("../../../src/assets/images/landingBack.webp");
     --menuHeight: 160px;
 }

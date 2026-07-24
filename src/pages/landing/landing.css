@@ -1,5 +1,5 @@
 * {
-    font-family: "Ubuntu";
+    font-family: "ubuntu";
 }
 
 .section_noBack {
@@ -44,7 +44,7 @@
     width: 100vw;
     height: 100vh;
     background-image: var(--landingBack_1);
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     filter: grayscale(0.5);
@@ -54,65 +54,67 @@
     width: 100%;
     height: auto;
 
-    .background_layerBack {
+    .background_MASKED {
         position: fixed;
         z-index: 2;
         width: 100%;
         height: 100vh;
         background-image: var(--landingBack_1);
-        background-size: 100%;
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         clip-path: polygon(0 0, 100% 0, 100% var(--menuHeight), 0 var(--menuHeight));
     }
-
 
     .wellcome {
         height: 100vh;
 
         .titlesBox {
             position: absolute;
-            bottom: 0;
-            left: 12.8%;
-            width: 680px;
+            bottom: 0%;
+            left: 5%;
+            width: 45%;
             height: 370px;
             color: var(--lightColor);
 
-            h1,
-            h4 {
-                width: 100%;
-
-            }
-
             h1 {
-                font-size: clamp(2.021rem, 2.021rem + ((1vw - 0.2rem) * 2.578), 3.6rem);
-                font-weight: 600;
+                width: 100%;
+                height: auto;
+                font-size: 3.8cqi;
+                font-weight: 500;
+                white-space: nowrap;
+                letter-spacing: 2px;
+
+                &:last-child {
+                    color: grey;
+                }
             }
 
             h4 {
                 margin: 30px 0 50px 0;
-                font-size: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.531), 1.2rem);
+                font-size: 18px;
                 font-weight: 400;
+                line-height: 25px;
             }
 
             span {
                 position: relative;
                 width: 160px;
                 height: 40px;
-                font-size: 12px;
+                font-size: 14px;
                 color: rgba(255, 255, 255, 0.5);
                 font-weight: 700;
                 padding: 10px 20px;
-                border: 1px solid rgba(255, 255, 255, 0.2);
+                border: 2px solid rgba(255, 255, 255, 0.2);
                 border-radius: 12px;
                 letter-spacing: 1px;
                 cursor: pointer;
                 transition: 100ms;
 
                 &:hover {
-                    border: 2px solid var(--lightColor);
-                    color: var(--lightColor);
-                    font-size: 15px;
+                    border: 3px solid var(--enphasisColor);
+                    color: var(--enphasisColor);
+                    letter-spacing: 4px;
                 }
             }
         }
@@ -128,7 +130,8 @@
         position: relative;
         width: 100%;
         height: 350px;
-        background-color: rgb(255, 187, 0);
+        background-color: var(--enphasisColor);
+        ;
         color: var(--textDark)
     }
 }
@@ -149,13 +152,13 @@ footer {
     height: var(--menuHeight);
     overflow: hidden;
 
-    .background_masked_MENU {
+    .background_ALPHA {
         position: absolute;
         top: 0;
         width: 100%;
         height: 100vh;
         background-image: var(--landingBack_1);
-        background-size: 100%;
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
@@ -166,14 +169,15 @@ footer {
 
     .menuBox {
         position: absolute;
-        width: 75%;
+        width: 90%;
         height: 65px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border: 1px solid red;
 
         .logo {
-            width: 30vh;
+            width: clamp(6.25rem, -1.5625rem + 25vw, 12.5rem);
             aspect-ratio: 1.4/1;
         }
 
@@ -188,9 +192,11 @@ footer {
                 font-size: clamp(0.825rem, 0.825rem + ((1vw - 0.2rem) * 0.389), 1.0625rem);
                 padding: 5px 20px;
                 cursor: pointer;
+                transition: 200ms;
 
                 &:hover {
-                    color: var(--lightColor);
+                    color: var(--enphasisColor);
+                    ;
                 }
             }
         }
