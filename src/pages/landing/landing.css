@@ -250,6 +250,7 @@ footer {
                     &:first-of-type .icon,
                     &:last-of-type .icon {
                         transform: scale(1.3);
+                        opacity: 1;
                     }
                 }
             }
