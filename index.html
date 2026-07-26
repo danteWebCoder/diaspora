@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diaspora</title>
-    <link rel="stylesheet" href="./src/assets/css/global.css">
     <link rel="stylesheet" href="./src/pages/landing/landing.css">
+    <link rel="stylesheet" href="./src/assets/css/global.css">
+    <!-- ojo especifidad por orden, siempre despues del style principal -->
     <link rel="stylesheet" href="./src/assets/css/fonts.css">
-    <!--     <link rel="shortcut icon" href="./src/assets/images/favicon.jpeg" type="image/x-icon">
- --><!-- fonts -->
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -18,20 +18,34 @@
 </head>
 
 <body>
-    <div class="backImage" id="backImage"></div> <!-- default z -->
+    <div class="backImage  filterGray" id="backImage"></div> <!-- default z -->
 
     <div class="scrool">
-        <div class="background_MASKED"></div> <!-- z2 -->
+        <div class="maskedBox">
+            <div class="background_MASKED filterGray"></div> <!-- z2 -->
+        </div>
 
         <section class="wellcome section_noBack"> <!-- z2 -->
-            <div class="contentBox">
+            <div class="contentBox  center">
                 <div class="titlesBox">
-                    <h1>Fundación La Diáspora</h1>
-                    <!--                     <h1>Bienvenido</h1>
+                    <h1 class="h">FUNDACION</h1>
+                    <div class="titlesBox">
+                        <h2 class="h">LA DIASPORA</h2>
+                        <h3 class="h">EL ARTE COMO MEDIO DE REINDIVICACION DE LOS DERECHOS HUMANOS</h3>
+                    </div>
+                    <ul class="wordKeys rowSpacing">
+                        <li class="word">COMUNIDAD</li>
+                        <li class="separator"></li>
+                        <li class="word">ARTE</li>
+                        <li class="separator"></li>
+                        <li class="word">DERECHOS</li>
+                    </ul>
+                    <span class="h year">2005 - 2026
+                        <div class="icon"></div>
+                    </span>
+                    <!-- no borrar pasar a otra seccion -->
+                    <!--                     <span class="subscribe center">SUBSCRIBETE</a> 
  -->
-                    <h4>La Fundación La Diáspora es una organización juvenil comunitaria, que usa el
-                        arte para la defensa de los derechos humanos.</h4>
-                    <span class="center">SUBSCRIBETE</a>
                 </div>
             </div>
         </section>
@@ -112,8 +126,8 @@
     </div>
 
 
-    <nav class="menu">
-        <div class="background_ALPHA menu_max"></div>
+    <nav class="menu hidden">
+        <div class="background_ALPHA menu_max  filterGray"></div>
         <div class="menuBox">
             <div class="logoBox">
                 <img class="logo" src="./src/assets/images/COLOREDLOGO.svg" alt="logo fundacion">

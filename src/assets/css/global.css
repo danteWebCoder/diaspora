@@ -7,11 +7,13 @@
 }
 
 :root {
-    --lightColor: rgb(220, 220, 220);
-    --textLight: rgb(220, 220, 220);
+    --whiteBack: rgb(220, 220, 220);
+    --textLight: var(--whiteBack);
+    --textMediumLight: rgb(180, 180, 180);
     --textDark: rgb(40, 40, 40);
     --enphasisColor:#fcc91f;
-    --landingBack_1: url("../../../src/assets/images/landingBack.webp");
+    --landingBack1: url("../../../src/assets/images/montanas-minimalista-arte-low-poly-3354.webp");
+    --landingBack1_filter: grayScale(0.7);
     --menuHeight: 200px;
 }
 
@@ -24,4 +26,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.rowCenter {
+    display: flex;
+    justify-content: center;
+}
+
+.rowSpacing {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hidden {
+    display: none;
 }
