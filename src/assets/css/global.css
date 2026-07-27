@@ -14,7 +14,7 @@
     --enphasisColor:#fcc91f;
     --landingBack1: url("../../../src/assets/images/montanas-minimalista-arte-low-poly-3354.webp");
     --landingBack1_filter: grayScale(0.7);
-    --menuHeight: 200px;
+    --menuHeight: 100px;
 }
 
 body {

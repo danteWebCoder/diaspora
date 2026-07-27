@@ -103,10 +103,10 @@
             }
 
             .titlesBox {
-                border-top: 2px solid rgba(255, 255, 255, 0.2);
-                border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+                border-top: 2px dotted rgba(255, 255, 255, 0.2);
+                border-bottom: 2px dotted rgba(255, 255, 255, 0.2);
                 padding: 5px 20px;
-                margin: 40px 0;
+                margin: 40px 0 20px 0;
 
                 h2 {
                     position: relative;
@@ -121,10 +121,10 @@
                     font-size: 14px;
                     font-weight: 500;
                     letter-spacing: 4px;
-                    text-shadow: 0 0 5px black;
+                    text-shadow: 0 0 1px black, 0 0 2px black, 0 0 2px black;
                     margin-bottom: 10px;
+                    font-style: italic;
                 }
-
             }
 
             .wordKeys {
@@ -135,6 +135,7 @@
                 font-size: 14px;
                 font-weight: 500;
                 letter-spacing: 3px;
+                text-shadow: 0 0 1px black, 0 0 4px black, 0 0 4px black;
 
                 .separator {
                     width: 0px;
@@ -144,23 +145,27 @@
                 }
             }
 
-            .year {
+            .years {
                 display: flex;
                 align-items: center;
-                position: relative;
-                left: 8px;
-                margin-top: 42px;
-                font-size: 16px;
-                font-weight: 700;
-                letter-spacing: 3px;
+                width: auto;
+                height: 20px;
+                margin-top: 30px;
+
+                .number {
+                    font-size: 16px;
+                    font-weight: 700;
+                    letter-spacing: 3px;
+                    text-shadow: 0 0 1px black, 0 0 4px black, 0 0 4px black;
+                }
 
                 .icon {
-                    height: 14px;
+                    height: 12px;
                     aspect-ratio: 1.2/1;
-                    margin: 0 10px;
+                    margin: 0 20px;
                     background-image: url("../../assets/images/white_heart.png");
                     background-size: contain;
-                    filter: brightness(0.5)
+                    filter: brightness(0.7)
                 }
             }
         }
@@ -189,7 +194,8 @@ footer {
     background-color: var(--whiteBack);
 }
 
-.menu {
+
+.landingMenu {
     position: fixed;
     z-index: 3;
     display: flex;
@@ -198,7 +204,8 @@ footer {
     width: 100%;
     height: var(--menuHeight);
     overflow: hidden;
-
+    opacity: 0;
+    transition: 300ms;
 
     .background_ALPHA {
         position: absolute;
@@ -214,27 +221,21 @@ footer {
 
     .menuBox {
         position: absolute;
-        top: 40px;
         width: 90%;
         height: 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        /*         border: 1px solid red;
- */
         .logoBox {
             display: flex;
             align-items: center;
-            width: 250px;
+            width: 160px;
             height: 100%;
-            border: 1px solid red;
+            margin-right: 40px;
 
             .logo {
-                position: relative;
-                left: -14px;
-                top: 20px;
-                width: 90%;
+                width: 100%;
             }
         }
 
