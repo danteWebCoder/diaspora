@@ -5,10 +5,8 @@ const menuHeight = parseFloat(getComputedStyle(document.documentElement).getProp
 const wellcomeHeight = parseFloat(window.getComputedStyle(wellcome).getPropertyValue("height"))
 const menuTime = parseFloat(window.getComputedStyle(menu).getPropertyValue("transition")) * 1000
 /* info image */
-/* const infoSection = document.querySelector("#infoSection")
-const infoSection_height = parseFloat(getComputedStyle(infoSection).getPropertyValue("height"))
- */const image = document.querySelector("#imageBox .image")
-
+const image = document.querySelector("#imageBox .image")
+const imageTime = parseFloat(window.getComputedStyle(image).getPropertyValue("transition")) * 1000
 
 const doVisible = async () => {
     menu.classList.remove("hidden")
@@ -22,30 +20,37 @@ const doHidden = async () => {
     menu.classList.add("hidden")
 }
 
-const fadeIn_imageInfo = () => {
+const fadeIn_imageInfo = async () => {
 
+    image.classList.add("image250")
+    await new Promise(resolve => setTimeout(resolve, imageTime))
+
+    image.classList.remove("image250")
+    image.classList.add("image80")
+    await new Promise(resolve => setTimeout(resolve, imageTime))
+
+/*     image.style.transition = imageTime + "ms ease-in-out"
+ */    image.classList.remove("image80")
+    image.classList.add("imageMax")
 }
 
 let pos = 0
-window.addEventListener("scroll", () => {
+let imageInfo_opened = false
+window.addEventListener("scroll", async () => {
     const posY = window.scrollY
 
     /* menu */
     if (posY >= wellcomeHeight - menuHeight && posY > pos) {
         doVisible()
-        pos = posY
     }
     if (posY <= wellcomeHeight && posY < pos) {
         doHidden()
-        pos = posY
     }
     /* info image */
-    if (posY >= wellcomeHeight) {
-        image.classList.replace("imageMin", "imageMax")
-        pos = posY
+    if (posY >= wellcomeHeight && !imageInfo_opened) {
+        imageInfo_opened = true
+        fadeIn_imageInfo()
     }
-    if (posY < wellcomeHeight) {
-        image.classList.replace("imageMax", "imageMin")
-        pos = posY
-    }
+
+    pos = posY
 })
