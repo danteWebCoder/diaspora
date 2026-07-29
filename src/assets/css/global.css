@@ -7,14 +7,15 @@
 }
 
 :root {
-    --whiteBack: rgb(220, 220, 220);
+    --whiteBack: rgb(240, 240, 240);
     --textLight: var(--whiteBack);
     --textMediumLight: rgb(180, 180, 180);
     --textDark: rgb(40, 40, 40);
     --enphasisColor: #fcc91f;
     --landingBack1: url("../../../src/assets/images/montanas-minimalista-arte-low-poly-3354.webp");
     --landingBack1_filter: grayScale(0.7);
-    --menuHeight: 100px;
+    --menuHeight: 80px;
+    --menuEffect_height: 120px;
 }
 
 body {

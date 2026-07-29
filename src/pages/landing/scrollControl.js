@@ -1,5 +1,5 @@
 /* menu */
-const menu = document.querySelector("#landingMenu")
+const menu = document.querySelector("#menuBox")
 const wellcome = document.querySelector(".wellcome")
 const menuHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--menuHeight"))
 const wellcomeHeight = parseFloat(window.getComputedStyle(wellcome).getPropertyValue("height"))
@@ -10,6 +10,7 @@ const imageTime = parseFloat(window.getComputedStyle(image).getPropertyValue("tr
 
 const doVisible = async () => {
     menu.classList.remove("hidden")
+    menu.classList.add("menuVisible")
     await new Promise(resolve => setTimeout(resolve, 10))
     menu.style.opacity = 1
 }
@@ -18,19 +19,19 @@ const doHidden = async () => {
     menu.style.opacity = 0
     await new Promise(resolve => setTimeout(resolve, menuTime))
     menu.classList.add("hidden")
+    menu.classList.remove("menuVisible")
 }
 
 const fadeIn_imageInfo = async () => {
 
-    image.classList.add("image250")
+    image.classList.add("image300")
     await new Promise(resolve => setTimeout(resolve, imageTime))
 
-    image.classList.remove("image250")
-    image.classList.add("image80")
+    image.classList.remove("image300")
+    image.classList.add("image100")
     await new Promise(resolve => setTimeout(resolve, imageTime))
 
-/*     image.style.transition = imageTime + "ms ease-in-out"
- */    image.classList.remove("image80")
+    image.classList.remove("image100")
     image.classList.add("imageMax")
 }
 
@@ -40,7 +41,7 @@ window.addEventListener("scroll", async () => {
     const posY = window.scrollY
 
     /* menu */
-    if (posY >= wellcomeHeight - menuHeight && posY > pos) {
+    if (posY >= wellcomeHeight && posY > pos) {
         doVisible()
     }
     if (posY <= wellcomeHeight && posY < pos) {
