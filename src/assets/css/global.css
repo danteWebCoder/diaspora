@@ -9,6 +9,7 @@
 :root {
     --whiteBack: rgb(240, 240, 240);
     --textLight: var(--whiteBack);
+    /* wellcome color */
     --textMediumLight: rgb(180, 180, 180);
     --textDark: rgb(40, 40, 40);
     --enphasisColor: #fcc91f;

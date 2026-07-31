@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diaspora</title>
+    <link rel="shortcut icon" href="./src/assets/icons/corazon.png" type="image/x-icon">
     <link rel="stylesheet" href="./src/pages/landing/landing.css">
     <!-- ojo especifidad por orden, siempre despues del style principal por las clases que pisan -->
     <link rel="stylesheet" href="./src/assets/css/global.css">
@@ -55,6 +56,10 @@
                     <div class="imageBox max">
                         <span class="toogle center"></span>
                         <input class="hiddenInput" type="checkbox" name="" id="toogle_info">
+                        <div class="counterBox">
+                            <span class="heart center"></span>
+                            <span class="counter">1479</span>
+                        </div>
                     </div>
 
                     <div class="description max center">
@@ -115,12 +120,22 @@
                 <div class="logoBox">
                     <img class="logo" src="./src/assets/images/logoText-blanco.webp" alt="logo fundacion">
                 </div>
-                <div class="menuLists">
+                <div class="menuLists" id="menuLists">
                     <ul class="textMenu">
-                        <li class="text center">Fundación</li>
-                        <li class="text center">Proyectos</li>
+                        <li class="text center mainItem">Quienes somos</li>
+                        <li class="text center" id="navProject">Nuestros proyectos
+                            <div class="subMenuBox" id="navProject-menu">
+                                <ul class="subMenu">
+                                    <li class="subText">Mundo código abierto</li>
+                                    <li class="subText">Aprende </li>
+                                    <li class="subText">Red Neuronal</li>
+                                    <li class="subText">Mundo Digital</li>
+                                    <li class="subText">Sombra Nocturna</li>
+                                </ul>
+                            </div>
+                        </li>
                         <li class="text center">Contacto</li>
-                        <li class="text center">Colabora</li>
+                        <li class="text center">Quiero colaborar</li>
                     </ul>
                     <ul class="iconsMenu">
                         <li class="iconBox">
@@ -143,6 +158,7 @@
     </div>
 
     <script type="module" src="./src/pages/landing/scrollControl.js"></script>
+    <script type="module" src="./src/pages/landing/infoControl.js"></script>
 </body>
 
 </html>
