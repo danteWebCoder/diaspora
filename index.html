@@ -15,7 +15,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -52,8 +54,14 @@
         <section class="info section_white center" id="infoSection">
             <div class="whiteBack"></div>
             <div class="contentBox center">
+                <div class="fakecontainer">
+                    <div class="fakeBox-shadow box"></div>
+                </div>
+
                 <div class="infoContainer">
-                    <div class="imageBox max">
+
+                    <div class="imageBox box">
+
                         <span class="toogle center"></span>
                         <input class="hiddenInput" type="checkbox" name="" id="toogle_info">
                         <div class="imageInfo">
@@ -65,27 +73,76 @@
                         </div>
                     </div>
 
-                    <div class="description max center">
-                        <div class="descripcionTitle">Fundación La Diáspora</div>
-                        <p>Somos una Organización sin ánimo de lucro con domicilio principal en el
-                            municipio de Suacha, Cundinamarca, Colombia que desde el año 2005 ha venido trabajando por
-                            la defensa y promoción de los Derechos de niñas, niños, adolescentes y jóvenes, a través de
-                            cuatro componentes principales:</p>
-                        <ul class="itemsList">
-                            <li>Herramientas artísticas que incluyen el Teatro y elementos
-                                propios de la cultura Hip Hop (Rap, Graffiti, Bboying, DJ´s).</li>
-                            <li>Comunicación alternativa y
-                                comunitaria (Video, fotografía y radio).</li>
-                            <li>Acciones de incidencia directa mediante la
-                                realización de eventos públicos, toma de espacios y conciertos.</li>
-                            <li>Investigación de
-                                problemáticas sociales que afectan a las poblaciones infantil y juvenil.</li>
-                        </ul>
+                    <div class="descriptionContainer box center">
+                        <div class="descriptionBox">
+                            <div class="descripcionTitle">Fundación La Diáspora</div>
+                            <p>Somos una Organización sin ánimo de lucro con domicilio principal en el
+                                municipio de Suacha, Cundinamarca, Colombia que desde el año 2005 ha venido trabajando
+                                por
+                                la defensa y promoción de los Derechos de niñas, niños, adolescentes y jóvenes, a través
+                                de
+                                cuatro componentes principales:</p>
+                            <ul class="itemsList">
+                                <li>Herramientas artísticas que incluyen el Teatro y elementos
+                                    propios de la cultura Hip Hop (Rap, Graffiti, Bboying, DJ´s).</li>
+                                <li>Comunicación alternativa y
+                                    comunitaria (Video, fotografía y radio).</li>
+                                <li>Acciones de incidencia directa mediante la
+                                    realización de eventos públicos, toma de espacios y conciertos.</li>
+                                <li>Investigación de
+                                    problemáticas sociales que afectan a las poblaciones infantil y juvenil.</li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="stats max center">
-                        graficos
+                    <div class="statsContainer box center">
+                        <li class="statBox">
+                            <div class="circle center">
+                                <div class="statVisual">22</div>
+                            </div>
+                            <div class="statInfo">
+                                <div class="statTitle">algo como titulo</div>
+                                <p class="statText">descripcion de la estadistica</p>
+                            </div>
+                        </li>
+                        <li class="statBox">
+                            <div class="circle center">
+                                <div class="statVisual">22</div>
+                            </div>
+                            <div class="statInfo">
+                                <div class="statTitle">algo como titulo</div>
+                                <p class="statText">descripcion de la estadistica</p>
+                            </div>
+                        </li>
+                        <li class="statBox">
+                            <div class="circle center">
+                                <div class="statVisual">22</div>
+                            </div>
+                            <div class="statInfo">
+                                <div class="statTitle">algo como titulo</div>
+                                <p class="statText">descripcion de la estadistica</p>
+                            </div>
+                        </li>
+                        <li class="statBox">
+                            <div class="circle center">
+                                <div class="statVisual">22</div>
+                            </div>
+                            <div class="statInfo">
+                                <div class="statTitle">algo como titulo</div>
+                                <p class="statText">descripcion de la estadistica</p>
+                            </div>
+                        </li>
+                        <li class="statBox">
+                            <div class="circle center">
+                                <div class="statVisual">22</div>
+                            </div>
+                            <div class="statInfo">
+                                <div class="statTitle">algo como titulo</div>
+                                <p class="statText">descripcion de la estadistica</p>
+                            </div>
+                        </li>
                     </div>
+                    
                 </div>
             </div>
         </section>
@@ -162,6 +219,7 @@
 
     <script type="module" src="./src/pages/landing/scrollControl.js"></script>
     <script type="module" src="./src/pages/landing/navControl.js"></script>
+    <script type="module" src="src/pages/landing/infoControl.js"></script>
 </body>
 
 </html>
