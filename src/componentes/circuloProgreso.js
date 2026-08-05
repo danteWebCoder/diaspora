@@ -102,7 +102,7 @@ class CirculoProgreso extends HTMLElement {
     #actualizarPorcentaje = async (num) => {
         const porcentaje = this.dom.querySelector(".porcentaje")
 
-        for (let i = 0; i < num; i++) {
+        for (let i = 0; i <= num; i++) {
             porcentaje.textContent = i + "%"
             await new Promise(resolve => setTimeout(resolve, 20))
         }
@@ -126,7 +126,6 @@ class CirculoProgreso extends HTMLElement {
     iniciar = async () => {
         this.#seccionesDibujadas = await this.#dibujarSecciones()
         this.#posicionarSecciones()
-        return await this.actualizar(85)
     }
 }
 customElements.define("circulo-progreso", CirculoProgreso) 

@@ -415,7 +415,6 @@
         }
     }
 }
-}
 
 footer {
     position: relative;
@@ -504,6 +503,7 @@ footer {
                         .subMenuCaja {
                             position: absolute;
                             top: 100%;
+                            left: 0.8vw;
                             width: 240px;
                             height: 0;
                             opacity: 0;
