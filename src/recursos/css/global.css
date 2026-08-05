@@ -14,14 +14,20 @@
     --menuEffect_height: 120px;
     --general_padding: 10vw;
 
-    /* colores */
-    --enfasis: #fcc91f;
-    --textoClaro: rgb(240, 240, 240);
-    --textoClaroMedio: rgb(180, 180, 180);
-    --textoOscuro: var(--fondoOscuro);
+    /* paleta */
+    --blancoClaro: rgb(240, 240, 240);
+    --blancoMedio: rgb(180, 180, 180);
+    --negroOscuro: rgb(60, 60, 60);
 
-    --fondoClaro: rgb(240, 240, 240);
-    --fondoOscuro: rgb(60, 60, 60);
+    --enfasis: rgb(252, 201, 31);
+    --enfasisClaro: rgb(250, 232, 177);
+    --enfasisOscuro: rgb(61, 49, 8);
+    --textoClaro: var(--blancoClaro);
+    --textoClaroMedio: var(--blancoMedio);
+    --textoOscuro: var(--negroOscuro);
+
+    --fondoClaro: var(--blancoClaro);
+    --fondoOscuro: var(--negroOscuro);
 }
 
 /* display flex */

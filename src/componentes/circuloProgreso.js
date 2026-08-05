@@ -31,9 +31,9 @@ class CirculoProgreso extends HTMLElement {
                 .circulo {
                     position: relative;
                     list-style: none;
-                    height: 100%;
+                    width: 100%;
                     aspect-ratio: 1/1;
-                    border: 1px solid rgb(210, 210, 210);
+                    border: 1px solid rgb(200, 200, 200);
                     border-radius: 50%;
 
                     .porcentaje {
@@ -46,24 +46,24 @@ class CirculoProgreso extends HTMLElement {
 
                     .seccion {
                         position: absolute;
-                        width: calc(100% - (32px + 6px)); /* 2 * border + separacion circulo  */
+                        width: calc(100% - (32px + 10px)); /* 2 * border + separacion circulo  */
                         aspect-ratio: 1/1;
                         border-width: 16px;
                         border-style: solid;
-                        border-color: rgb(210, 210, 210);
+                        border-color: rgba(0, 0, 0, 0.1);
                         border-radius: 50%;
                         clip-path: polygon(43% 0, 57% 0, 50% 50%, 50% 50%);
                     }
 
                     .seccionMarcada {
-                        animation: color 300ms forwards;
+                        animation: color 600ms forwards;
                     }
                 }
 
             }
 
             @keyframes color {
-                0% {border-color: rgb(40, 40, 40);}
+                0% {border-color: var(--enfasisClaro);}
                 100% {border-color: var(--enfasis);}
             }
 

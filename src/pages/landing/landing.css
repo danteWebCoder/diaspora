@@ -322,24 +322,6 @@
                     font-size: 15px;
                     font-weight: lighter;
                 }
-
-                .lista .puntos {
-                    margin-bottom: 10px;
-
-                    &::before {
-                        position: relative;
-                        top: 5px;
-                        display: inline-block;
-                        content: "";
-                        margin-right: 4px;
-                        width: 20px;
-                        height: 20px;
-                        background-image: url("../../recursos/iconos/check.png");
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                    }
-                }
             }
 
             .cajaEstadisticasReducidas {
@@ -347,8 +329,6 @@
                 height: 0px;
                 transition: 350ms ease-in-out;
                 overflow: hidden;
-                border: 1px solid red;
-
             }
 
             .altura50 {
@@ -364,11 +344,44 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(2, 1fr);
+                gap: 10px;
 
                 .tarjeta {
-                    display: flex;
-                    align-items: center;
-                    border: 1px solid red;
+                    position: relative;
+                    padding: 10px;
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    border-radius: 8px;
+
+                    .cajaComponente {
+                        width: 100%;
+                        height: 60%;
+                        padding: 10%;
+                    }
+
+                    .titulo {
+                        margin-top: 6%;
+                        font-size: 15px;
+                        font-weight: bolder;
+                        text-align: center;
+                    }
+
+                    .icono {
+                        position: absolute;
+                        bottom: 10px;
+                        right: 10px;
+                        width: 24px;
+                        height: 24px;
+                        background-image: url("../../recursos/iconos/imagen.png");
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        opacity: 0.25;
+                        cursor: pointer;
+
+                        &:hover {
+                        opacity: 0.8;
+                        }
+                    }
                 }
             }
         }
