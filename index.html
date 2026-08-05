@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diaspora</title>
-    <link rel="shortcut icon" href="./src/assets/icons/corazon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./src/recursos/iconos/corazon.png" type="image/x-icon">
     <link rel="stylesheet" href="./src/pages/landing/landing.css">
     <!-- ojo especifidad por orden, siempre despues del style principal por las clases que pisan -->
-    <link rel="stylesheet" href="./src/assets/css/global.css">
-    <link rel="stylesheet" href="./src/assets/css/fonts.css">
+    <link rel="stylesheet" href="./src/recursos/css/global.css">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,92 +18,103 @@
 </head>
 
 <body>
-    <div class="backImage" id="backImage"></div> <!-- default z -->
-    <div class="scrool">
+    <div class="fondoEstatico" id="backImage"></div> <!-- default z -->
+    <div class="capaDesplazamiento">
 
-        <section class="wellcome section_transparent"> <!-- z2 -->
-            <div class="contentBox center">
-                <div class="titlesBox">
-                    <h1 class="h">FUNDACION</h1>
-                    <div class="titlesBox">
-                        <h2 class="h">LA DIASPORA</h2>
-                        <h3 class="h">EL ARTE COMO MEDIO DE REINDIVICACION DE LOS DERECHOS HUMANOS</h3>
-                    </div>
-                    <ul class="wordKeys rowSpacing">
-                        <li class="word">COMUNIDAD</li>
-                        <li class="separator"></li>
-                        <li class="word">ARTE</li>
-                        <li class="separator"></li>
-                        <li class="word">CULTURA</li>
-                        <li class="separator"></li>
-                        <li class="word">DERECHOS</li>
+        <section class="presentacion seccionTransparente"> <!-- z2 -->
+            <div class="cajaContenido centrado">
+                <div class="cajaTitulos">
+                    <h1 class="SubTitulo">FUNDACION</h1>
+                    <h2 class="h tituloPrincipal">LA DIASPORA</h2>
+                    <h3 class="h nota">EL ARTE COMO MEDIO DE REINDIVICACION DE LOS DERECHOS HUMANOS</h3>
+                    <ul class="palabrasClave filaEsp">
+                        <li>COMUNIDAD</li>
+                        <li class="separador"></li>
+                        <li>ARTE</li>
+                        <li class="separador"></li>
+                        <li>CULTURA</li>
+                        <li class="separador"></li>
+                        <li>DERECHOS</li>
                     </ul>
-                    <ul class="years">
-                        <li class="h number">2005</li>
-                        <li class="icon"></li>
-                        <li class="h number">2026</li>
+                    <ul class="antiguedad">
+                        <li class="h fecha">2005</li>
+                        <li class="icono"></li>
+                        <li class="h fecha">2026</li>
                     </ul>
                 </div>
             </div>
         </section>
 
 
-        <section class="info section_white center" id="infoSection">
-            <div class="whiteBack"></div>
-            <div class="contentBox center">
-                <div class="infoContainer">
-                    <div class="imageBox max">
-                        <span class="toogle center"></span>
-                        <input class="hiddenInput" type="checkbox" name="" id="toogle_info">
-                        <div class="counterBox">
-                            <span class="heart center"></span>
-                            <span class="counter">1479</span>
+        <section class="info seccionBlanca centrado" id="infoSection">
+            <div class="fondoClaro"></div>
+            <div class="cajaContenido">
+                <div class="contenedorInfo" id="contenedorInfo">
+
+                    <div class="cajaImagen caja" id="cajaImagen">
+                        <div class="imagen max" id="imagen_info"><span class="iconoAbrir centrado"></span></div>
+                        <div class="barraAcciones">
+                            <div class="cajaContador max">
+                                <span class="icono centrado"></span>
+                                <span class="contador">1479</span>
+                            </div>
+                            <span class="compartir centrado"></span>
                         </div>
                     </div>
 
-                    <div class="description max center">
-                        <div class="descripcionTitle">Fundación La Diáspora</div>
-                        <p>Somos una Organización sin ánimo de lucro con domicilio principal en el
-                            municipio de Suacha, Cundinamarca, Colombia que desde el año 2005 ha venido trabajando por
-                            la defensa y promoción de los Derechos de niñas, niños, adolescentes y jóvenes, a través de
-                            cuatro componentes principales:</p>
-                        <ul class="itemsList">
-                            <li>Herramientas artísticas que incluyen el Teatro y elementos
-                                propios de la cultura Hip Hop (Rap, Graffiti, Bboying, DJ´s).</li>
-                            <li>Comunicación alternativa y
-                                comunitaria (Video, fotografía y radio).</li>
-                            <li>Acciones de incidencia directa mediante la
-                                realización de eventos públicos, toma de espacios y conciertos.</li>
-                            <li>Investigación de
-                                problemáticas sociales que afectan a las poblaciones infantil y juvenil.</li>
-                        </ul>
+                    <div class="contenedorDescripcion caja centrado">
+                        <div class="cajaDescripcion max" id="cajaDescripcion">
+                            <div class="titulo">Fundación La Diáspora</div>
+                            <p class="intro">Somos una Organización sin ánimo de lucro con domicilio principal en el
+                                municipio de Suacha, Cundinamarca, Colombia que desde el año 2005 ha venido trabajando
+                                por
+                                la defensa y promoción de los Derechos de niñas, niños, adolescentes y jóvenes, a través
+                                de
+                                cuatro componentes principales:</p>
+                            <ul class="lista">
+                                <li>Herramientas artísticas que incluyen el Teatro y elementos
+                                    propios de la cultura Hip Hop (Rap, Graffiti, Bboying, DJ´s).</li>
+                                <li>Comunicación alternativa y
+                                    comunitaria (Video, fotografía y radio).</li>
+                                <li>Acciones de incidencia directa mediante la
+                                    realización de eventos públicos, toma de espacios y conciertos.</li>
+                                <li>Investigación de
+                                    problemáticas sociales que afectan a las poblaciones infantil y juvenil.</li>
+                            </ul>
+                        </div>
+                        <div class="cajaEstadisticasReducidas alturaMin" id="cajaEstadisticasReducidas"></div>
                     </div>
 
-                    <div class="stats max center">
-                        graficos
+                    <div class="contenedorEstadisticas caja" id="contenedorEstadisticas">
+                        <ul class="listaEstadisticas max" id="listaEstadisticas">
+                            <div class="tarjeta max"></div>
+                            <div class="tarjeta max"></div>
+                            <div class="tarjeta max"></div>
+                            <div class="tarjeta max"></div>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="video section_transparent">
-            <div class="contentBox center">
+        <section class="video seccionTransparente">
+            <div class="cajaContenido centrado">
                 <h1>VIDEO</h1>
             </div>
         </section>
 
-        <section class="comunity section_white">
-            <div class="back"></div>
-            <div class="contentBox center">
+        <section class="comunity seccionBlanca">
+            <div class="fondoClaro"></div>
+            <div class="cajaContenido centrado">
                 <h1>COMUNIDAD</h1>
             </div>
         </section>
 
-        <section class="subscribe center">
-            <span class="button center">SUBSCRIBETE</span>
+        <section class="subscribe centrado">
+            <span class="button centrado">SUBSCRIBETE</span>
         </section>
 
-        <footer class="center">
+        <footer class="centrado">
             <h1>FOOTER</h1>
         </footer>
 
@@ -112,53 +122,54 @@
     </div>
 
     <!-- nav -->
-    <div class="menuBox hidden" id="menuBox">
-        <div class="backColor"></div>
-        <div class="alphaDegraded"></div>
-        <div class="menu center" id="menuBox">
-            <nav class="nav">
-                <div class="logoBox">
-                    <img class="logo" src="./src/assets/images/logoText-blanco.webp" alt="logo fundacion">
+    <div class="contenedorNav oculto centrado" id="contenedorNav">
+        <div class="fondoColor"></div>
+        <div class="alfaProgresivo"></div>
+        <div class="menu centrado" id="menuBox">
+            <nav>
+                <div class="cajaLogo">
+                    <img class="logo" src="./src/recursos/imagenes/logoText-blanco.webp" alt="logo fundacion">
                 </div>
-                <div class="menuLists" id="menuLists">
-                    <ul class="textMenu">
-                        <li class="text center mainItem">Quienes somos</li>
-                        <li class="text center" id="navProject">Nuestros proyectos
-                            <div class="subMenuBox" id="navProject-menu">
-                                <ul class="subMenu">
-                                    <li class="subText">Mundo código abierto</li>
-                                    <li class="subText">Aprende </li>
-                                    <li class="subText">Red Neuronal</li>
-                                    <li class="subText">Mundo Digital</li>
-                                    <li class="subText">Sombra Nocturna</li>
+                <div class="menuLista" id="menuLists">
+                    <ul class="listaTexto">
+                        <li class="botonTexto centrado mainItem">Quienes somos</li>
+                        <li class="botonTexto centrado" id="proyectos">Nuestros proyectos
+                            <div class="subMenuCaja" id="proyectos-subMenu">
+                                <ul class="subMenuLista">
+                                    <li class="subTexto">Mundo código abierto</li>
+                                    <li class="subTexto">Aprende </li>
+                                    <li class="subTexto">Red Neuronal</li>
+                                    <li class="subTexto">Mundo Digital</li>
+                                    <li class="subTexto">Sombra Nocturna</li>
                                 </ul>
                             </div>
                         </li>
-                        <li class="text center">Contacto</li>
-                        <li class="text center">Quiero colaborar</li>
+                        <li class="botonTexto centrado">Contacto</li>
+                        <li class="botonTexto centrado">Quiero colaborar</li>
                     </ul>
-                    <ul class="iconsMenu">
-                        <li class="iconBox">
-                            <img class="icon" src="./src/assets/icons/nav-facebook.webp">
+                    <ul class="listaIconos">
+                        <li class="iconoCaja">
+                            <img class="icono" src="./src/recursos/iconos/nav-facebook.webp">
                         </li>
-                        <li class="iconBox">
-                            <img class="icon" src="./src/assets/icons/nav-instagram.webp">
+                        <li class="iconoCaja">
+                            <img class="icono" src="./src/recursos/iconos/nav-instagram.webp">
                         </li>
-                        <li class="iconBox">
-                            <img class="icon" src="./src/assets/icons/nav-twitter.webp">
+                        <li class="iconoCaja">
+                            <img class="icono" src="./src/recursos/iconos/nav-twitter.webp">
                         </li>
-                        <li class="iconBox">
-                            <img class="icon" src="./src/assets/icons/nav-youtube.webp">
+                        <li class="iconoCaja">
+                            <img class="icono" src="./src/recursos/iconos/nav-youtube.webp">
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
-
     </div>
 
     <script type="module" src="./src/pages/landing/scrollControl.js"></script>
-    <script type="module" src="./src/pages/landing/infoControl.js"></script>
+    <script type="module" src="./src/pages/landing/navControl.js"></script>
+    <script type="module" src="./src/pages/landing/introControl.js"></script>
+    <script type="module" src="./src/componentes/circuloProgreso.js"></script>
 </body>
 
 </html>
