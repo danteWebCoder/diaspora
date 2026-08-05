@@ -292,19 +292,21 @@
         }
 
         .contenedorDescripcion {
+            position: relative;
             display: flex;
             flex-direction: column;
-            padding: 20px;
-            border: 1px solid grey;
+            border: 1px solid var(--blancoMedio);
 
             --infoMargin: 20px;
 
             .cajaDescripcion {
+                position: absolute;
+                top: 0;
                 max-height: 420px;
+                padding: 20px;
                 text-align: justify;
                 overflow: auto;
                 transition: 350ms ease-in-out;
-                border: 1px solid red;
 
                 .titulo {
                     width: 100%;
@@ -324,33 +326,50 @@
                 }
             }
 
-            .cajaEstadisticasReducidas {
+            .contenedorEstadisticasHor {
+                position: absolute;
+                top: 100%;
+                height: 50%;
                 width: 100%;
-                height: 0px;
                 transition: 350ms ease-in-out;
                 overflow: hidden;
-            }
 
-            .altura50 {
-                height: 50%;
+                .cajaEstadisticas {
+                    padding: 20px;
+
+                    .estadisticasHor {
+                        position: relative;
+                        left: calc(100% + 20px);
+                        width: 100%;
+                        height: 44px;
+                    }
+
+                    .estadisticasHor_izq {
+                        left: 0;
+                        transition: 350ms ease-in-out;
+                    }
+                }
             }
         }
 
         .contenedorEstadisticas {
             padding: 20px;
-            border: 1px solid gray;
+            border: 1px solid var(--blancoMedio);
 
             .listaEstadisticas {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(2, 1fr);
-                gap: 10px;
+                gap: 20px;
 
                 .tarjeta {
                     position: relative;
                     padding: 10px;
-                    border: 1px solid rgba(0, 0, 0, 0.2);
                     border-radius: 8px;
+                    opacity: 0;
+                    transform: scale(0);
+                    box-shadow: -2px 2px 6px grey;
+                    transition: 350ms ease-in-out;
 
                     .cajaComponente {
                         width: 100%;
@@ -379,8 +398,26 @@
                         cursor: pointer;
 
                         &:hover {
-                        opacity: 0.8;
+                            opacity: 0.8;
                         }
+                    }
+                }
+
+                .tarjeta_visible {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+
+                .tarjeta_hover {
+                    cursor: pointer;
+                    transition: 100ms ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+
+                    &:not(:hover) {
+                        transform: scale(1);
                     }
                 }
             }

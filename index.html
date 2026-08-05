@@ -82,13 +82,21 @@
                                     problemáticas sociales que afectan a las poblaciones infantil y juvenil.</li>
                             </ul>
                         </div>
-                        <div class="cajaEstadisticasReducidas alturaMin" id="cajaEstadisticasReducidas"></div>
+                        <div class="contenedorEstadisticasHor  alturaMin" id="contenedorEstadisticasHor">
+                            <ul class="cajaEstadisticas max columnaEsp">
+                                <li class="estadisticasHor"><barra-segmentada icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
+                                <li class="estadisticasHor"><barra-segmentada icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
+                                <li class="estadisticasHor"><barra-segmentada icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
+                                <li class="estadisticasHor"><barra-segmentada icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="contenedorEstadisticas caja" id="contenedorEstadisticas">
                         <ul class="listaEstadisticas max" id="listaEstadisticas">
                             <li class="tarjeta max">
-                                <div class="cajaComponente"><circulo-progreso id="participacion"></circulo-progreso></div>
+                                <div class="cajaComponente"><circulo-progreso id="participacion"></circulo-progreso>
+                                </div>
                                 <div class="titulo">Participación juvenil</div>
                                 <div class="icono"></div>
                             </li>
@@ -186,6 +194,7 @@
     <script type="module" src="./src/pages/landing/navControl.js"></script>
     <script type="module" src="./src/pages/landing/introControl.js"></script>
     <script type="module" src="./src/componentes/circuloProgreso.js"></script>
+    <script type="module" src="./src/componentes/barraProgresoSegmentada.js"></script>
 </body>
 
 </html>

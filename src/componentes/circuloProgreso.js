@@ -8,7 +8,7 @@ class CirculoProgreso extends HTMLElement {
         this.dom.innerHTML = `
             <div class="contenedorPrincipal max centrado">
                 <ul class="circulo centrado">
-                    <div class="porcentaje"></div>
+                    <div class="porcentaje">0 %</div>
                 </ul>
             </div>
         `
@@ -64,6 +64,7 @@ class CirculoProgreso extends HTMLElement {
 
             @keyframes color {
                 0% {border-color: var(--enfasisClaro);}
+                25% {border-color: var(--enfasisClaro);}
                 100% {border-color: var(--enfasis);}
             }
 

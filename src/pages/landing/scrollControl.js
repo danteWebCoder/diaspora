@@ -3,11 +3,6 @@ const menu = document.querySelector("#contenedorNav")
 const presentacion = document.querySelector(".presentacion")
 const menuHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--menuHeight"))
 const presentacionHeight = parseFloat(window.getComputedStyle(presentacion).getPropertyValue("height"))
-/* estadisticas */
-const participacion = document.querySelector("#participacion")
-const formacion = document.querySelector("#formacion")
-const presencia = document.querySelector("#presencia")
-const trabajo = document.querySelector("#trabajo")
 
 const visibilizar = async () => {
     menu.classList.remove("noVisible")
@@ -23,7 +18,33 @@ const ocultar = async () => {
     menu.classList.remove("menuVisible")
 }
 
-let pos = 0
+/* estadisticas */
+const estadisticas = {
+    "participacion": 90,
+    "formacion": 82,
+    "presencia": 87,
+    "trabajo": 78
+}
+const tarjetasEstadisticas = document.querySelectorAll(".tarjeta")
+
+const iniciarEstadisticas = async () => {
+    for (const item of tarjetasEstadisticas) {
+        item.classList.add("tarjeta_visible")
+        await new Promise(resolve => setTimeout(resolve, 200))
+    }
+    await new Promise(resolve => setTimeout(resolve, 200))
+    let cont = 0
+    for (const item of tarjetasEstadisticas) {
+        const circulo = item.querySelector("circulo-progreso")
+        circulo.actualizar(Object.values(estadisticas)[cont])
+        cont = cont + 1
+        await new Promise(resolve => setTimeout(resolve, 500))
+    }
+/*     tarjetasEstadisticas.forEach(item => item.classList.add("tarjeta_hover"))
+ */}
+
+/* scrool */
+let pos = window.scrollY
 let estadisticasCargadas = false
 window.addEventListener("scroll", async () => {
     const posY = window.scrollY
@@ -35,13 +56,13 @@ window.addEventListener("scroll", async () => {
     if (posY <= presentacionHeight && posY < pos) {
         ocultar()
     }
-    pos = posY
-
+    /* estadisticas */
     if (pos >= presentacionHeight * 0.8 && !estadisticasCargadas) {
-        participacion.actualizar(90)
-        formacion.actualizar(82)
-        presencia.actualizar(87)
-        trabajo.actualizar(78)
         estadisticasCargadas = true
+        iniciarEstadisticas()
     }
+
+    pos = posY
 })
+
+/* pos al recargar */
