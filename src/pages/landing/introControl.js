@@ -18,7 +18,7 @@ const animacionApertura = async () => {
 
     for (const item of estadisticasHor) {
         item.classList.add("estadisticasHor_izq")
-        await new Promise(resolve => setTimeout(resolve, cajaImagen_tempo))
+        await new Promise(resolve => setTimeout(resolve, 150))
     }
     return true
 }
@@ -36,10 +36,32 @@ const animacionCierre = async () => {
     return true
 }
 
-let open = false
+const iniciarEstadisticasHorizontal = async () => {
+    const estadisticas = document.querySelectorAll("barra-segmentada")
+    const estadisticasDatos = {
+        "participacion": 90,
+        "formacion": 82,
+        "presencia": 87,
+        "trabajo": 78
+    }
+
+    let cont = 0
+    for (const item of estadisticas) {
+        item.actualizar(Object.values(estadisticasDatos)[cont])
+        cont = cont + 1
+        await new Promise(resolve => setTimeout(resolve, 500))
+    }
+}
+
+let expandido = false
+let estadisticasAnimadas = false
 imagen.addEventListener("click", async (e) => {
-    open = open ? false : true
-    open
-        ? await animacionApertura()
-        : await animacionCierre()
+    expandido = expandido ? false : true
+    if (expandido) {
+        await animacionApertura()
+        !estadisticasAnimadas && iniciarEstadisticasHorizontal()
+        estadisticasAnimadas = true
+    } else {
+        await animacionCierre()
+    }
 })

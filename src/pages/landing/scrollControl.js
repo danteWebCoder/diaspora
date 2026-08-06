@@ -19,15 +19,15 @@ const ocultar = async () => {
 }
 
 /* estadisticas */
-const estadisticas = {
-    "participacion": 90,
-    "formacion": 82,
-    "presencia": 87,
-    "trabajo": 78
-}
-const tarjetasEstadisticas = document.querySelectorAll(".tarjeta")
+const iniciarEstadisticasTarjetas = async () => {
+    const tarjetasEstadisticas = document.querySelectorAll(".tarjeta")
+    const estadisticasDatos = {
+        "participacion": 90,
+        "formacion": 82,
+        "presencia": 87,
+        "trabajo": 78
+    }
 
-const iniciarEstadisticas = async () => {
     for (const item of tarjetasEstadisticas) {
         item.classList.add("tarjeta_visible")
         await new Promise(resolve => setTimeout(resolve, 200))
@@ -36,12 +36,11 @@ const iniciarEstadisticas = async () => {
     let cont = 0
     for (const item of tarjetasEstadisticas) {
         const circulo = item.querySelector("circulo-progreso")
-        circulo.actualizar(Object.values(estadisticas)[cont])
+        circulo.actualizar(Object.values(estadisticasDatos)[cont])
         cont = cont + 1
         await new Promise(resolve => setTimeout(resolve, 500))
     }
-/*     tarjetasEstadisticas.forEach(item => item.classList.add("tarjeta_hover"))
- */}
+}
 
 /* scrool */
 let pos = window.scrollY
@@ -59,7 +58,7 @@ window.addEventListener("scroll", async () => {
     /* estadisticas */
     if (pos >= presentacionHeight * 0.8 && !estadisticasCargadas) {
         estadisticasCargadas = true
-        iniciarEstadisticas()
+        iniciarEstadisticasTarjetas()
     }
 
     pos = posY

@@ -111,7 +111,7 @@ class CirculoProgreso extends HTMLElement {
 
     #actualizarProgreso = async (num) => {
         const secciones = ((num * 20) / 100)
-        for (let i = 0; i <= secciones; i++) {
+        for (let i = 0; i < secciones; i++) {
             const seccion = this.#seccionesDibujadas[i]
             seccion.classList.add("seccionMarcada")
             await new Promise(resolve => setTimeout(resolve, 50))
