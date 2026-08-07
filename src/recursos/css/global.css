@@ -8,10 +8,10 @@
 
 :root {
     /* wellcome color */
-    --landingBack1: url("../../../src/recursos/imagenes/montanas-minimalista-arte-low-poly-3354.webp");
-    --landingBack1_filter: grayScale(0.6);
+    --landingFondo1: url("../../../../src/recursos/imagenes/montanas-minimalista-arte-low-poly-3354.webp");
+    --landingFondo1_filtro: grayScale(0.6);
     --menuHeight: 80px;
-    --menuEffect_height: 120px;
+    --menuEfecto_height: 120px;
     --general_padding: 10vw;
 
     /* paleta */
@@ -102,7 +102,6 @@
 .noVisible {
     display: none;
 }
-
 
 .inputNoVisible {
     position: absolute;
