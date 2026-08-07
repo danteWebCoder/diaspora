@@ -55,10 +55,11 @@ class BarraSegmentada extends HTMLElement {
                         flex: 1;
                         display: flex;
                         justify-content: space-between;
+                        align-items: center;
                         margin: 0 10px;
 
                         .seccion {
-                            height: 100%;
+                            height: 80%;
                             width: calc((100% - 38px) / 20);
                             background-color: rgba(0, 0, 0, 0.1);
                             border-radius: 20%;
