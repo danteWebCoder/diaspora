@@ -49,10 +49,10 @@ window.addEventListener("scroll", async () => {
     const posY = window.scrollY
 
     /* menu */
-    if (posY > presentacionHeight && posY > pos) {
+    if (posY > presentacionHeight * 0.9 && posY > pos) {
         visibilizar()
     }
-    if (posY <= presentacionHeight && posY < pos) {
+    if (posY <= presentacionHeight * 0.9 && posY < pos) {
         ocultar()
     }
     /* estadisticas */

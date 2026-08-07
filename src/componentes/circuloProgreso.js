@@ -105,7 +105,7 @@ class CirculoProgreso extends HTMLElement {
 
         for (let i = 0; i <= num; i++) {
             porcentaje.textContent = i + "%"
-            await new Promise(resolve => setTimeout(resolve, 20))
+            await new Promise(resolve => setTimeout(resolve, 10))
         }
     }
 
@@ -114,7 +114,7 @@ class CirculoProgreso extends HTMLElement {
         for (let i = 0; i < secciones; i++) {
             const seccion = this.#seccionesDibujadas[i]
             seccion.classList.add("seccionMarcada")
-            await new Promise(resolve => setTimeout(resolve, 50))
+            await new Promise(resolve => setTimeout(resolve, 40))
         }
     }
 

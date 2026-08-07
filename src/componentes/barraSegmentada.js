@@ -61,7 +61,7 @@ class BarraSegmentada extends HTMLElement {
                             height: 100%;
                             width: calc((100% - 38px) / 20);
                             background-color: rgba(0, 0, 0, 0.1);
-                            border-radius: 2px;
+                            border-radius: 20%;
                         }
 
                         .seccionMarcada {

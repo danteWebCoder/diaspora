@@ -169,7 +169,7 @@
         /* only % */
         --sectionWidth: calc((100% - 2 * var(--sectionMargin)) / 3);
 
-        .caja {
+        .subContenedorInfo {
             flex-shrink: 0;
             width: var(--sectionWidth);
             height: 100%;
@@ -185,7 +185,6 @@
             display: flex;
             width: 100%;
             aspect-ratio: 16/7;
-            border-radius: 14px;
             overflow: hidden;
             transition: 350ms ease-in-out;
 
@@ -277,7 +276,7 @@
                 .compartir {
                     width: 18px;
                     height: 18px;
-                    background-image: url("../../recursos/iconos/share.png");
+                    background-image: url("../../recursos/iconos/compartir.png");
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: 90%;
@@ -286,7 +285,7 @@
 
                 &:hover {
                     opacity: 1;
-                    background-color: rgb(from var(--enfasis) r g b / 0.5);
+                    background-color: rgb(from var(--enfasis) r g b / 0.8);
                 }
             }
         }
@@ -332,7 +331,6 @@
                 height: 50%;
                 width: 100%;
                 transition: 350ms ease-in-out;
-                overflow: hidden;
 
                 .cajaEstadisticas {
                     padding: 20px;
@@ -423,7 +421,82 @@
             }
         }
     }
+
+    .contenedorSlider {
+        position: relative;
+        margin-top: 100px;
+        width: 86%;
+        height: 7vw;
+        border: 1px solid blue;
+
+        .cajaBotonSlider {
+            width: 50px;
+            height: 100%;
+            background-color: red;
+        }
+
+        .cajaSlider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            .degradadoSlider {
+                position: absolute;
+                width: 80px;
+                height: 100%;
+                background-color: gray;
+
+                &:nth-child(1 of &) {
+                    left: 0;
+                    background: linear-gradient(90deg, var(--blanco) 0%, var(--blancoTransparente) 100%);
+                }
+
+                &:nth-child(2 of &) {
+                    right: 0;
+                    background: linear-gradient(90deg, var(--blancoTransparente) 0%, var(--blanco) 100%);
+                }
+            }
+
+            .slider {
+                position: absolute;
+                border: 1px solid red;
+
+                .cajaSliderRelativo {
+                    position: relative;
+                    left: 0;
+                    width: calc(100% - 160px);
+                    height: 100%;
+                    background-color: cadetblue;
+                    transition: 500ms ease-in-out;
+
+                }
+            }
+
+            &:hover .slider .cajaSliderRelativo {
+                border: 2px solid black;
+                left: 100%;
+            }
+        }
+
+        /*         .tex {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgb(0, 92, 128);
+        }
+
+        .back {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        }
+ */
+    }
+
 }
+
 
 .subscribe {
     position: relative;

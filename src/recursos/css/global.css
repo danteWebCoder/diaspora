@@ -15,18 +15,20 @@
     --general_padding: 10vw;
 
     /* paleta */
-    --blancoClaro: rgb(240, 240, 240);
+    --blanco: rgb(240, 240, 240);
     --blancoMedio: rgb(180, 180, 180);
-    --negroOscuro: rgb(60, 60, 60);
+    --blancoTransparente: rgb(from var(--blanco) r g b / 0);
+
+    --negro: rgb(60, 60, 60);
 
     --enfasis: rgb(252, 201, 31);
     --enfasisClaro: rgb(250, 232, 177);
     --enfasisOscuro: rgb(61, 49, 8);
-    --textoClaro: var(--blancoClaro);
+    --textoClaro: var(--blanco);
     --textoClaroMedio: var(--blancoMedio);
     --textoOscuro: var(--negroOscuro);
 
-    --fondoClaro: var(--blancoClaro);
+    --fondoClaro: var(--blanco);
     --fondoOscuro: var(--negroOscuro);
 }
 
@@ -68,6 +70,16 @@
 .filaEsp {
     display: flex;
     justify-content: space-between;
+}
+
+.filaCenVertical {
+    display: flex;
+    align-items: center;
+}
+
+.filaCenHorizontal {
+    display: flex;
+    justify-content: center;
 }
 
 /* efectos */

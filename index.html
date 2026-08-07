@@ -15,6 +15,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -46,12 +49,11 @@
         </section>
 
 
-        <section class="info seccionBlanca centrado" id="infoSection">
+        <section class="info seccionBlanca" id="infoSection">
             <div class="fondoClaro"></div>
-            <div class="cajaContenido">
+            <div class="cajaContenido columnaCen">
                 <div class="contenedorInfo" id="contenedorInfo">
-
-                    <div class="cajaImagen caja" id="cajaImagen">
+                    <div class="cajaImagen subContenedorInfo" id="cajaImagen">
                         <div class="imagen max" id="imagen_info"><span class="iconoAbrir centrado"></span></div>
                         <div class="barraAcciones">
                             <div class="cajaContador max">
@@ -61,8 +63,7 @@
                             <span class="compartir centrado"></span>
                         </div>
                     </div>
-
-                    <div class="contenedorDescripcion caja centrado">
+                    <div class="contenedorDescripcion subContenedorInfo centrado">
                         <div class="cajaDescripcion max" id="cajaDescripcion">
                             <div class="titulo">Fundación La Diáspora</div>
                             <p class="intro">Somos una Organización sin ánimo de lucro con domicilio principal en el
@@ -84,15 +85,18 @@
                         </div>
                         <div class="contenedorEstadisticasHor  alturaMin" id="contenedorEstadisticasHor">
                             <ul class="cajaEstadisticas max columnaEsp">
-                                <li class="estadisticasHor"><barra-segmentada titulo="Participación juvenil" icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
-                                <li class="estadisticasHor"><barra-segmentada icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
-                                <li class="estadisticasHor"><barra-segmentada icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
-                                <li class="estadisticasHor"><barra-segmentada icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
+                                <li class="estadisticasHor"><barra-segmentada titulo="Participación juvenil"
+                                        icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
+                                <li class="estadisticasHor"><barra-segmentada titulo="Fromación en derechos"
+                                        icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
+                                <li class="estadisticasHor"><barra-segmentada titulo="Presencia en el territorio"
+                                        icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
+                                <li class="estadisticasHor"><barra-segmentada titulo="Trabajo con NNAJ"
+                                        icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
                             </ul>
                         </div>
                     </div>
-
-                    <div class="contenedorEstadisticas caja" id="contenedorEstadisticas">
+                    <div class="contenedorEstadisticas subContenedorInfo" id="contenedorEstadisticas">
                         <ul class="listaEstadisticas max" id="listaEstadisticas">
                             <li class="tarjeta max">
                                 <div class="cajaComponente"><circulo-progreso id="participacion"></circulo-progreso>
@@ -118,12 +122,33 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="contenedorSlider filaCenVertical">
+                    <div class="cajaBotonSlider centrado">&lt;</div>
+                    <div class="cajaSlider">
+                        <div class="slider max">
+                            <div class="cajaSliderRelativo"></div>
+                        </div>
+                        <div class="degradadoSlider"></div>
+                        <div class="degradadoSlider"></div>
+                    </div>
+                    <div class="cajaBotonSlider centrado">&gt;</div>
+
+                    <!--                     <ul class="subContenedorSlider" id="slider">
+                        <div class="contenidoSlider max">ffffffffddddddddddddddddff</div>
+                    </ul>
+                    <div class="sliderOpacidad"></div>
+                    <div class="sliderOpacidad"></div>
+
+                    <div class="cajaBotonSlider centrado"><span class="botonSliderIntro centrado">&lt;</span></div>
+                    <div class="cajaBotonSlider centrado"><span class="botonSliderIntro centrado">&gt;</span></div>
+ -->
+                </div>
             </div>
         </section>
 
         <section class="video seccionTransparente">
             <div class="cajaContenido centrado">
-                <h1>VIDEO</h1>
             </div>
         </section>
 
@@ -194,7 +219,8 @@
     <script type="module" src="./src/pages/landing/navControl.js"></script>
     <script type="module" src="./src/pages/landing/introControl.js"></script>
     <script type="module" src="./src/componentes/circuloProgreso.js"></script>
-    <script type="module" src="./src/componentes/barraProgresoSegmentada.js"></script>
+    <script type="module" src="./src/componentes/barraSegmentada.js"></script>
+    <script type="module" src="./src/pages/landing/carruselControl.js"></script>
 </body>
 
 </html>
