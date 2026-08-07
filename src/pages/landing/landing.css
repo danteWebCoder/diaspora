@@ -424,79 +424,82 @@
 
     .contenedorSlider {
         position: relative;
+        width: 80%;
+        height: 90px;
         margin-top: 100px;
-        width: 86%;
-        height: 7vw;
-        border: 1px solid blue;
 
-        .cajaBotonSlider {
-            width: 50px;
-            height: 100%;
-            background-color: red;
-        }
+        --degradadoWidth: 80px;
+        --sliderWidth: calc(100% - 2 * var(--degradadoWidth));
+        --itemsMargin: 20px;
+        --logoWidth: calc(var(--sliderWidth) * 0.2);
+        --logoPos: var(--degradadoWidth);
+        --textoWidth: calc(var(--sliderWidth) * 0.4);
+        --textoPos: calc(var(--logoPos) + var(--logoWidth) + var(--itemsMargin));
+        --infoWidth: calc(var(--sliderWidth) * 0.4 - 2 * var(--itemsMargin));
+        --infoPos: calc(var(--textoPos) + var(--textoWidth) + var(--itemsMargin));
 
-        .cajaSlider {
+        .slider {
             position: relative;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+            background-color: aquamarine;
 
-            .degradadoSlider {
+            .logo {
                 position: absolute;
-                width: 80px;
+                left: var(--logoPos);
+                width: var(--logoWidth);
                 height: 100%;
-                background-color: gray;
-
-                &:nth-child(1 of &) {
-                    left: 0;
-                    background: linear-gradient(90deg, var(--blanco) 0%, var(--blancoTransparente) 100%);
-                }
-
-                &:nth-child(2 of &) {
-                    right: 0;
-                    background: linear-gradient(90deg, var(--blancoTransparente) 0%, var(--blanco) 100%);
-                }
+                background-color: red;
             }
 
-            .slider {
+            .texto {
                 position: absolute;
-                border: 1px solid red;
-
-                .cajaSliderRelativo {
-                    position: relative;
-                    left: 0;
-                    width: calc(100% - 160px);
-                    height: 100%;
-                    background-color: cadetblue;
-                    transition: 500ms ease-in-out;
-
-                }
+                left: var(--textoPos);
+                width: var(--textoWidth);
+                height: 100%;
+                background-color: grey;
             }
-
-            &:hover .slider .cajaSliderRelativo {
-                border: 2px solid black;
-                left: 100%;
+            
+            .info {
+                position: absolute;
+                left: var(--infoPos);
+                width: var(--infoWidth);
+                height: 100%;
+                background-color: rgb(28, 190, 109);
             }
         }
 
-        /*         .tex {
+        .degradado {
             position: absolute;
-            width: 100%;
+            width: var(--degradadoWidth);
             height: 100%;
-            background: rgb(0, 92, 128);
-        }
+            border: 1px solid gray;
 
-        .back {
-            position: relative;
-            width: 50%;
-            height: 100%;
-            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            &:nth-child(1 of &) {
+                background: linear-gradient(90deg, var(--blanco) 40px, var(--blancoTransparente) 100%);
+            }
+
+            &:nth-child(2 of &) {
+                right: 0;
+                background: linear-gradient(90deg, var(--blancoTransparente) 0%, var(--blanco) calc(100% - 40px));
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .botonSlider {
+                width: 30px;
+                height: 100%;
+                background-color: red;
+                font-family: "DM Sans";
+                font-size: 30px;
+                color: var(--blanco);
+                background-color: var(--negro);
+                border-radius: 4px;
+                opacity: 1;
+                cursor: pointer;
+                transition: 200ms;
+            }
         }
- */
     }
-
 }
-
 
 .subscribe {
     position: relative;
