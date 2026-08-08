@@ -120,7 +120,6 @@ class BarraSegmentada extends HTMLElement {
     }
 
     #actualizarPorcentaje = async (num) => {
-        console.log(num)
         const porcentaje = this.dom.querySelector(".porcentaje")
         for (let i = 0; i <= num; i++) {
             porcentaje.textContent = i + "%"

@@ -1,0 +1,87 @@
+.presentacion {
+    width: 100%;
+    height: 100vh;
+
+    .cajaTitulos {
+        position: relative;
+        top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        height: auto;
+        color: var(--textoClaroMedio);
+
+        .h {
+            width: fit-content;
+            height: auto;
+        }
+
+        .SubTitulo {
+            font-size: 24px;
+            font-weight: bolder;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+        }
+
+        .tituloPrincipal {
+            position: relative;
+            left: 6px;
+            font-size: 86px;
+            font-weight: 500;
+            letter-spacing: 6px;
+            color: white;
+        }
+
+        .nota {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-indent: 10px;
+            margin-bottom: 10px;
+            margin-bottom: 40px;
+        }
+
+        .palabrasClave {
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            height: 40px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+
+            .separador {
+                width: 0px;
+                height: 14px;
+                border-left: 2px solid grey;
+                margin: 0 12px;
+            }
+        }
+
+        .antiguedad {
+            display: flex;
+            align-items: center;
+            width: auto;
+            height: 20px;
+            margin-top: 30px;
+
+            .fecha {
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 3px;
+            }
+
+            .icono {
+                width: 14px;
+                aspect-ratio: 1/1;
+                margin: 0 20px;
+                background-image: url("../../../recursos/iconos/corazon.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                filter: brightness(0.7)
+            }
+        }
+    }
+}
