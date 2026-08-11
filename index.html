@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./src/pages/landing/css/main.css">
     <link rel="stylesheet" href="./src/pages/landing/css/nav.css">
     <link rel="stylesheet" href="./src/pages/landing/css/presentacion.css">
-    <link rel="stylesheet" href="./src/pages/landing/css/info.css">
+    <link rel="stylesheet" href="./src/pages/landing/css/intro.css">
     <!-- ojo especifidad por orden, siempre despues del style principal por las clases que pisan -->
     <link rel="stylesheet" href="./src/recursos/css/global.css">
     <!-- fonts -->
@@ -53,7 +53,7 @@
             <div class="fondoClaro"></div>
             <div class="cajaContenido columnaCen">
                 <div class="contenedorInfo" id="contenedorInfo">
-                    <div class="cajaImagen subContenedorInfo" id="cajaImagen">
+                    <div class="cajaImagen subContenedor" id="cajaImagen">
                         <div class="imagen max" id="imagen_info"><span class="iconoAbrir centrado"></span></div>
                         <div class="barraAcciones">
                             <div class="cajaContador max">
@@ -63,23 +63,30 @@
                             <span class="compartir centrado"></span>
                         </div>
                     </div>
-                    <div class="contenedorDescripcion subContenedorInfo centrado">
+                    <div class="contenedorDescripcion subContenedor">
                         <div class="cajaDescripcion max" id="cajaDescripcion">
-                            <div class="titulo">Fundación La Diáspora</div>
-                            <p class="intro">Somos una Organización sin ánimo de lucro con domicilio principal en el
-                                municipio de Suacha, Cundinamarca, Colombia que desde el año 2005 ha venido trabajando por
-                                la defensa y promoción de los Derechos de niñas, niños, adolescentes y jóvenes, a través
-                                de cuatro componentes principales:</p>
-                            <ul class="lista">
-                                <li>Herramientas artísticas que incluyen el Teatro y elementos
-                                    propios de la cultura Hip Hop (Rap, Graffiti, Bboying, DJ´s).</li>
-                                <li>Comunicación alternativa y
-                                    comunitaria (Video, fotografía y radio).</li>
-                                <li>Acciones de incidencia directa mediante la
-                                    realización de eventos públicos, toma de espacios y conciertos.</li>
-                                <li>Investigación de
-                                    problemáticas sociales que afectan a las poblaciones infantil y juvenil.</li>
-                            </ul>
+                            <div class="cajaExpand max ">
+                                <div class="expansorFlex max"></div>
+                                <div class="titulo">Fundación La Diáspora</div>
+                                <p class="intro">Somos una Organización sin ánimo de lucro con domicilio principal en el
+                                    municipio de Suacha, Cundinamarca, Colombia que desde el año 2005 ha venido
+                                    trabajando
+                                    por
+                                    la defensa y promoción de los Derechos de niñas, niños, adolescentes y jóvenes, a
+                                    través
+                                    de cuatro componentes principales:</p>
+                                <ul class="lista">
+                                    <li>Herramientas artísticas que incluyen el Teatro y elementos
+                                        propios de la cultura Hip Hop (Rap, Graffiti, Bboying, DJ´s).</li>
+                                    <li>Comunicación alternativa y
+                                        comunitaria (Video, fotografía y radio).</li>
+                                    <li>Acciones de incidencia directa mediante la
+                                        realización de eventos públicos, toma de espacios y conciertos.</li>
+                                    <li>Investigación de
+                                        problemáticas sociales que afectan a las poblaciones infantil y juvenil.</li>
+                                </ul>
+                                <div class="expansorFlex max"></div>
+                            </div>
                         </div>
                         <div class="contenedorEstadisticasHor  alturaMin" id="contenedorEstadisticasHor">
                             <ul class="cajaEstadisticas max columnaEsp">
@@ -94,7 +101,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="contenedorEstadisticas subContenedorInfo" id="contenedorEstadisticas">
+                    <div class="contenedorEstadisticas subContenedor" id="contenedorEstadisticas">
                         <ul class="listaEstadisticas max" id="listaEstadisticas">
                             <li class="tarjeta max">
                                 <div class="cajaComponente"><circulo-progreso id="participacion"></circulo-progreso>

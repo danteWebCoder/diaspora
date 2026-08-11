@@ -62,7 +62,6 @@ class SliderVerticalMultiple extends HTMLElement {
                             height: 100%;
                             opacity: 0;
                             transition: 350ms ease-in-out;
-                            border: 1px solid red;
                         }
 
                         .logoCaja {
