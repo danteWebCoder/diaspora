@@ -1,103 +1,89 @@
 export const info = [
     {
-        logo: "./src/recursos/imagenes/COLOREDLOGO.svg",
-        texto: "texto de item1: Somos una Organización sin ánimo de lucro de Suacha, Cundinamarca, que desde 2005 defiende y promueve los derechos de la niñez y juventud mediante cuatro componentes",
+        logo: "https://www.creatit.es/wp-content/uploads/2018/04/Audi-logo-1999-1920x1080-1024x576.png",
+        texto: [
+            `Somos una Organización sin ánimo de lucro con domicilio principal en el
+            municipio de Suacha, Cundinamarca, Colombia que desde el año 2005 ha venido trabajando por`,
+            "Gracias por vuestro apoyo"
+        ],
         info: {
-            redes: [
-                {
-                    icono: "./src/recursos/iconos/facebook.webp",
-                    enlace: ""
-                },
-                {
-                    icono: "./src/recursos/iconos/instagram.webp",
-                    enlace: ""
-                },
-                {
-                    icono: "./src/recursos/iconos/twitter.webp",
-                    enlace: ""
-                },
-                {
-                    icono: "./src/recursos/iconos/youtube.webp",
-                    enlace: ""
-                }
-            ],
             contacto: [
-                {
-                    icono: "./src/recursos/iconos/whatsapp.png",
-                    contacto: "+34 601 234 567"
-                },
-                {
-                    icono: "./src/recursos/iconos/whatsapp.png",
-                    contacto: "correoelectronico@correo.es"
-                }
+                "+34 601 234 567",
+                "correoelectronico@correo.es"
+            ],
+            redes: [
+                { icono: "./src/recursos/iconos/facebook.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/instagram.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/twitter.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/youtube.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/facebook.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/facebook.webp", enlace: "" }
             ]
         }
     },
-        {
-        logo: "./src/recursos/imagenes/COLOREDLOGO.svg",
-        texto: "texto de item1: Somos una Organización sin ánimo de lucro de Suacha, Cundinamarca, que desde 2005 defiende y promueve los derechos de la niñez y juventud mediante cuatro componentes",
+    {
+        logo: "https://www.creatit.es/wp-content/uploads/2018/04/logo-coca-cola-lead.png",
+        texto: [
+            `Somos una Organización sin ánimo de lucro con domicilio principal en el
+            municipio de Suacha, Cundinamarca, Colombia que desde el año 2005 ha venido trabajando por`,
+            "Gracias por vuestro apoyo"
+        ],
         info: {
-            redes: [
-                {
-                    icono: "./src/recursos/iconos/facebook.webp",
-                    enlace: ""
-                },
-                {
-                    icono: "./src/recursos/iconos/instagram.webp",
-                    enlace: ""
-                },
-                {
-                    icono: "./src/recursos/iconos/twitter.webp",
-                    enlace: ""
-                },
-                {
-                    icono: "./src/recursos/iconos/youtube.webp",
-                    enlace: ""
-                }
-            ],
             contacto: [
-                {
-                    icono: "./src/recursos/iconos/whatsapp.png",
-                    contacto: "+34 601 234 567"
-                },
-                {
-                    icono: "./src/recursos/iconos/whatsapp.png",
-                    contacto: "correoelectronico@correo.es"
-                }
+                "+34 601 234 567",
+                "correoelectronico@correo.es"
+            ],
+            redes: [
+                { icono: "./src/recursos/iconos/facebook.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/instagram.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/twitter.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/youtube.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/facebook.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/facebook.webp", enlace: "" }
             ]
         }
     },
-        {
-        logo: "./src/recursos/imagenes/COLOREDLOGO.svg",
-        texto: "texto de item1: Somos una Organización sin ánimo de lucro de Suacha, Cundinamarca, que desde 2005 defiende y promueve los derechos de la niñez y juventud mediante cuatro componentes",
+    {
+        logo: "https://content-management-files.canva.com/057e33ce-7a6b-474c-85f5-3a9b59e3d98b/3450logotiposqueteinspiraran.png",
+        texto: [
+            `Somos una Organización sin ánimo de lucro con domicilio principal en el
+            municipio de Suacha, Cundinamarca, Colombia que desde el año 2005 ha venido trabajando por`,
+            "Gracias por vuestro apoyo"
+        ],
         info: {
-            redes: [
-                {
-                    icono: "./src/recursos/iconos/facebook.webp",
-                    enlace: ""
-                },
-                {
-                    icono: "./src/recursos/iconos/instagram.webp",
-                    enlace: ""
-                },
-                {
-                    icono: "./src/recursos/iconos/twitter.webp",
-                    enlace: ""
-                },
-                {
-                    icono: "./src/recursos/iconos/youtube.webp",
-                    enlace: ""
-                }
-            ],
             contacto: [
-                {
-                    icono: "./src/recursos/iconos/whatsapp.png",
-                    contacto: "+34 601 234 567"
-                },
-                {
-                    icono: "./src/recursos/iconos/whatsapp.png",
-                    contacto: "correoelectronico@correo.es"
-                }
+                "+34 601 234 567",
+                "correoelectronico@correo.es"
+            ],
+            redes: [
+                { icono: "./src/recursos/iconos/facebook.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/instagram.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/twitter.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/youtube.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/facebook.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/facebook.webp", enlace: "" }
+            ]
+        }
+    },
+    {
+        logo: "https://img.magnific.com/vector-gratis/plantilla-logotipo-tienda-instagram-degradado_23-2149709626.jpg",
+        texto: [
+            `Somos una Organización sin ánimo de lucro con domicilio principal en el
+            municipio de Suacha, Cundinamarca, Colombia que desde el año 2005 ha venido trabajando por`,
+            "Gracias por vuestro apoyo"
+        ],
+        info: {
+            contacto: [
+                "+34 601 234 567",
+                "correoelectronico@correo.es"
+            ],
+            redes: [
+                { icono: "./src/recursos/iconos/facebook.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/instagram.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/twitter.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/youtube.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/facebook.webp", enlace: "" },
+                { icono: "./src/recursos/iconos/facebook.webp", enlace: "" }
             ]
         }
     }

@@ -1,13 +1,10 @@
-const fuenteSimbolos = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200";
 const fuenteGeneral = "https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
 const colorSimbolosHover = "rgb(252, 201, 31)"
 const tempo1 = 200
-const tempo2 = 3500 /* tiempo de aparacion entre grupos */
+const tempo2 = 5000 /* tiempo de aparacion entre grupos */
 const tamañoFuente = "15px"
 const color = "var(--negro)"
-const iconoFondo = "var(--negro)"
-const enfasis = "var(--enfasis)"
-const tamañoIcono = "28px"
+const tamañoIcono = "26px"
 
 class SliderVerticalMultiple extends HTMLElement {
     #info = null
@@ -29,11 +26,10 @@ class SliderVerticalMultiple extends HTMLElement {
                 width: 100%;
                 height: 100%;
 
-                --botonWidth: 30px;
-                --logoWidth: 20%;
-                --textoWidth: 45%;
-                --infoWidth: 35%;
-                --cajasMargin: 20px;
+                --cajasMargin: 35px;
+                --logoWidth: calc((100% - 2 * var(--cajasMargin)) * 0.25);
+                --textoWidth: calc((100% - 2 * var(--cajasMargin)) * 0.50);
+                --infoWidth: calc((100% - 2 * var(--cajasMargin)) * 0.25);
             }
 
             * {
@@ -51,7 +47,8 @@ class SliderVerticalMultiple extends HTMLElement {
 
                     .cajaContenidoSlider {
                         position: absolute;
-                        display: flex;
+                        display: flex; 
+                        justify-content: space-between;
 
                         * {
                             font-size: ${tamañoFuente};
@@ -65,45 +62,44 @@ class SliderVerticalMultiple extends HTMLElement {
                             height: 100%;
                             opacity: 0;
                             transition: 350ms ease-in-out;
+                            border: 1px solid red;
                         }
 
                         .logoCaja {
                             width: var(--logoWidth);
 
                             .logo {
-                                max-width: 140px;
+                                width: 100%;
                             }
                         }
 
                         .textoCaja {
                             width: var(--textoWidth);
+                            text-align: justify;
+
+                            .texto:last-of-type {
+                                text-align: right;
+                            }
                         }
 
                         .infoCaja {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-between;
                             width: var(--infoWidth);
                             height: 100%;
-                            padding-left: var(--cajasMargin);
 
                             .redes {
                                 display: flex;
-                                justify-content: flex-end;
                                 width: 100%;
                                 height: ${tamañoIcono};
 
                                 .cajaIconoIndividual {
                                     width: ${tamañoIcono};
-                                    aspect-ratio: 1/1;;
-                                    margin-left: 12px;
+                                    aspect-ratio: 1/1;
+                                    margin-right: 12px;
                                     border: 1px solid grey;
                                     border-radius: 4px;
                                     cursor: pointer;
 
                                     .icono {
-                                        width: 90%;
-                                        height: 90%;
                                         background-position: center;
                                         background-repeat: no-repeat;
                                         background-size: cover;
@@ -114,27 +110,11 @@ class SliderVerticalMultiple extends HTMLElement {
 
                             .cajaContacto {
                                 width: 100%;
-                                height: 50px;
 
                                 .contacto {
                                     display: flex;
+                                    align-items: center;
                                     width: 100%;
-                                    height: 50%;
-
-                                    .cajaIcono {
-                                        width: ${tamañoIcono};
-                                        height: ${tamañoIcono};
-                                        margin-right: 14px;
-
-                                        .icono {
-                                            width: 80%;
-                                            height: 80%;
-                                            background-position: center;
-                                            background-repeat: no-repeat;
-                                            background-size: cover;
-                                            filter: brightness(0.2);
-                                        }
-                                    }
 
                                     .numero {
                                         display: flex;
@@ -160,6 +140,12 @@ class SliderVerticalMultiple extends HTMLElement {
                 align-items: center;
             }
 
+            .columnaEsp {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
             .transicion { transition: 2000ms ease-in-out; }`
     }
 
@@ -178,7 +164,7 @@ class SliderVerticalMultiple extends HTMLElement {
         }
     }
 
-    #dibujarContenido(modulo) {
+    #dibujarContenido() {
         const cajaContenidoOculto = this.dom.querySelector(".cajaContenidoOculto")
 
         this.#info.forEach(item => {
@@ -186,42 +172,40 @@ class SliderVerticalMultiple extends HTMLElement {
             const grupo = []
 
             Object.entries(item).forEach(([key, value]) => {
-                const caja = this.#crearTag("div", cajaContenido, `${key}Caja caja centrado`)
+                const caja = this.#crearTag("div", cajaContenido, `${key}Caja caja`)
 
                 if (key === "logo") {
-                    const logo = caja.appendChild(document.createElement("img"))
-                    logo.classList.add("logo")
+                    caja.classList.add("centrado")
+                    const logo = this.#crearTag("img", caja, "logo")
                     logo.src = value
                     logo.alt = "logotipo"
                 }
 
-                key === "texto" && (caja.textContent = value)
+                if (key === "texto") {
+                    caja.classList.add("columnaEsp")
+                    value.forEach(item => {
+                        const texto = this.#crearTag("div", caja, "texto")
+                        texto.textContent = item
+                    })
+                }
 
                 if (key === "info") {
+                    caja.classList.add("columnaEsp")
                     Object.entries(value).forEach(([tipo, value]) => {
-
                         if (tipo === "redes") {
                             const redes = this.#crearTag("div", caja, "redes")
-
                             value.forEach(item => {
                                 const cajaIconoIndividual = this.#crearTag("div", redes, "cajaIconoIndividual centrado")
-                                const icono = this.#crearTag("div", cajaIconoIndividual, "icono")
+                                const icono = this.#crearTag("div", cajaIconoIndividual, "icono max")
                                 icono.style.backgroundImage = `url("${item.icono}")`
                             })
                         }
 
                         if (tipo === "contacto") {
                             const cajaContacto = this.#crearTag("div", caja, "cajaContacto")
-
-                            value.forEach((item, index) => {
-                                console.log(item)
-
+                            value.forEach(item => {
                                 const contacto = this.#crearTag("div", cajaContacto, "contacto")
-                                const cajaIcono = this.#crearTag("span", contacto, "cajaIcono centrado")
-                                const icono = this.#crearTag("div", cajaIcono, "icono")
-                                icono.style.backgroundImage = `url("${item.icono}")`
-                                const numero = this.#crearTag("span", contacto, "numero")
-                                numero.textContent += item.contacto
+                                contacto.textContent = item
                             })
                         }
                     })
@@ -256,7 +240,6 @@ class SliderVerticalMultiple extends HTMLElement {
     }
 
     async connectedCallback() {
-        this.#importarFuente(fuenteSimbolos)
         this.#importarFuente(fuenteGeneral)
         this.#info = (await import(this.getAttribute("info"))).info
         this.#dibujarContenido()
