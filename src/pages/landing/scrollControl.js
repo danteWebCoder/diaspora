@@ -45,6 +45,9 @@ const iniciarEstadisticasTarjetas = async () => {
 /* scrool */
 let pos = window.scrollY
 let estadisticasCargadas = false
+
+pos > presentacionHeight * 0.9 && visibilizar()
+
 window.addEventListener("scroll", async () => {
     const posY = window.scrollY
 
