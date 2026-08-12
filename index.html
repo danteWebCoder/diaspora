@@ -141,19 +141,25 @@
                 <div class="contenedorVideos">
                     <ul class="grupoSeleccion">
                         <li class="cajaVideo">
-                            <div class="videoMiniatura"></div>
-                            <div class="videoMiniaturaInfo"></div>
+                            <img class="max" src="./src/recursos/imagenes/1.jpg" alt="miniaturaVideo">
+                            <input class="opcionOculta" type="radio" name="video">
                         </li>
-                        <li class="cajaVideo"></li>
-                        <li class="cajaVideo"></li>
-                        <li class="cajaVideo"></li>
+                        <li class="cajaVideo">
+                            <img class="max" src="./src/recursos/imagenes/2.jpg" alt="miniaturaVideo">
+                            <input class="opcionOculta" type="radio" name="video">
+                        </li>
+                        <li class="cajaVideo">
+                            <img class="max" src="./src/recursos/imagenes/3.jpg" alt="miniaturaVideo">
+                            <input class="opcionOculta" type="radio" name="video">
+                        </li>
+                        <li class="cajaVideo">
+                            <img class="max" src="./src/recursos/imagenes/4.jpg" alt="miniaturaVideo">
+                            <input class="opcionOculta" type="radio" name="video">
+                        </li>
                     </ul>
 
                     <div class="reproductorCaja columna">
-                        <iframe class="reproductor" src="https://www.youtube.com/embed/E-E2wjfvbEE?si=8RCtDyViqTooyJU6"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div id="reproductor" class="reproductor"></div>
                         <div id="cajaTituloVideo" class="tituloVideo"></div>
                     </div>
                 </div>
@@ -223,9 +229,12 @@
         </div>
     </div>
 
+    <!-- controles -->
     <script type="module" src="./src/pages/landing/scrollControl.js"></script>
     <script type="module" src="./src/pages/landing/navControl.js"></script>
     <script type="module" src="./src/pages/landing/introControl.js"></script>
+    <script type="module" src="./src/pages/landing/videosControl.js"></script>
+    <!-- componentes -->
     <script type="module" src="./src/componentes/circuloProgreso.js"></script>
     <script type="module" src="./src/componentes/barraSegmentada.js"></script>
     <script type="module" src="./src/componentes/sliderVerticalMultiple.js"></script>

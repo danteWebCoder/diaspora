@@ -6,39 +6,56 @@
     position: relative;
     width: 100%;
     height: var(--contenedorHeight);
-    border: 1px solid rgb(9, 255, 0);
 
     .grupoSeleccion {
         width: fit-content;
         height: 100%;
-        border: 3px solid grey;
 
         .cajaVideo {
+            position: relative;
             height: calc((100% - 30px) / 4);
             aspect-ratio: 16/10;
             margin-bottom: 10px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            border: 1px solid red;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            filter: grayscale(1);
+            overflow: hidden;
+            transition: 100ms ease-in-out;
 
-            &:first-child {
-                background-image: url("./../../../recursos/imagenes/miniaturaVideo_1.png")
+            img {
+                transform: scale(2);
+                transition: 350ms ease-in-out;
+            }
+
+            &:hover {
+                filter: grayscale(0);
+
+                img {
+                    transform: scale(1);
+                }
+            }
+
+            &:has(.opcionOculta:checked) {
+                filter: grayscale(0);
+                border: 2px solid var(--enfasis);
+
+                img {
+                    transform: scale(1);
+                }
             }
         }
     }
-
 
     .reproductorCaja {
         align-items: flex-end;
         width: 100%;
         height: 100%;
-        border: 1px solid rgb(0, 81, 255);
 
         .reproductor {
             width: calc(100% - 100px);
             height: calc(100% - 100px);
-            border-radius: 20px;
+            border-radius: 12px;
+            overflow: hidden;
         }
 
         .tituloVideo {

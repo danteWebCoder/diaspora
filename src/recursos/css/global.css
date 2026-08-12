@@ -103,7 +103,8 @@
     display: none;
 }
 
-.inputNoVisible {
+/* inputs */
+.opcionOculta {
     position: absolute;
     left: 0;
     top: 0;
