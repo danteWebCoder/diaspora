@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./src/pages/landing/css/nav.css">
     <link rel="stylesheet" href="./src/pages/landing/css/presentacion.css">
     <link rel="stylesheet" href="./src/pages/landing/css/intro.css">
+    <link rel="stylesheet" href="./src/pages/landing/css/video.css">
     <!-- ojo especifidad por orden, siempre despues del style principal por las clases que pisan -->
     <link rel="stylesheet" href="./src/recursos/css/global.css">
     <!-- fonts -->
@@ -136,7 +137,26 @@
         </section>
 
         <section class="video seccionTransparente">
-            <div class="cajaContenido centrado">
+            <div class="cajaContenido">
+                <div class="contenedorVideos">
+                    <ul class="grupoSeleccion">
+                        <li class="cajaVideo">
+                            <div class="videoMiniatura"></div>
+                            <div class="videoMiniaturaInfo"></div>
+                        </li>
+                        <li class="cajaVideo"></li>
+                        <li class="cajaVideo"></li>
+                        <li class="cajaVideo"></li>
+                    </ul>
+
+                    <div class="reproductorCaja columna">
+                        <iframe class="reproductor" src="https://www.youtube.com/embed/E-E2wjfvbEE?si=8RCtDyViqTooyJU6"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div id="cajaTituloVideo" class="tituloVideo"></div>
+                    </div>
+                </div>
             </div>
         </section>
 
