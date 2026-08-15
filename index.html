@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <div class="fondoEstatico" id="backImage"></div> <!-- default z -->
+    <div class="fondoEstatico" id="fondoEstatico"></div> <!-- default z -->
     <div class="capaDesplazamiento">
 
         <section class="presentacion seccionTransparente"> <!-- z2 -->
@@ -136,7 +136,7 @@
             </div>
         </section>
 
-        <section class="video seccionTransparente">
+        <section class="video seccionTransparente relativo">
             <div class="cajaContenido">
                 <div class="contenedorVideos">
                     <ul class="grupoSeleccion">
@@ -159,8 +159,7 @@
                     </ul>
 
                     <div class="reproductorCaja columna">
-                        <div id="reproductor" class="reproductor"></div>
-                        <div id="cajaTituloVideo" class="tituloVideo"></div>
+                        <div id="reproductor" class="reproductor max"></div>
                     </div>
                 </div>
             </div>
@@ -233,8 +232,8 @@
     <script type="module" src="./src/pages/landing/scrollControl.js"></script>
     <script type="module" src="./src/pages/landing/navControl.js"></script>
     <script type="module" src="./src/pages/landing/introControl.js"></script>
-    <script type="module" src="./src/pages/landing/videosControl.js"></script>
-    <!-- componentes -->
+<!--     <script type="module" src="./src/pages/landing/videosControl.js"></script>
+ -->    <!-- componentes -->
     <script type="module" src="./src/componentes/circuloProgreso.js"></script>
     <script type="module" src="./src/componentes/barraSegmentada.js"></script>
     <script type="module" src="./src/componentes/sliderVerticalMultiple.js"></script>

@@ -9,6 +9,7 @@
 :root {
     /* wellcome color */
     --landingFondo1: url("../../../../src/recursos/imagenes/montanas-minimalista-arte-low-poly-3354.webp");
+    --landingFondo2: url("../../../../src/recursos/imagenes/fondoVideos.jpg");
     --landingFondo1_filtro: grayScale(0.6);
     --menuHeight: 80px;
     --menuEfecto_height: 120px;
@@ -30,6 +31,15 @@
 
     --fondoClaro: var(--blanco);
     --fondoOscuro: var(--negroOscuro);
+}
+
+/* position */
+.absoluto {
+    position: absolute;
+}
+
+.relativo {
+    position: relative;
 }
 
 /* display flex */

@@ -1,6 +1,6 @@
 export const info = [
     {
-        logo: "https://www.creatit.es/wp-content/uploads/2018/04/Audi-logo-1999-1920x1080-1024x576.png",
+        logo: "./src/recursos/imagenes/marca_audi.png",
         texto: [
             `Somos una Organización sin ánimo de lucro con domicilio principal en el
             municipio de Suacha, Cundinamarca, Colombia que desde el año 2005 ha venido trabajando por`,
@@ -22,7 +22,7 @@ export const info = [
         }
     },
     {
-        logo: "https://www.creatit.es/wp-content/uploads/2018/04/logo-coca-cola-lead.png",
+        logo: "./src/recursos/imagenes/marca_airbnb.png",
         texto: [
             `Somos una Organización sin ánimo de lucro con domicilio principal en el
             municipio de Suacha, Cundinamarca, Colombia que desde el año 2005 ha venido trabajando por`,
@@ -44,7 +44,7 @@ export const info = [
         }
     },
     {
-        logo: "https://content-management-files.canva.com/057e33ce-7a6b-474c-85f5-3a9b59e3d98b/3450logotiposqueteinspiraran.png",
+        logo: "./src/recursos/imagenes/marca_insta.jpg",
         texto: [
             `Somos una Organización sin ánimo de lucro con domicilio principal en el
             municipio de Suacha, Cundinamarca, Colombia que desde el año 2005 ha venido trabajando por`,
@@ -66,7 +66,7 @@ export const info = [
         }
     },
     {
-        logo: "https://img.magnific.com/vector-gratis/plantilla-logotipo-tienda-instagram-degradado_23-2149709626.jpg",
+        logo: "./src/recursos/imagenes/marca_cocacola.png",
         texto: [
             `Somos una Organización sin ánimo de lucro con domicilio principal en el
             municipio de Suacha, Cundinamarca, Colombia que desde el año 2005 ha venido trabajando por`,

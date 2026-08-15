@@ -3,15 +3,20 @@ const menu = document.querySelector("#contenedorNav")
 const presentacion = document.querySelector(".presentacion")
 const menuHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--menuHeight"))
 const presentacionHeight = parseFloat(window.getComputedStyle(presentacion).getPropertyValue("height"))
+const fondoEstatico = document.querySelector("#fondoEstatico")
+const fondo1 = getComputedStyle(document.documentElement).getPropertyValue("--landingFondo1")
+const fondo2 = getComputedStyle(document.documentElement).getPropertyValue("--landingFondo2")
 
-const visibilizar = async () => {
+const seccionVideosFondo = document.querySelector("#seccionVideosFondo")
+
+const mostrarMenu = async () => {
     menu.classList.remove("noVisible")
     menu.classList.add("menuVisible")
     await new Promise(resolve => setTimeout(resolve, 10))
     menu.style.opacity = 1
 }
 
-const ocultar = async () => {
+const ocultarMenu = async () => {
     menu.style.opacity = 0
     await new Promise(resolve => setTimeout(resolve, 10))
     menu.classList.add("noVisible")
@@ -46,17 +51,19 @@ const iniciarEstadisticasTarjetas = async () => {
 let pos = window.scrollY
 let estadisticasCargadas = false
 
-pos > presentacionHeight * 0.9 && visibilizar()
+pos > presentacionHeight * 1 && mostrarMenu()
 
 window.addEventListener("scroll", async () => {
     const posY = window.scrollY
 
     /* menu */
-    if (posY > presentacionHeight * 0.9 && posY > pos) {
-        visibilizar()
+    if (posY > presentacionHeight * 1 && posY > pos) {
+        mostrarMenu()
+        fondoEstatico.style.backgroundImage = fondo2
     }
-    if (posY <= presentacionHeight * 0.9 && posY < pos) {
-        ocultar()
+    if (posY <= presentacionHeight * 1 && posY < pos) {
+        ocultarMenu()
+        fondoEstatico.style.backgroundImage = fondo1
     }
     /* estadisticas */
     if (pos >= presentacionHeight * 0.8 && !estadisticasCargadas) {
