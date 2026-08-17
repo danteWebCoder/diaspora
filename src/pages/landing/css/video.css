@@ -1,6 +1,6 @@
 .video .cajaContenido .contenedorVideos {
-    --contenedorHeight: calc(100vh - var(--menuEfecto_height) - 8vh);
-    --videoInfoHeight: 100px;
+    --contenedorHeight: 34vw;
+    --miniaturasWidth: 210px;
 
     display: flex;
     position: relative;
@@ -8,52 +8,65 @@
     height: var(--contenedorHeight);
 
     .grupoSeleccion {
-        width: fit-content;
+        width: var(--miniaturasWidth);
         height: 100%;
 
         .cajaVideo {
             position: relative;
             height: calc((100% - 30px) / 4);
-            aspect-ratio: 16/10;
-            margin-bottom: 10px;
-            border: 2px solid transparent;
-            border-radius: 8px;
-            filter: grayscale(1);
-            overflow: hidden;
-            transition: 100ms ease-in-out;
+            aspect-ratio: 16/9;
+
+            &:not(:last-child of &) {
+                margin-bottom: 10px;
+            }
 
             img {
                 transition: 200ms ease-in-out;
+                filter: grayscale(1);
+                border-radius: 8px;
+                border: 4px solid transparent;
+
             }
 
-            &:hover {
+            &:has(.opcionOculta:hover) img {
                 filter: grayscale(0);
-
-                img {
-                    transform: scale(1);
-                }
             }
 
-            &:has(.opcionOculta:checked) {
+            &:has(.opcionOculta:checked) img {
                 filter: grayscale(0);
-                border: 2px solid var(--enfasis);
-
-                img {
-                    transform: scale(1);
-                }
+                border: 4px solid var(--enfasis);
             }
         }
     }
 
-    .reproductorCaja {
-        align-items: flex-end;
-        flex: 1;
-        padding-left: 100px;
+    .cajaReproductor {
+        width: 76%;
+        height: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 5px 5px 10px black;
+    }
 
-        .reproductor {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 5px 5px 10px black;
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+        height: fit-content;
+
+        .grupoSeleccion {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            height: fit-content;
+
+            .cajaVideo {
+                width: calc((100% - 60px) / 4);
+                margin-bottom: 20px;
+            }
+        }
+
+        .cajaReproductor {
+            width: 100%;
+            aspect-ratio: 16/9;
         }
     }
 }

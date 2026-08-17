@@ -51,7 +51,10 @@ const iniciarEstadisticasTarjetas = async () => {
 let pos = window.scrollY
 let estadisticasCargadas = false
 
-pos > presentacionHeight * 1 && mostrarMenu()
+if (pos >= presentacionHeight) {
+    mostrarMenu()
+    fondoEstatico.style.backgroundImage = fondo2
+}
 
 window.addEventListener("scroll", async () => {
     const posY = window.scrollY
