@@ -136,29 +136,35 @@
             </div>
         </section>
 
-        <section class="video seccionTransparente relativo">
-            <div class="cajaContenido">
-                <div class="contenedorVideos filaEsp">
-                    <ul class="grupoSeleccion">
-                        <li class="cajaVideo centrado">
-                            <img class="max" src="./src/recursos/imagenes/1.jpg" alt="miniaturaVideo">
-                            <input class="opcionOculta" type="radio" name="video">
+        <section class="video seccionTransparente">
+            <div class="cajaContenido columnaCen">
+                <div class="contenedorVideos relativo filaEsp">
+                    <ul class="cajaSeleccion columnaEsp absoluto">
+                        <li class="cajaVideo">
+                            <img class="max tempo200" src="./src/recursos/imagenes/1.jpg" alt="miniaturaVideo">
+                            <input type="checkbox" name="seleccionVideo" id="">
                         </li>
                         <li class="cajaVideo">
-                            <img class="max" src="./src/recursos/imagenes/2.jpg" alt="miniaturaVideo">
-                            <input class="opcionOculta" type="radio" name="video">
+                            <img class="max tempo200" src="./src/recursos/imagenes/2.jpg" alt="miniaturaVideo">
+                            <input type="checkbox" name="seleccionVideo" id="">
                         </li>
                         <li class="cajaVideo">
-                            <img class="max" src="./src/recursos/imagenes/3.jpg" alt="miniaturaVideo">
-                            <input class="opcionOculta" type="radio" name="video">
+                            <img class="max tempo200" src="./src/recursos/imagenes/3.jpg" alt="miniaturaVideo">
+                            <input type="checkbox" name="seleccionVideo" id="">
                         </li>
                         <li class="cajaVideo">
-                            <img class="max" src="./src/recursos/imagenes/4.jpg" alt="miniaturaVideo">
-                            <input class="opcionOculta" type="radio" name="video">
+                            <img class="max tempo200" src="./src/recursos/imagenes/4.jpg" alt="miniaturaVideo">
+                            <input type="checkbox" name="seleccionVideo" id="">
                         </li>
                     </ul>
 
-                    <div id="cajaReproductor" class="cajaReproductor"></div>
+                    <div class="contenedorReproductor columnaEsp absoluto">
+                        <div class="cajaInfoVideo columna">
+                            <h4 id="tituloVideo" class="tituloVideo filaCenVertical"></h4>
+                            <p id="infoVideo" class="infoVideo"></p>
+                        </div>
+                        <div id="cajaReproductor" class="cajaReproductor filaCenVertical"></div>
+                    </div>
                 </div>
             </div>
         </section>

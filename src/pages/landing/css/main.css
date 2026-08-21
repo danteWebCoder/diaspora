@@ -4,7 +4,7 @@
 
 .seccionTransparente {
     width: 100vw;
-    height: 150vh;
+    height: fit-content;
 
     .cajaContenido {
         position: relative;
@@ -15,12 +15,16 @@
         font-size: 20px;
         padding: var(--general_padding);
     }
+
+    @media screen and (max-width: 800px) {
+        .cajaContenido { padding: 0;}
+    }
 }
 
 .seccionBlanca {
     position: relative;
     width: 100vw;
-    height: 150vh;
+    height: fit-content;
 
     .fondoClaro {
         position: absolute;

@@ -13,7 +13,7 @@
     --landingFondo1_filtro: grayScale(0.6);
     --menuHeight: 80px;
     --menuEfecto_height: 120px;
-    --general_padding: 10vw;
+    --general_padding: 10%;
 
     /* paleta */
     --blanco: rgb(240, 240, 240);
@@ -31,6 +31,9 @@
 
     --fondoClaro: var(--blanco);
     --fondoOscuro: var(--negroOscuro);
+
+    /* fuentes */
+    --tipoNormal: 14px;
 }
 
 /* position */
@@ -122,4 +125,8 @@
     width: 100%;
     height: 100%;
     cursor: pointer;
+}
+
+.tempo200 {
+    transition: 200ms ease-in-out;
 }
