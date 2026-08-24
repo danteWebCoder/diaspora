@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-responsive="1200 800">
 
 <head>
     <meta charset="UTF-8">
@@ -27,7 +27,8 @@
 
         <section class="presentacion seccionTransparente"> <!-- z2 -->
             <div class="cajaContenido centrado">
-                <div class="cajaTitulos">
+                <div class="cajaTitulos" 
+                    media-800="remove: [algo]">
                     <h1 class="SubTitulo">FUNDACION</h1>
                     <h2 class="h tituloPrincipal">LA DIASPORA</h2>
                     <h3 class="h nota">EL ARTE COMO MEDIO DE REINDIVICACION DE LOS DERECHOS HUMANOS</h3>
@@ -233,11 +234,12 @@
     </div>
 
     <!-- controles -->
+    <script type="module" src="./src/helpers/responsive.js"></script>
     <script type="module" src="./src/pages/landing/scrollControl.js"></script>
     <script type="module" src="./src/pages/landing/navControl.js"></script>
     <script type="module" src="./src/pages/landing/introControl.js"></script>
-    <script type="module" src="./src/pages/landing/videosControl.js"></script>
-    <!-- componentes -->
+<!--     <script type="module" src="./src/pages/landing/videosControl.js"></script>
+ -->    <!-- componentes -->
     <script type="module" src="./src/componentes/circuloProgreso.js"></script>
     <script type="module" src="./src/componentes/barraSegmentada.js"></script>
     <script type="module" src="./src/componentes/sliderVerticalMultiple.js"></script>

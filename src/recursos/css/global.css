@@ -10,7 +10,7 @@
     /* wellcome color */
     --landingFondo1: url("../../../../src/recursos/imagenes/montanas-minimalista-arte-low-poly-3354.webp");
     --landingFondo2: url("../../../../src/recursos/imagenes/fondoVideos.jpg");
-    --landingFondo1_filtro: grayScale(0.6);
+    --landingFondo1_filtro: grayScale(0.6) brightness(0.8);
     --menuHeight: 80px;
     --menuEfecto_height: 120px;
     --general_padding: 10%;

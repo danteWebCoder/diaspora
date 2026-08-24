@@ -15,10 +15,6 @@
         font-size: 20px;
         padding: var(--general_padding);
     }
-
-    @media screen and (max-width: 800px) {
-        .cajaContenido { padding: 0;}
-    }
 }
 
 .seccionBlanca {
