@@ -24,7 +24,7 @@ const videos = {
 
 
 const titulo = document.querySelector("#tituloVideo")
-const info = document.querySelector("#infoVideo")
+const info = document.querySelector("#textoVideo")
 
 const cambiarVideo = (index) => {
     const reproductor = document.querySelector("#cajaReproductor")

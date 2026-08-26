@@ -1,125 +1,112 @@
 .video .cajaContenido .contenedorVideos {
-    display: flex;
     width: 100%;
     min-width: 900px;
     max-width: 1400px;
-    aspect-ratio: 20/9;
+    aspect-ratio: 20/9.6;
     border-radius: 12px;
-    border: 1px solid red;
+
+    .cajaReproductor {
+        width: 70%;
+        height: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+    }
 
     .cajaSeleccion {
-        width: 18%;
+        width: calc(25% - 3px);
         height: 100%;
-        overFlow: hidden;
+        border-radius: 8px;
+        overflow: hidden;
 
-        .cajaVideo {
-            height: 24%;
-            aspect-ratio: 16/9;
-            border-radius: 8px;
-            overflow: hidden;
-            opacity: 0.5;
+        .cajaMiniatura {
+            width: 100%;
+            height: calc((100% / 3) - 2px);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: grayscale(0.7);
+            cursor: pointer;
             transition: 100ms;
 
-            img {
-                filter: grayscale(1);
-                cursor: pointer;
-                transition: 100ms;
+            &:hover {
+                filter: grayscale(0);
             }
 
-            &:hover {
-                opacity: 1;
+            &:nth-child(1 of &) {
+                background-image: url("./../../../recursos/imagenes/1.jpg");
+            }
 
-                img {
-                    filter: grayscale(0);
+            &:nth-child(2 of &) {
+                background-image: url("./../../../recursos/imagenes/2.jpg");
+            }
+
+            &:nth-child(3 of &) {
+                background-image: url("./../../../recursos/imagenes/3.jpg");
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .video.seccionTransparente {
+
+        .contenedorVideos {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 86%;
+            min-width: 700px;
+            max-width: 1400px;
+            aspect-ratio: 16/11;
+
+            .cajaReproductor {
+                width: 100%;
+                height: calc(75% - 10px);
+            }
+
+            .cajaSeleccion {
+                flex-direction: row;
+                aspect-ratio: unset;
+                width: 100%;
+                height: 25%;
+
+                .cajaMiniatura {
+                    width: calc((100% / 3) - 2px);
+                    height: 100%;
                 }
             }
         }
     }
+}
 
-    .contenedorReproductor {
-        right: 0;
-        width: 70%;
-        height: 100%;
+@media screen and (orientation: portrait) and (max-width: 700px) {
+    .video.seccionTransparente {
+        height: fit-content;
 
-        .cajaInfoVideo {
-            width: 100%;
-            height: 60px;
-            border-radius: 8px;
-            background-color: rgba(0, 0, 0, 0.4);
+        .cajaContenido {
+            padding: 0;
 
-
-            .tituloVideo,
-            .infoVideo {
-                margin-top: 6px;
-                text-indent: 20px;
-            }
-
-            .infoVideo {
-                font-size: var(--tipoNormal);
-            }
-        }
-
-        .cajaReproductor {
-            width: 100%;
-            height: calc(100% - 70px);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-    }
-
-    /*     @media screen and (max-width: 1400px) and (orientation: landscape) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 78vh;
-
-        .contenedorReproductor {
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: calc(80% - 20px);
-
-            .cajaInfoVideo {
-                width: calc(100% - 40px);
-            }
-
-            .cajaReproductor {
-                bottom: 10px;
-                width: 660px;
-                height: 85%;
-            }
-        }
-
-        .cajaSeleccion {
-            bottom: 20px;
-            width: fit-content;
-            height: 20%;
-            flex-direction: row;
-
-            .cajaVideo {
-                width: 25%;
-                height: 100%;
-            }
-        }
-    }
- */
-    /*     @media screen and (max-width: 400px) {
-        padding: 0;
-
-        .cajaSeleccion {
-            top: 0;
-            flex-direction: column;
-            width: 100%;
-            height: fit-content;
-            
-            .cajaVideo {
+            .contenedorVideos {
                 width: 100%;
+                min-width: unset;
+
+                height: fit-content;
+
+                .cajaReproductor {
+                    display: none;
+                }
+
+                .cajaSeleccion {
+                    flex-direction: column;
+                    height: auto;
+
+                    .cajaMiniatura {
+                        width: 100%;
+                        aspect-ratio: 16/9;
+                        filter: none;
+                    }
+                }
             }
         }
-
-        .contenedorReproductor {
-            display: none;
-        }
     }
- */
 }

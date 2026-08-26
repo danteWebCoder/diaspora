@@ -271,7 +271,8 @@
 
 .contenedorSlider {
     position: relative;
-    width: 85%;
-    height: 90px;
+    width: 90%;
+    height: 100px;
     margin-top: 160px;
+    border: 1px solid red;
 }

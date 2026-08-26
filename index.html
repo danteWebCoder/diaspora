@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-responsive="1200 800">
+<html lang="es" data-responsive="1000">
 
 <head>
     <meta charset="UTF-8">
@@ -27,8 +27,7 @@
 
         <section class="presentacion seccionTransparente"> <!-- z2 -->
             <div class="cajaContenido centrado">
-                <div class="cajaTitulos" 
-                    media-800="remove: [algo]">
+                <div class="cajaTitulos">
                     <h1 class="SubTitulo">FUNDACION</h1>
                     <h2 class="h tituloPrincipal">LA DIASPORA</h2>
                     <h3 class="h nota">EL ARTE COMO MEDIO DE REINDIVICACION DE LOS DERECHOS HUMANOS</h3>
@@ -136,40 +135,20 @@
                 </div>
             </div>
         </section>
-
+        <!-- video -->
         <section class="video seccionTransparente">
-            <div class="cajaContenido columnaCen">
-                <div class="contenedorVideos relativo filaEsp">
-                    <ul class="cajaSeleccion columnaEsp absoluto">
-                        <li class="cajaVideo">
-                            <img class="max tempo200" src="./src/recursos/imagenes/1.jpg" alt="miniaturaVideo">
-                            <input type="checkbox" name="seleccionVideo" id="">
-                        </li>
-                        <li class="cajaVideo">
-                            <img class="max tempo200" src="./src/recursos/imagenes/2.jpg" alt="miniaturaVideo">
-                            <input type="checkbox" name="seleccionVideo" id="">
-                        </li>
-                        <li class="cajaVideo">
-                            <img class="max tempo200" src="./src/recursos/imagenes/3.jpg" alt="miniaturaVideo">
-                            <input type="checkbox" name="seleccionVideo" id="">
-                        </li>
-                        <li class="cajaVideo">
-                            <img class="max tempo200" src="./src/recursos/imagenes/4.jpg" alt="miniaturaVideo">
-                            <input type="checkbox" name="seleccionVideo" id="">
-                        </li>
+            <div class="cajaContenido centrado">
+                <div class="contenedorVideos filaEsp">
+                    <ul class="cajaSeleccion columnaEsp">
+                        <li class="cajaMiniatura"></li>
+                        <li class="cajaMiniatura"></li>
+                        <li class="cajaMiniatura"></li>
                     </ul>
-
-                    <div class="contenedorReproductor columnaEsp absoluto">
-                        <div class="cajaInfoVideo columna">
-                            <h4 id="tituloVideo" class="tituloVideo filaCenVertical"></h4>
-                            <p id="infoVideo" class="infoVideo"></p>
-                        </div>
-                        <div id="cajaReproductor" class="cajaReproductor filaCenVertical"></div>
-                    </div>
+                    <div id="cajaReproductor" class="cajaReproductor"></div>
                 </div>
             </div>
         </section>
-
+        <!-- comunidad -->
         <section class="comunity seccionBlanca">
             <div class="fondoClaro"></div>
             <div class="cajaContenido centrado">
@@ -234,7 +213,6 @@
     </div>
 
     <!-- controles -->
-    <script type="module" src="./src/helpers/responsive.js"></script>
     <script type="module" src="./src/pages/landing/scrollControl.js"></script>
     <script type="module" src="./src/pages/landing/navControl.js"></script>
     <script type="module" src="./src/pages/landing/introControl.js"></script>
