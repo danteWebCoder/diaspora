@@ -12,10 +12,7 @@ const videos = [
 
 const restaurarMiniaturas = (indexSeleccion) => {
     cajasMiniaturas.forEach((item, index) => {
-        if (index !== indexSeleccion) {
-            console.log(item)
-            item.innerHTML = ""
-        }
+        index !== indexSeleccion && (item.innerHTML = "")
     })
 }
 
