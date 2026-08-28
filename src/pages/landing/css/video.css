@@ -49,6 +49,7 @@
 
 @media screen and (max-width: 1200px) {
     .video.seccionTransparente {
+        height: fit-content;
 
         .contenedorVideos {
             display: flex;
