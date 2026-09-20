@@ -75,33 +75,6 @@
     }
 
 
-    .subscribe {
-        position: relative;
-        width: 100%;
-        height: 60vh;
-        background-color: var(--enfasis);
-
-        .button {
-            position: relative;
-            width: 160px;
-            height: 40px;
-            font-size: 14px;
-            color: white;
-            font-weight: 700;
-            padding: 10px 20px;
-            border: 2px solid white;
-            border-radius: 12px;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: 100ms;
-
-            &:hover {
-                border: 3px solid var(--textoOscuro);
-                color: var(--textoOscuro);
-                letter-spacing: 4px;
-            }
-        }
-    }
 
     footer {
         position: relative;

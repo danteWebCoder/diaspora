@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="./src/pages/landing/css/presentacion.css">
     <link rel="stylesheet" href="./src/pages/landing/css/intro.css">
     <link rel="stylesheet" href="./src/pages/landing/css/video.css">
+    <link rel="stylesheet" href="./src/pages/landing/css/subscribir.css">
     <!-- ojo especifidad por orden, siempre despues del style principal por las clases que pisan -->
-    <link rel="stylesheet" href="./src/recursos/css/global.css">
+    <link rel="stylesheet" href="./src/pages/landing/css/global.css">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -148,20 +149,38 @@
             </div>
         </section>
         <!-- comunidad -->
-        <section class="comunity seccionBlanca">
+        <section class="comunidad seccionBlanca">
             <div class="fondoClaro"></div>
             <div class="cajaContenido centrado">
                 <h1>COMUNIDAD</h1>
             </div>
         </section>
 
-        <section class="subscribe centrado">
-            <span class="button centrado">SUBSCRIBETE</span>
-        </section>
+        <section class="subscribir seccionBlanca centrado">
+            <div class="cajaContenido">
+                <div class="subscribirFlex">
+                    <div class="cajaSubscribir">
+                        <h2 class="subscribirH2">Subscríbete</h2>
+                        <p class="citaSubscribir">Lorem ipsum dolor sit amet consectetur adipisicing elit. A est
+                            expedita iure cumque</p>
+                    </div>
+                    <div class="cajaSubscribir">
+                        <input class="inputMail" type="email" name="mail" id="mail">
+                        <label class="condicionesCaja relativo">
+                            <input class="condicionesInput" type="checkbox" name="condiciones" id="condiciones">
+                            <span class="condiciones">Acepto el uso de mi correo electrónico con fines
+                                informativos</span>
+                            <span class="botonMail centrado absoluto">Enviar</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
 
-        <footer class="centrado">
-            <h1>FOOTER</h1>
-        </footer>
+    <footer class="centrado">
+        <h1>FOOTER</h1>
+    </footer>
 
 
     </div>

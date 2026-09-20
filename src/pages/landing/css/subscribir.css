@@ -1,0 +1,89 @@
+.subscribir {
+    position: relative;
+    background-color: var(--enfasis);
+
+    .cajaContenido .subscribirFlex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-width: 700px;
+        max-width: 1400px;
+        height: fit-content;
+
+        .cajaSubscribir {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            width: 44%;
+            height: 140px;
+            color: var(--negro);
+
+            .subscribirH2 {
+                font-size: 38px;
+                font-weight: 400;
+            }
+
+            .citaSubscribir {
+                font-size: 26px;
+                font-weight: lighter;
+                line-height: 36px;
+            }
+
+            .inputMail {
+                all: unset;
+                width: calc(100% - 10px);
+                height: 50px;
+                background-color: var(--blanco);
+                border-radius: 8px;
+                text-align: right;
+                padding-right: 10px;
+            }
+
+            .condicionesCaja {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: auto;
+
+                .condicionesInput {
+                    bottom: 10px;
+                    right: 0;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                    cursor: pointer;
+                }
+
+                .condiciones {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .botonMail {
+            bottom: 0;
+            right: 0;
+            width: 120px;
+            height: 50px;
+            background-color: var(--blanco);
+            border-radius: 8px;
+            color: grey;
+            transition: 100ms;
+        }
+
+        .botonActivado {
+            box-shadow: 5px 5px 10px black;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 2px 2px 5px black;
+            }
+
+            &:active {
+                box-shadow: inset 2px 2px 5px black;
+            }
+        }
+    }
+}
+}

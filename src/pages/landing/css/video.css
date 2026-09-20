@@ -102,8 +102,8 @@
                     height: auto;
 
                     .cajaMiniatura {
-                        width: 100%;
-                        aspect-ratio: 16/9;
+                        width: 100dvi;
+                        height: 100dvh;
                         filter: none;
                     }
                 }
