@@ -9,7 +9,6 @@
         min-width: 700px;
         max-width: 1400px;
         height: fit-content;
-        border: 1px solid red;
 
         .cajaSubscribir {
             display: flex;
@@ -34,7 +33,7 @@
 
             .inputMail {
                 all: unset;
-                width: calc(100% - 10px);
+                width: 100%;
                 height: 50px;
                 background-color: var(--blanco);
                 border-radius: 8px;

@@ -21,6 +21,7 @@
     --blancoTransparente: rgb(from var(--blanco) r g b / 0);
 
     --negro: rgb(60, 60, 60);
+    --negroTransparente: rgb(from var(--negro) r g b / 0.5);
 
     --enfasis: rgb(252, 201, 31);
     --enfasisClaro: rgb(250, 232, 177);
@@ -119,7 +120,7 @@
 }
 
 /* inputs */
-.opcionOculta {
+.inputOculto {
     position: absolute;
     left: 0;
     top: 0;
