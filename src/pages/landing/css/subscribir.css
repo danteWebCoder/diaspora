@@ -1,5 +1,4 @@
 .subscribir {
-    position: relative;
     background-color: var(--enfasis);
 
     .cajaContenido .subscribirFlex {
@@ -10,6 +9,7 @@
         min-width: 700px;
         max-width: 1400px;
         height: fit-content;
+        border: 1px solid red;
 
         .cajaSubscribir {
             display: flex;
@@ -38,8 +38,7 @@
                 height: 50px;
                 background-color: var(--blanco);
                 border-radius: 8px;
-                text-align: right;
-                padding-right: 10px;
+                text-indent: 15px;
                 margin-bottom: 80px;
             }
 
@@ -86,6 +85,29 @@
 
             &:active {
                 box-shadow: inset 2px 2px 5px black;
+            }
+        }
+    }
+}
+
+@media screen and (orientation: portrait) and (max-width: 700px) {
+    .subscribir .cajaContenido {
+        width: 100%;
+        height: fit-content;
+
+        .subscribirFlex {
+            flex-direction: column;
+            align-items: center;
+            min-width: unset;
+            max-width: unset;
+
+            .cajaSubscribir {
+                width: 100%;
+                height: fit-content;
+
+                &:nth-child(1 of &) {
+                    margin-bottom: 50px;
+                }
             }
         }
     }
