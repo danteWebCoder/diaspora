@@ -4,7 +4,7 @@
 
     .cajaContenido .subscribirFlex {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: space-between;
         width: 100%;
         min-width: 700px;
@@ -16,18 +16,20 @@
             justify-content: space-between;
             flex-direction: column;
             width: 44%;
-            height: 140px;
+            height: auto;
             color: var(--negro);
 
             .subscribirH2 {
                 font-size: 38px;
                 font-weight: 400;
+                margin-bottom: 20px;
             }
 
             .citaSubscribir {
+                top: 10px;
                 font-size: 26px;
                 font-weight: lighter;
-                line-height: 36px;
+                line-height: 46px;
             }
 
             .inputMail {
@@ -38,12 +40,13 @@
                 border-radius: 8px;
                 text-align: right;
                 padding-right: 10px;
+                margin-bottom: 80px;
             }
 
             .condicionesCaja {
                 display: flex;
                 align-items: center;
-                width: 100%;
+                width: calc(100% - 140px);
                 height: auto;
 
                 .condicionesInput {
