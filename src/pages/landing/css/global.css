@@ -32,6 +32,8 @@
     --fondoClaro: var(--blanco);
     --fondoOscuro: var(--negroOscuro);
 
+    --radiusGeneral: 12px;
+
     /* fuentes */
     --tipoNormal: 14px;
 }

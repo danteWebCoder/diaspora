@@ -48,6 +48,7 @@
                 align-items: center;
                 width: calc(100% - 140px);
                 height: auto;
+                cursor: pointer;
 
                 .condicionesInput {
                     bottom: 10px;
@@ -55,7 +56,6 @@
                     width: 20px;
                     height: 20px;
                     margin-right: 10px;
-                    cursor: pointer;
                 }
 
                 .condiciones {
@@ -65,18 +65,19 @@
         }
 
         .botonMail {
+            border: none;
             bottom: 0;
             right: 0;
             width: 120px;
             height: 50px;
             background-color: var(--blanco);
             border-radius: 8px;
+            font-size: 16px;
             color: grey;
             transition: 100ms;
         }
 
         .botonActivado {
-            box-shadow: 5px 5px 10px black;
             cursor: pointer;
 
             &:hover {
@@ -88,5 +89,4 @@
             }
         }
     }
-}
 }

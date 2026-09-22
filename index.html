@@ -144,7 +144,10 @@
                         <li class="cajaMiniatura"></li>
                         <li class="cajaMiniatura"></li>
                     </ul>
-                    <div id="cajaReproductor" class="cajaReproductor"></div>
+                    <div class="cajaReproductorIcono centrado relativo">
+                        <div class="imagenReproductor absoluto"></div>
+                        <div id="cajaReproductor" class="cajaReproductor absoluto max"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -158,21 +161,20 @@
 
         <section class="subscribir seccionBlanca centrado">
             <div class="cajaContenido">
-                <div class="subscribirFlex">
+                <form class="subscribirFlex" action="" method="GET">
                     <div class="cajaSubscribir">
                         <h2 class="subscribirH2">Subscríbete</h2>
                         <p class="citaSubscribir relativo">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                     <div class="cajaSubscribir  relativo">
-                        <input class="inputMail" type="email" name="mail" id="mail">
+                        <input class="inputMail" type="email" name="mail" id="mail" placeholder="tuCorreoElectronico@mail.com" required>
                         <label class="condicionesCaja relativo">
                             <input class="condicionesInput" type="checkbox" name="condiciones" id="condiciones">
-                            <span class="condiciones">Acepto el uso de mi correo electrónico con fines
-                                informativos</span>
+                            <span class="condiciones">Acepto el uso de mi correo electrónico con fines informativos</span>
                         </label>
-                        <span class="botonMail centrado absoluto">Enviar</span>
+                        <button type="submit" class="botonMail bototActivado centrado absoluto">Enviar</button>
                     </div>
-                </div>
+                </form>
             </div>
     </div>
     </section>
@@ -234,6 +236,7 @@
     <script type="module" src="./src/pages/landing/navControl.js"></script>
     <script type="module" src="./src/pages/landing/introControl.js"></script>
     <script type="module" src="./src/pages/landing/videosControl.js"></script>
+    <script type="module" src="./src/pages/landing/subscribirControl.js"></script>
     <!-- componentes -->
     <script type="module" src="./src/componentes/circuloProgreso.js"></script>
     <script type="module" src="./src/componentes/barraSegmentada.js"></script>

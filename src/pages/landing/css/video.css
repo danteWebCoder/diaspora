@@ -2,14 +2,23 @@
     width: 100%;
     min-width: 900px;
     max-width: 1400px;
-    aspect-ratio: 20/9.6;
+    aspect-ratio: 20/9.4;
     border-radius: 12px;
 
-    .cajaReproductor {
+    .cajaReproductorIcono {
         width: 70%;
         height: 100%;
-        border-radius: 12px;
+        border-radius: var(--radiusGeneral);
         overflow: hidden;
+
+        .imagenReproductor {
+            width: 128px;
+            aspect-ratio: 1/1;
+            background-image: url("/src/recursos/iconos/video.png");
+            background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
     }
 
     .cajaSeleccion {
@@ -60,7 +69,7 @@
             max-width: 1400px;
             aspect-ratio: 16/11;
 
-            .cajaReproductor {
+            .cajaReproductorIcono {
                 width: 100%;
                 height: calc(75% - 10px);
             }
@@ -93,7 +102,7 @@
 
                 height: fit-content;
 
-                .cajaReproductor {
+                .cajaReproductorIcono {
                     display: none;
                 }
 
