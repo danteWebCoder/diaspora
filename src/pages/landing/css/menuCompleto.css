@@ -2,11 +2,9 @@
     position: fixed;
     z-index: 6;
     top: 30px;
-    right: 30px;
+    left: 30px;
     width: 40px;
     height: 40px;
-    border: 2px solid var(--blanco);
-    border-radius: 4px;
 
     .cajaIcono {
         width: 60%;
@@ -16,11 +14,15 @@
             width: 18px;
             height: 3px;
             border-radius: 4px;
-            background-color: var(--negro);
+            background-color: var(--blanco);
 
             &:not(:nth-child(1 of &)) {
                 margin-top: 4px;
             }
+        }
+
+        .lineaBotonNegra {
+            background-color: var(--negro);
         }
     }
 }
@@ -54,18 +56,13 @@
 }
 
 
-&:has(.menuBoton .inputOculto:hover) {
+&:has(.menuBoton .inputOculto:hover),
+&:has(.menuBoton .inputOculto:checked) {
     .menuBoton .cajaIcono .lineaBoton {
         background-color: var(--enfasis);
     }
 }
 
-&:has(.menuBoton .inputOculto:checked) {
-    .menuBoton .cajaIcono .lineaBoton {
-        background-color: var(--negro);
-    }
-
-    .menuPantalla {
-        right: 0;
-    }
+&:has(.menuBoton .inputOculto:checked) .menuPantalla {
+    right: 0;
 }
