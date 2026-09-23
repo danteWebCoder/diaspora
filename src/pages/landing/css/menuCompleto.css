@@ -25,7 +25,7 @@
     }
 }
 
-.desplegableMenuPantalla {
+.menuPantalla {
     position: fixed;
     z-index: 5;
     top: 0;
@@ -61,7 +61,7 @@
         background-color: var(--negro);
     }
 
-    .desplegableMenuPantalla {
+    .menuPantalla {
         right: 0;
     }
 }
