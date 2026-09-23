@@ -6,10 +6,9 @@ const presentacionHeight = parseFloat(window.getComputedStyle(presentacion).getP
 const fondoEstatico = document.querySelector("#fondoEstatico")
 const fondo1 = getComputedStyle(document.documentElement).getPropertyValue("--landingFondo1")
 const fondo2 = getComputedStyle(document.documentElement).getPropertyValue("--landingFondo2")
-const menuFondo = document.querySelector("#menuFondo")
 const lineasBotonMenu = document.querySelectorAll(".lineaBoton")
 
-const mostrarMenu = async () => {
+export const mostrarMenu = async () => {
     menu.classList.remove("noVisible")
     menu.classList.add("menuVisible")
     await new Promise(resolve => setTimeout(resolve, 10))
@@ -17,7 +16,7 @@ const mostrarMenu = async () => {
     menu.style.opacity = 1
 }
 
-const ocultarMenu = async () => {
+export const ocultarMenu = async () => {
     menu.style.opacity = 0
     await new Promise(resolve => setTimeout(resolve, 10))
     menu.classList.add("noVisible")

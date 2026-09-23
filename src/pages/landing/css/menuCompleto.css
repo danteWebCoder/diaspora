@@ -47,11 +47,15 @@
         top: 0;
         width: 100%;
         height: 100px;
-        background-color: transparent;
+        background-color: var(--blanco);
     }
 
-    .menuFondoBlanco {
-        background-color: var(--blanco);
+    .contenidoMenu {
+        bottom: 0;
+        width: 100%;
+        height: calc(100% - 100px);
+        padding: 40px;
+        border: 1px solid red;
     }
 }
 
