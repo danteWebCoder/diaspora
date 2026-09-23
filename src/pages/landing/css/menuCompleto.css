@@ -41,10 +41,14 @@
     color: var(--blanco);
     text-shadow: 0 0 2px var(--negro), 2px 2px 0 var(--negro);
 
-    .fondoBlanco {
+    .menuFondo {
         top: 0;
         width: 100%;
         height: 100px;
+        background-color: transparent;
+    }
+
+    .menuFondoBlanco {
         background-color: var(--blanco);
     }
 }

@@ -6,8 +6,7 @@ const presentacionHeight = parseFloat(window.getComputedStyle(presentacion).getP
 const fondoEstatico = document.querySelector("#fondoEstatico")
 const fondo1 = getComputedStyle(document.documentElement).getPropertyValue("--landingFondo1")
 const fondo2 = getComputedStyle(document.documentElement).getPropertyValue("--landingFondo2")
-
-const seccionVideosFondo = document.querySelector("#seccionVideosFondo")
+const menuFondo = document.querySelector("#menuFondo")
 
 const mostrarMenu = async () => {
     menu.classList.remove("noVisible")
@@ -63,10 +62,12 @@ window.addEventListener("scroll", async () => {
     if (posY > presentacionHeight * 1 && posY > pos) {
         mostrarMenu()
         fondoEstatico.style.backgroundImage = fondo2
+        menuFondo.classList.add("menuFondoBlanco")
     }
     if (posY <= presentacionHeight * 1 && posY < pos) {
         ocultarMenu()
         fondoEstatico.style.backgroundImage = fondo1
+        menuFondo.classList.remove("menuFondoBlanco")
     }
     /* estadisticas */
     if (pos >= presentacionHeight * 0.8 && !estadisticasCargadas) {
