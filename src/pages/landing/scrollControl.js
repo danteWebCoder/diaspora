@@ -1,4 +1,4 @@
-import {getTempo} from "./../../helpers/utilidades.js"
+import * as utils from "./../../helpers/utilidades.js"
 
 /* menu */
 const menuPantalla = document.querySelector("#menuPantalla")
@@ -9,12 +9,12 @@ const fondoEstatico = document.querySelector("#fondoEstatico")
 const fondo1 = getComputedStyle(document.documentElement).getPropertyValue("--landingFondo1")
 const fondo2 = getComputedStyle(document.documentElement).getPropertyValue("--landingFondo2")
 const lineasBotonMenu = document.querySelectorAll(".lineaBoton")
+const tempoMenu = utils.getTempo(menuPantalla)
 
 export const mostrarNav = async () => {
     nav.classList.remove("noVisible")
     lineasBotonMenu.forEach(item => item.classList.add("lineaBotonNegra"))
-    const tempo = getTempo(menuPantalla)
-    console.log(tempo)
+    await utils.sleep(tempoMenu)
     const navVisible = !nav.classList.contains("noVisible")
 
 }

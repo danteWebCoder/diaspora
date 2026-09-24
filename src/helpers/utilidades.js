@@ -5,3 +5,7 @@ export const getTempo = (elemento) => {
     }
     return parseFloat(transicion) * 1000
 }
+
+export const sleep = async (ms) => {
+    await new Promise(resolve => setTimeout(resolve, ms))
+}
