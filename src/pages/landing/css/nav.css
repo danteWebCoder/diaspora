@@ -40,30 +40,28 @@
             font-size: 16px;
 
             .botonTexto {
-                position: relative;
+/*                 position: relative;
                 display: flex;
                 flex-direction: column;
-                width: auto;
+ */                width: auto;
                 height: 100%;
                 font-weight: 500;
                 padding: 0 0.8vw;
                 cursor: pointer;
 
-                .subMenuLista {
+                .subMenu {
                     top: calc(100% + 20px);
                     left: 0.8vw;
                     width: 240px;
-                    height: fit-content;
-                    opacity: 1;
+                    height: 0;
+                    opacity: 0;
 
                     background: rgb(from var(--fondoClaro) r g b / 0.95);
                     outline: 1px solid rgba(0, 0, 0, 0.2);
                     border-radius: 8px;
                     overflow: hidden;
 
-                    .subTexto {
-                        position: relative;
-                        right: 100%;
+                    .subItem {
                         flex-shrink: 0;
                         display: flex;
                         align-items: center;
@@ -75,14 +73,14 @@
                         transition: right 400ms ease-in-out, color 0s;
                     }
                 }
-            }
 
-            &:hover {
-                color: var(--enfasis);
+                &:hover {
+                    color: var(--enfasis);
 
-                .subMenuCaja .subMenuLista .subTexto:hover {
-                    color: var(--textoClaro);
-                    background-color: var(--enfasis);
+                    .subMenuCaja .subMenuLista .subTexto:hover {
+                        color: var(--textoClaro);
+                        background-color: var(--enfasis);
+                    }
                 }
             }
         }

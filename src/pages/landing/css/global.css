@@ -152,3 +152,7 @@
 .tempo200 {
     transition: 200ms ease-in-out;
 }
+
+.tempo300 {
+    transition: 300ms ease-in-out;
+}

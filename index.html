@@ -24,19 +24,20 @@
 </head>
 
 <body>
+    <!-- nav y falso fondo nav -->
     <div class="falsoFondoNav z2"></div>
-    <nav class="nav centrado z4">
+    <nav class="nav centrado z5">
         <span class="logo"></span>
         <div class="menuLista" id="menuLists">
             <ul class="listaTexto">
                 <li class="botonTexto centrado mainItem">Quienes somos</li>
-                <li class="botonTexto centrado" id="proyectos">Nuestros proyectos
-                    <ul class="subMenuLista absoluto">
-                        <li class="subTexto">Mundo código abierto</li>
-                        <li class="subTexto">Aprende </li>
-                        <li class="subTexto">Red Neuronal</li>
-                        <li class="subTexto">Mundo Digital</li>
-                        <li class="subTexto">Sombra Nocturna</li>
+                <li class="botonTexto centrado relativo" id="proyectos">Nuestros proyectos
+                    <ul class="subMenu proyectos tempo200 absoluto" id="subMenuProyectos">
+                        <li class="subItem">Mundo código abierto</li>
+                        <li class="subItem">Aprende </li>
+                        <li class="subItem">Red Neuronal</li>
+                        <li class="subItem">Mundo Digital</li>
+                        <li class="subItem">Sombra Nocturna</li>
                     </ul>
                 </li>
                 <li class="botonTexto centrado">Contacto</li>
@@ -51,6 +52,26 @@
         </div>
     </nav>
 
+    <!-- menu pantalla completa -->
+    <div id="menuPantalla" class="menuPantalla centrado">
+        <div id="menuFondo" class="menuFondo absoluto"></div>
+        <div class="contenidoMenu absoluto"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque facilis
+            tenetur
+            alias dolorum quidem unde
+            reprehenderit illo repellat libero non!
+        </div>
+    </div>
+
+    <div class="menuBoton centrado">
+        <ul class="cajaIcono max columnaEspCen relativo">
+            <li class="lineaBoton"></li>
+            <li class="lineaBoton"></li>
+            <li class="lineaBoton"></li>
+        </ul>
+        <input id="menuInput" type="checkBox" class="inputOculto">
+    </div>
+
+    <!-- contenido pagina -->
     <div class="fondoEstatico" id="fondoEstatico"></div> <!-- default z -->
     <div class="capaDesplazamiento">
 
@@ -217,24 +238,6 @@
 
     </div>
 
-    <!-- menu pantalla completa -->
-    <div id="menuPantalla" class="menuPantalla centrado">
-        <div id="menuFondo" class="menuFondo absoluto"></div>
-        <div class="contenidoMenu absoluto"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque facilis
-            tenetur
-            alias dolorum quidem unde
-            reprehenderit illo repellat libero non!
-        </div>
-    </div>
-
-    <div class="menuBoton centrado">
-        <ul class="cajaIcono max columnaEspCen relativo">
-            <li class="lineaBoton"></li>
-            <li class="lineaBoton"></li>
-            <li class="lineaBoton"></li>
-        </ul>
-        <input id="menuInput" type="checkBox" class="inputOculto">
-    </div>
 
     <!-- menu nav -->
     <!--     <div class="contenedorNav noVisible centrado" id="contenedorNav">
