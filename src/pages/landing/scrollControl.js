@@ -1,26 +1,26 @@
+import {getTempo} from "./../../helpers/utilidades.js"
+
 /* menu */
-const menu = document.querySelector("#contenedorNav")
+const menuPantalla = document.querySelector("#menuPantalla")
+const nav = document.querySelector("#contenedorNav")
 const presentacion = document.querySelector(".presentacion")
-const menuHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--menuHeight"))
 const presentacionHeight = parseFloat(window.getComputedStyle(presentacion).getPropertyValue("height"))
 const fondoEstatico = document.querySelector("#fondoEstatico")
 const fondo1 = getComputedStyle(document.documentElement).getPropertyValue("--landingFondo1")
 const fondo2 = getComputedStyle(document.documentElement).getPropertyValue("--landingFondo2")
 const lineasBotonMenu = document.querySelectorAll(".lineaBoton")
 
-export const mostrarMenu = async () => {
-    menu.classList.remove("noVisible")
-    menu.classList.add("menuVisible")
-    await new Promise(resolve => setTimeout(resolve, 10))
+export const mostrarNav = async () => {
+    nav.classList.remove("noVisible")
     lineasBotonMenu.forEach(item => item.classList.add("lineaBotonNegra"))
-    menu.style.opacity = 1
+    const tempo = getTempo(menuPantalla)
+    console.log(tempo)
+    const navVisible = !nav.classList.contains("noVisible")
+
 }
 
-export const ocultarMenu = async () => {
-    menu.style.opacity = 0
-    await new Promise(resolve => setTimeout(resolve, 10))
-    menu.classList.add("noVisible")
-    menu.classList.remove("menuVisible")
+export const ocultarNav = async () => {
+    nav.classList.add("noVisible")
     lineasBotonMenu.forEach(item => item.classList.remove("lineaBotonNegra"))
 }
 
@@ -53,7 +53,7 @@ let pos = window.scrollY
 let estadisticasCargadas = false
 
 if (pos >= presentacionHeight) {
-    mostrarMenu()
+    mostrarNav()
     fondoEstatico.style.backgroundImage = fondo2
 }
 
@@ -62,12 +62,12 @@ window.addEventListener("scroll", async () => {
 
     /* menu */
     if (posY > presentacionHeight * 1 && posY > pos) {
-        mostrarMenu()
+        mostrarNav()
         fondoEstatico.style.backgroundImage = fondo2
         menuFondo.classList.add("menuFondoBlanco")
     }
     if (posY <= presentacionHeight * 1 && posY < pos) {
-        ocultarMenu()
+        ocultarNav()
         fondoEstatico.style.backgroundImage = fondo1
         menuFondo.classList.remove("menuFondoBlanco")
     }
