@@ -11,7 +11,8 @@
     --landingFondo1: url("../../../../src/recursos/imagenes/montanas-minimalista-arte-low-poly-3354.webp");
     --landingFondo2: url("../../../../src/recursos/imagenes/fondoVideos.jpg");
     --landingFondo1_filtro: grayScale(0.6) brightness(0.8);
-    --nav_height: 120px;
+    --nav_height: 80px;
+    --nav_degradado: 140px;
     --general_padding: 10%;
 
     /* paleta */
@@ -98,6 +99,12 @@
     align-items: center;
 }
 
+.columnaEspAr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 .fila {
     display: flex;
 }
@@ -155,4 +162,8 @@
 
 .tempo300 {
     transition: 300ms ease-in-out;
+}
+
+.tempo400 {
+    transition: 400ms ease;
 }

@@ -25,14 +25,17 @@
 
 <body>
     <!-- nav y falso fondo nav -->
-    <div class="falsoFondoNav z2"></div>
-    <nav class="nav centrado z5">
+    <div class="capaFondoSolido z2"></div>
+    <nav class="nav z5">
         <span class="logo"></span>
-        <div class="menuLista" id="menuLists">
+        <div class="menuLista">
             <ul class="listaTexto">
-                <li class="botonTexto centrado mainItem">Quienes somos</li>
-                <li class="botonTexto centrado relativo" id="proyectos">Nuestros proyectos
-                    <ul class="subMenu proyectos tempo200 absoluto" id="subMenuProyectos">
+                <li class="botonNav centrado">Quienes somos</li>
+                <li class="botonNav centrado relativo">
+                    <span class="textoBoton centrado relativo tempo400" id="proyectos">Nuestros proyectos</span>
+                    <input type="checkbox" name="" id="" class="input max absoluto">
+
+                    <ul class="subMenu proyectos columnaEspAr absoluto tempo400" id="subMenuProyectos">
                         <li class="subItem">Mundo código abierto</li>
                         <li class="subItem">Aprende </li>
                         <li class="subItem">Red Neuronal</li>
@@ -40,8 +43,8 @@
                         <li class="subItem">Sombra Nocturna</li>
                     </ul>
                 </li>
-                <li class="botonTexto centrado">Contacto</li>
-                <li class="botonTexto centrado">Quiero colaborar</li>
+                <li class="botonNav centrado">Contacto</li>
+                <li class="botonNav centrado">Quiero colaborar</li>
             </ul>
             <ul class="listaIconos">
                 <li class="iconoCaja"><img class="icono" src="./src/recursos/iconos/facebook.webp"></li>
@@ -252,7 +255,8 @@
     <!-- controles -->
     <script type="module" src="./src/pages/landing/scrollControl.js"></script>
     <script type="module" src="./src/pages/landing/menuControl.js"></script>
-    <script type="module" src="./src/pages/landing/navControl.js"></script>
+    <!--     <script type="module" src="./src/pages/landing/navControl.js"></script>
+ -->
     <script type="module" src="./src/pages/landing/introControl.js"></script>
     <!--     <script type="module" src="./src/pages/landing/videosControl.js"></script>
  -->

@@ -1,13 +1,21 @@
-.falsoFondoNav,
+.capaFondoSolido,
 .nav {
     position: fixed;
     top: 0;
     width: 100%;
-    height: var(--nav_height);
     background-color: var(--blanco);
 }
 
+.capaFondoSolido {
+    height: var(--nav_degradado);
+    border: 1px solid blue;
+}
+
 .nav {
+    display: flex;
+    justify-content: center;
+    height: var(--nav_height);
+    border: 1px solid red;
 
     .logo {
         display: flex;
@@ -27,39 +35,52 @@
 
     .menuLista {
         display: flex;
-        justify-content: space-between;
+        align-items: center;
         width: auto;
         height: 100%;
 
         .listaTexto {
             display: flex;
             width: auto;
-            height: 100%;
+            height: 80%;
             list-style: none;
             color: var(--textoOscuro);
             font-size: 16px;
 
-            .botonTexto {
-/*                 position: relative;
-                display: flex;
-                flex-direction: column;
- */                width: auto;
+            .botonNav {
+                width: auto;
                 height: 100%;
-                font-weight: 500;
-                padding: 0 0.8vw;
-                cursor: pointer;
+                padding: 0 20px;
+
+                .textoBoton {
+                    top: 0;
+                    width: fit-content;
+                    height: 40px;
+                    text-wrap: nowrap;
+                    background-color: transparent;
+                    padding: 0 20px;
+                    border-radius: 8px;
+                }
+
+                .input {
+                    appearance: none;
+                    cursor: pointer;
+                }
 
                 .subMenu {
-                    top: calc(100% + 20px);
-                    left: 0.8vw;
+                    top: 20vh;
+                    left: 20px;
                     width: 240px;
-                    height: 0;
+                    height: auto;
                     opacity: 0;
-
-                    background: rgb(from var(--fondoClaro) r g b / 0.95);
-                    outline: 1px solid rgba(0, 0, 0, 0.2);
+                    background: rgb(from var(--fondoClaro) r g b / 0.8);
+                    backdrop-filter: blur(8px);
+                    /*                     border: 1px solid var(--negro);
+ */
                     border-radius: 8px;
-                    overflow: hidden;
+                    padding: 20px 10px;
+                    filter: blur(40px);
+                    pointer-events: none;
 
                     .subItem {
                         flex-shrink: 0;
@@ -67,19 +88,42 @@
                         align-items: center;
                         width: 100%;
                         height: 40px;
-                        color: rgb(97, 96, 96);
                         font-weight: normal;
                         text-indent: 14px;
-                        transition: right 400ms ease-in-out, color 0s;
+                        border-radius: 6px;
+                        transition: background-color 500ms ease-out;
+
+                        &:not(:nth-child(1 of &)) {
+                            margin-top: 5px;
+                        }
+
+                        &:hover {
+                            background-color: var(--enfasis);
+                            color: var(--blanco);
+                            font-weight: bolder;
+                            transition: background-color 0ms;
+                        }
                     }
                 }
 
-                &:hover {
-                    color: var(--enfasis);
+                &:has(.input:hover) {
+                    .textoBoton {
+                        color: var(--enfasis)
+                    }
+                }
 
-                    .subMenuCaja .subMenuLista .subTexto:hover {
-                        color: var(--textoClaro);
-                        background-color: var(--enfasis);
+                &:has(.input:checked) {
+                    .textoBoton {
+                        color: var(--blanco);
+                        background-color: var(--negro);
+                    }
+
+                    .subMenu {
+                        top: calc(100% + 10px);
+                        opacity: 1;
+                        filter: blur(0);
+                        cursor: pointer;
+                        pointer-events: all;
                     }
                 }
             }
