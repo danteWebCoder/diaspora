@@ -12,7 +12,7 @@
     --landingFondo2: url("../../../../src/recursos/imagenes/fondoVideos.jpg");
     --landingFondo1_filtro: grayScale(0.6) brightness(0.8);
     --nav_height: 80px;
-    --nav_degradado: 140px;
+    --nav_degradado: 40px;
     --general_padding: 10%;
 
     /* paleta */
@@ -138,6 +138,11 @@
 .max {
     width: 100%;
     height: 100%;
+}
+
+.maxVisual {
+    width: 100vw;
+    height: 100vh;
 }
 
 /* otros */

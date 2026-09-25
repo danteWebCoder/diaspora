@@ -1,21 +1,28 @@
 .capaFondoSolido,
-.nav {
+.nav,
+.capaFondoDegradado {
     position: fixed;
-    top: 0;
     width: 100%;
-    background-color: var(--blanco);
 }
 
 .capaFondoSolido {
+    top: 0;
+    height: calc(var(--nav_height) + var(--nav_degradado));
+    background-color: var(--blanco);
+}
+
+.capaFondoDegradado {
+    top: var(--nav_height);
     height: var(--nav_degradado);
-    border: 1px solid blue;
+    background: linear-gradient(180deg, var(--blanco) 0%, var(--blancoTransparente) 100%);
 }
 
 .nav {
+    top: 0;
     display: flex;
     justify-content: center;
     height: var(--nav_height);
-    border: 1px solid red;
+    background-color: var(--blanco);
 
     .logo {
         display: flex;
@@ -68,18 +75,17 @@
                 }
 
                 .subMenu {
-                    top: 20vh;
+                    top: 30vh;
                     left: 20px;
                     width: 240px;
                     height: auto;
                     opacity: 0;
                     background: rgb(from var(--fondoClaro) r g b / 0.8);
-                    backdrop-filter: blur(8px);
-                    /*                     border: 1px solid var(--negro);
- */
+                    backdrop-filter: blur(4px);
+                    border: 1px solid var(--negro);
                     border-radius: 8px;
                     padding: 20px 10px;
-                    filter: blur(40px);
+                    filter: blur(10px);
                     pointer-events: none;
 
                     .subItem {
@@ -106,10 +112,8 @@
                     }
                 }
 
-                &:has(.input:hover) {
-                    .textoBoton {
-                        color: var(--enfasis)
-                    }
+                &:has(.input:hover) .textoBoton {
+                    color: var(--enfasis)
                 }
 
                 &:has(.input:checked) {

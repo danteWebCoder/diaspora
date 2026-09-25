@@ -1,7 +1,7 @@
 .subscribir {
     background-color: var(--enfasis);
 
-    .cajaContenido .subscribirFlex {
+    .capaContenido .subscribirFlex {
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
@@ -90,7 +90,7 @@
 }
 
 @media screen and (orientation: portrait) and (max-width: 700px) {
-    .subscribir .cajaContenido {
+    .subscribir .capaContenido {
         width: 100%;
         height: fit-content;
 

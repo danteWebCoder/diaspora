@@ -1,7 +1,9 @@
-.info .cajaContenido {
+.info .capaContenido {
     --sectionMargin: 4%;
     /* only % */
     --sectionWidth: calc((100% - 2 * var(--sectionMargin)) / 3);
+
+    /*  */
 
     .subContenedor {
         flex-shrink: 0;

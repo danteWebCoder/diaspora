@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./src/pages/landing/css/main.css">
     <link rel="stylesheet" href="./src/pages/landing/css/nav.css">
     <link rel="stylesheet" href="./src/pages/landing/css/menuCompleto.css">
-    <link rel="stylesheet" href="./src/pages/landing/css/presentacion.css">
+    <link rel="stylesheet" href="./src/pages/landing/css/bienvenida.css">
     <link rel="stylesheet" href="./src/pages/landing/css/intro.css">
     <link rel="stylesheet" href="./src/pages/landing/css/video.css">
     <link rel="stylesheet" href="./src/pages/landing/css/subscribir.css">
@@ -26,6 +26,7 @@
 <body>
     <!-- nav y falso fondo nav -->
     <div class="capaFondoSolido z2"></div>
+    <div class="capaFondoDegradado z4"></div>
     <nav class="nav z5">
         <span class="logo"></span>
         <div class="menuLista">
@@ -77,34 +78,32 @@
     <!-- contenido pagina -->
     <div class="fondoEstatico" id="fondoEstatico"></div> <!-- default z -->
     <div class="capaDesplazamiento">
-
-        <section class="presentacion seccionTransparente"> <!-- z2 -->
-            <div class="cajaContenido centrado">
-                <div class="cajaTitulos">
-                    <h1 class="subTitulo">FUNDACION</h1>
-                    <h2 class="h tituloPrincipal">LA DIASPORA</h2>
-                    <h3 class="h nota">EL ARTE COMO MEDIO DE REINDIVICACION DE LOS DERECHOS HUMANOS</h3>
-                    <ul class="palabrasClave filaEsp">
-                        <li>COMUNIDAD</li>
-                        <li class="separador"></li>
-                        <li>ARTE</li>
-                        <li class="separador"></li>
-                        <li>CULTURA</li>
-                        <li class="separador"></li>
-                        <li>DERECHOS</li>
-                    </ul>
-                    <ul class="antiguedad">
-                        <li class="h fecha">2005</li>
-                        <li class="icono"></li>
-                        <li class="h fecha">2026</li>
-                    </ul>
-                </div>
+        <!-- bienvenida -->
+        <section class="presentacion maxVisual z2 relativo centrado"> <!-- z2 -->
+            <div class="cajaTitulos">
+                <h1 class="subTitulo">FUNDACION</h1>
+                <h2 class="h tituloPrincipal">LA DIASPORA</h2>
+                <h3 class="h nota">EL ARTE COMO MEDIO DE REINDIVICACION DE LOS DERECHOS HUMANOS</h3>
+                <ul class="palabrasClave filaEsp">
+                    <li>COMUNIDAD</li>
+                    <li class="separador"></li>
+                    <li>ARTE</li>
+                    <li class="separador"></li>
+                    <li>CULTURA</li>
+                    <li class="separador"></li>
+                    <li>DERECHOS</li>
+                </ul>
+                <ul class="antiguedad">
+                    <li class="h fecha">2005</li>
+                    <li class="icono"></li>
+                    <li class="h fecha">2026</li>
+                </ul>
             </div>
         </section>
-
+        <!--  -->
         <section class="info seccionBlanca" id="infoSection">
-            <div class="fondoClaro"></div>
-            <div class="cajaContenido columnaCen">
+            <div class="capaFondo"></div>
+            <div class="capaContenido columnaCen">
                 <div class="contenedorInfo" id="contenedorInfo">
                     <div class="cajaImagen subContenedor" id="cajaImagen">
                         <div class="imagen max" id="imagen_info"><span class="iconoAbrir centrado"></span></div>
@@ -189,7 +188,7 @@
         </section>
         <!-- video -->
         <section class="video seccionTransparente">
-            <div class="cajaContenido centrado">
+            <div class="capaContenido centrado">
                 <div class="contenedorVideos filaEsp">
                     <ul class="cajaSeleccion columnaEsp">
                         <li class="cajaMiniatura"></li>
@@ -205,14 +204,14 @@
         </section>
         <!-- comunidad -->
         <section class="comunidad seccionBlanca">
-            <div class="fondoClaro"></div>
-            <div class="cajaContenido centrado">
+            <div class="capaFondo"></div>
+            <div class="capaContenido centrado">
                 <h1>COMUNIDAD</h1>
             </div>
         </section>
         <!-- subscribir -->
         <section class="subscribir seccionBlanca centrado">
-            <div class="cajaContenido">
+            <div class="capaContenido">
                 <form class="subscribirFlex" action="" method="GET">
                     <div class="cajaSubscribir">
                         <h2 class="subscribirH2">Subscríbete</h2>
@@ -231,12 +230,11 @@
                     </div>
                 </form>
             </div>
-    </div>
-    </section>
+        </section>
 
-    <footer class="centrado">
-        <h1>FOOTER</h1>
-    </footer>
+        <footer class="footer centrado">
+            <h1>FOOTER</h1>
+        </footer>
 
 
     </div>
@@ -253,14 +251,7 @@
 
 
     <!-- controles -->
-    <script type="module" src="./src/pages/landing/scrollControl.js"></script>
-    <script type="module" src="./src/pages/landing/menuControl.js"></script>
-    <!--     <script type="module" src="./src/pages/landing/navControl.js"></script>
- -->
-    <script type="module" src="./src/pages/landing/introControl.js"></script>
-    <!--     <script type="module" src="./src/pages/landing/videosControl.js"></script>
- -->
-    <script type="module" src="./src/pages/landing/subscribirControl.js"></script>
+
     <!-- componentes -->
     <script type="module" src="./src/componentes/circuloProgreso.js"></script>
     <script type="module" src="./src/componentes/barraSegmentada.js"></script>

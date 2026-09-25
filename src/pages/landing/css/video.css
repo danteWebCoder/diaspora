@@ -1,4 +1,4 @@
-.video .cajaContenido .contenedorVideos {
+.video .capaContenido .contenedorVideos {
     width: 100%;
     min-width: 900px;
     max-width: 1400px;
@@ -93,7 +93,7 @@
     .video.seccionTransparente {
         height: fit-content;
 
-        .cajaContenido {
+        .capaContenido {
             padding: 0;
 
             .contenedorVideos {
