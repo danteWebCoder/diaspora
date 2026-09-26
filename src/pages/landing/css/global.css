@@ -146,8 +146,14 @@
 }
 
 /* otros */
-.noVisible {
-    display: none;
+.oculto {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.visible {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* inputs */
