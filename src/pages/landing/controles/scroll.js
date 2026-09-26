@@ -1,10 +1,20 @@
 import { viewPort } from "./monitorViewPort.js"
 
-const nav = document.querySelectorAll(".navGroup")
+const grupoNav = document.querySelectorAll(".grupoNav")
 
 const alternarNav = () => {
     const alturaBienvenida = document.querySelector(".presentacion").offsetHeight
-    console.log(viewPort.scroll)
+    if (viewPort.scroll > alturaBienvenida) {
+        grupoNav.forEach(item => {
+            item.classList.replace("oculto", "visible")
+        })
+    }
+
+    if (viewPort.scroll <= alturaBienvenida) {
+        grupoNav.forEach(item => {
+            item.classList.replace("visible", "oculto")
+        })
+    }
 }
 
 viewPort.incluir("scroll", [alternarNav])
