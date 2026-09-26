@@ -25,5 +25,7 @@ export const reactivo = (objeto, arrayFn) => {
         return prop ? propFn[prop] : propFn
     }
 
+    proxy.eliminar = () => propFn = null
+
     return proxy
 }
