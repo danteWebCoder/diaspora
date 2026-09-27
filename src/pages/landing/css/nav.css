@@ -1,28 +1,27 @@
-.capaFondoSolido,
-.nav,
-.capaFondoDegradado {
+.capaSolido,
+.capaDesenfoque,
+.nav {
     position: fixed;
+    top: 0;
     width: 100%;
+    height: var(--nav_height);
 }
 
-.capaFondoSolido {
-    top: 0;
-    height: calc(var(--nav_height) + var(--nav_degradado));
+.capaSolido {
     background-color: var(--blanco);
 }
 
-.capaFondoDegradado {
-    top: var(--nav_height);
-    height: var(--nav_degradado);
-    background: linear-gradient(180deg, var(--blanco) 0%, var(--blancoTransparente) 100%);
+.capaDesenfoque,
+.nav .menuLista .listaTexto .botonNav .subMenu {
+    background: rgb(from var(--blanco) r g b / 0.8);
+    backdrop-filter: blur(5px);
 }
 
+
 .nav {
-    top: 0;
     display: flex;
     justify-content: center;
     height: var(--nav_height);
-    background-color: var(--blanco);
 
     .logo {
         display: flex;
@@ -75,17 +74,15 @@
                 }
 
                 .subMenu {
-                    top: 30vh;
+                    top: calc(var(--nav_height) + 30px);
                     left: 20px;
                     width: 240px;
                     height: auto;
                     opacity: 0;
-                    background: rgb(from var(--fondoClaro) r g b / 0.8);
-                    backdrop-filter: blur(4px);
                     border: 1px solid var(--negro);
                     border-radius: 8px;
                     padding: 20px 10px;
-                    filter: blur(10px);
+                    filter: blur(40px);
                     pointer-events: none;
 
                     .subItem {

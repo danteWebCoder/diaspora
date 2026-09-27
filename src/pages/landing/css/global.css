@@ -11,8 +11,7 @@
     --landingFondo1: url("../../../../src/recursos/imagenes/montanas-minimalista-arte-low-poly-3354.webp");
     --landingFondo2: url("../../../../src/recursos/imagenes/fondoVideos.jpg");
     --landingFondo1_filtro: grayScale(0.6) brightness(0.8);
-    --nav_height: 80px;
-    --nav_degradado: 40px;
+    --nav_height: 100px;
     --general_padding: 10%;
 
     /* paleta */
