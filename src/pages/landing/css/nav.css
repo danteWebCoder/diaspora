@@ -68,11 +68,6 @@
                     border-radius: 8px;
                 }
 
-                .input {
-                    appearance: none;
-                    cursor: pointer;
-                }
-
                 .subMenu {
                     top: calc(var(--nav_height) + 30px);
                     left: 20px;
@@ -109,11 +104,11 @@
                     }
                 }
 
-                &:has(.input:hover) .textoBoton {
+                &:has(.inputOculto:hover) .textoBoton {
                     color: var(--enfasis)
                 }
 
-                &:has(.input:checked) {
+                &:has(.inputOculto:checked) {
                     .textoBoton {
                         color: var(--blanco);
                         background-color: var(--negro);
