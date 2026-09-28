@@ -63,8 +63,8 @@ class CirculoProgreso extends HTMLElement {
             }
 
             @keyframes color {
-                0% {border-color: var(--enfasisClaro);}
-                25% {border-color: var(--enfasisClaro);}
+                0% {border-color: white;}
+                10% {border-color: white;}
                 100% {border-color: var(--enfasis);}
             }
 

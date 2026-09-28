@@ -22,6 +22,7 @@ export const resetSubMenus = () => {
 const eventosSubMenus = () => subMenus.forEach(item => item.addEventListener("mouseleave", () => cerrarSubMenus()))
 
 const init = () => {
+    alternarNav()
     eventosSubMenus()
 }
 

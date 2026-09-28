@@ -89,8 +89,8 @@ class BarraSegmentada extends HTMLElement {
             }
 
             @keyframes color {
-                0% {background-color: var(--enfasisClaro);}
-                10% {background-color: var(--enfasisClaro);}
+                0% {background-color: white;}
+                10% {background-color: white;}
                 100% {background-color: var(--enfasis);}
             }
 
