@@ -175,5 +175,5 @@
 }
 
 .tempo400 {
-    transition: 400ms ease;
+    transition: 400ms ease-out;
 }

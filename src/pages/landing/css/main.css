@@ -19,9 +19,9 @@
 
 .seccionBlanca {
     position: relative;
-/*     width: 100%;
+    width: 100%;
     height: fit-content;
- */
+
     .capaFondo {
         position: absolute;
         z-index: 1;

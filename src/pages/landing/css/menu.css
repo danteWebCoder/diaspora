@@ -2,7 +2,7 @@
     position: fixed;
     z-index: 6;
     top: 30px;
-    left: 30px;
+    right: 30px;
     width: 40px;
     height: 40px;
 
@@ -21,6 +21,10 @@
             }
         }
 
+        .lineaBoton_negro {
+            background-color: var(--negro);
+        }
+
         .lineaBotonNegra {
             background-color: var(--negro);
         }
@@ -34,36 +38,27 @@
     right: -100%;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(214, 172, 55, 0.637);
+    background-color: rgba(214, 172, 55, 0.6);
     backdrop-filter: blur(20px);
     transition: 400ms ease-out;
 
-
-    font-size: 40px;
-    color: var(--blanco);
-    text-shadow: 0 0 2px var(--negro), 2px 2px 0 var(--negro);
-
-    .menuFondo {
-        top: 0;
-        width: 100%;
-        height: 100px;
-        background-color: var(--blanco);
-    }
 
     .contenidoMenu {
         bottom: 0;
         width: 100%;
         height: calc(100% - 100px);
         padding: 40px;
+        font-size: 40px;
+        color: var(--blanco);
+        text-shadow: 0 0 2px var(--negro), 2px 2px 0 var(--negro);
         border: 1px solid red;
     }
 }
 
 
-&:has(.menuBoton .inputOculto:hover),
 &:has(.menuBoton .inputOculto:checked) {
     .menuBoton .cajaIcono .lineaBoton {
-        background-color: var(--enfasis);
+        background-color: var(--blanco);
     }
 }
 
