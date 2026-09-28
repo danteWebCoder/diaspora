@@ -17,14 +17,8 @@
     /* paleta */
     --blanco: rgb(240, 240, 240);
     --blancoMedio: rgb(180, 180, 180);
-    --blancoTransparente: rgb(from var(--blanco) r g b / 0);
-
     --negro: rgb(60, 60, 60);
-    --negroTransparente: rgb(from var(--negro) r g b / 0.5);
-
     --enfasis: rgb(252, 201, 31);
-    --enfasisClaro: rgb(250, 232, 177);
-    --enfasisOscuro: rgb(61, 49, 8);
     --textoClaro: var(--blanco);
     --textoClaroMedio: var(--blancoMedio);
     --textoOscuro: var(--negroOscuro);

@@ -1,8 +1,6 @@
 import { viewPort } from "./monitorViewPort.js"
 import * as nav from "./nav.js"
 
-/* const menuBoton = document.querySelector(".menuBoton")
- */
 const lineasBoton = document.querySelectorAll(".lineaBoton")
 const menuInput = document.querySelector("#menuInput")
 
