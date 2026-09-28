@@ -69,7 +69,7 @@
                 }
 
                 .subMenu {
-                    top: calc(var(--nav_height) + 30px);
+                    top: calc(var(--nav_height) + 50px);
                     left: 20px;
                     width: 240px;
                     height: auto;
