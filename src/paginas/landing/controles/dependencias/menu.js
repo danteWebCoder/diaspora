@@ -1,11 +1,11 @@
-import { viewPort } from "./monitorViewPort.js"
+import { estado } from "../estadoReactivo.js"
 import * as nav from "./nav.js"
 
 const lineasBoton = document.querySelectorAll(".lineaBoton")
 const menuInput = document.querySelector("#menuInput")
 
 export const cambiarColorIcono = () => {
-    viewPort.scroll >= viewPort.altura
+    estado.scroll >= estado.altura
         ? lineasBoton.forEach(item => item.classList.add("lineaBoton_negro"))
         : lineasBoton.forEach(item => item.classList.remove("lineaBoton_negro"))
 }
