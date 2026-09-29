@@ -1,19 +1,19 @@
 import { estado } from "./../reactivo.js"
 import { datosEstadisticas } from "./../../configuracion/estadisticas.js"
+import * as utilidad from "../../../../helpers/utilidades.js"
 
 export const iniciarEstadisticasTarjetas = async () => {
     if (estado.scroll >= estado.altura && !estado.introActivada) {
         const tarjetas = document.querySelectorAll(".tarjeta")
-        const tarjetas_tempo = parseFloat(getComputedStyle(tarjetas[0]).getPropertyValue("transition")) * 1000
         estado.introActivada = true
 
         for (let i = 0; i <= tarjetas.length - 1; i++) {
             tarjetas[i].classList.add("tarjeta_visible")
-            await new Promise(resolve => setTimeout(resolve, 150))
+            await utilidad.sleep(150)
             const circulo = tarjetas[i].querySelector("circulo-progreso")
             circulo.actualizar(Object.values(datosEstadisticas)[i])
         }
-        await new Promise(resolve => setTimeout(resolve, tarjetas_tempo))
+        await utilidad.sleepTempo(tarjetas[0])
         activacionImagen()
         activarEventoImagen()
     }
@@ -29,49 +29,46 @@ const iniciarEstadisticasHorizontal = async () => {
     for (let i = 0; i <= barras.length - 1; i++) {
         barras[i].actualizar(Object.values(datosEstadisticas)[i])
     }
-    await new Promise(resolve => setTimeout(resolve, 1000)) /* a ojo necesita que el componente avise al terminar la actualizacion */
+    await utilidad.sleep(1000) /* a ojo necesita que el componente avise al terminar la actualizacion */
     /* lo mismo para el componente de estadistica circulo */
 }
 
 let barrasCargadas = false
 const alternarLayout = async () => {
     const cajaImagen = document.querySelector("#cajaImagen")
-    const cajaImagen_tempo = parseFloat(getComputedStyle(cajaImagen).getPropertyValue("transition")) * 1000
     const cajaDescripcion = document.querySelector("#cajaDescripcion")
-    const cajaDescripcion_tempo = parseFloat(getComputedStyle(cajaDescripcion).getPropertyValue("transition")) * 1000
     const contenedorEstadisticasHor = document.querySelector("#contenedorEstadisticasHor")
     const estadisticasHor = contenedorEstadisticasHor.querySelectorAll(".estadisticasHor")
-    const estadisticasHor_tempo = parseFloat(getComputedStyle(estadisticasHor[0]).getPropertyValue("transition")) * 1000
-    const imagenExpandida = cajaImagen.classList.contains("cajaImagen_abierta")
+    const imagenExpandida = cajaImagen.classList.contains("cajaImagen_expandida")
 
     const animacionApertura = async () => {
-        cajaImagen.classList.add("cajaImagen_abierta")
-        await new Promise(resolve => setTimeout(resolve, cajaImagen_tempo))
+        cajaImagen.classList.add("cajaImagen_expandida")
+        await utilidad.sleepTempo(cajaImagen)
 
         cajaDescripcion.style.height = "50%"
         contenedorEstadisticasHor.style.top = "50%";
-        await new Promise(resolve => setTimeout(resolve, cajaDescripcion_tempo))
+        await utilidad.sleepTempo(cajaDescripcion)
 
         for (const item of estadisticasHor) {
             item.classList.add("estadisticasHor_izq")
-            await new Promise(resolve => setTimeout(resolve, 150))
+            await utilidad.sleep(150)
         }
         !barrasCargadas && await iniciarEstadisticasHorizontal()
         barrasCargadas = true
-        await new Promise(resolve => setTimeout(resolve, estadisticasHor_tempo))
+        await utilidad.sleepTempo(estadisticasHor[0])
     }
 
     const animacionCierre = async () => {
         contenedorEstadisticasHor.style.top = "100%";
         cajaDescripcion.style.height = "100%"
-        await new Promise(resolve => setTimeout(resolve, cajaImagen_tempo))
+        await utilidad.sleepTempo(cajaImagen)
 
         for (const item of estadisticasHor) {
             item.classList.remove("estadisticasHor_izq")
         }
 
-        cajaImagen.classList.remove("cajaImagen_abierta")
-        await new Promise(resolve => setTimeout(resolve, cajaImagen_tempo))
+        cajaImagen.classList.remove("cajaImagen_expandida")
+        await utilidad.sleepTempo(cajaImagen)
     }
 
     imagenExpandida
@@ -81,6 +78,7 @@ const alternarLayout = async () => {
 
 const activarEventoImagen = () => {
     const imagen = document.querySelector("#imagen_info")
+    imagen.style.cursor = "pointer"
     let clickBloqueado = false
 
     imagen.addEventListener("click", async (e) => {

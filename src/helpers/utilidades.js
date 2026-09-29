@@ -9,3 +9,7 @@ export const getTempo = (elemento) => {
 export const sleep = async (ms) => {
     await new Promise(resolve => setTimeout(resolve, ms))
 }
+
+export const sleepTempo = async (elemento) => {
+    await sleep(getTempo(elemento))
+}
