@@ -26,21 +26,19 @@
         overflow: hidden;
         transition: 350ms ease-in-out;
 
-
         .cajaImagen {
             position: relative;
             border-radius: 14px;
             overflow: hidden;
-            transition: 350ms ease-in-out;
 
             .imagen {
                 background-image: url("../../../recursos/imagenes/landingBack.webp");
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
-                cursor: pointer;
-
-                .iconoAbrir {
+/*                 cursor: pointer;
+ */
+                .introExpandir {
                     position: absolute;
                     right: 10px;
                     top: 6px;
@@ -56,7 +54,7 @@
                     }
                 }
 
-                &:hover .iconoAbrir {
+                &:hover .introExpandir {
                     color: var(--enfasis);
                 }
             }
@@ -117,7 +115,7 @@
         .cajaImagen_abierta {
             width: calc(2 * var(--sectionWidth) + var(--sectionMargin));
 
-            .imagen .iconoAbrir::after {
+            .imagen .introExpandir::after {
                 content: "-";
                 font-weight: lighter;
                 font-size: 34px;
@@ -142,7 +140,6 @@
             top: 0;
             padding: 20px;
             text-align: justify;
-            transition: 350ms ease-in-out;
 
             .cajaExpand {
                 display: flex;
@@ -217,7 +214,6 @@
             opacity: 0;
             transform: scale(0);
             box-shadow: -2px 2px 6px grey;
-            transition: 350ms ease-in-out;
 
             .cajaComponente {
                 width: 100%;

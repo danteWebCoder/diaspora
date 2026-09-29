@@ -1,0 +1,5 @@
+export const videos = [
+    `<iframe class="max" src="https://www.youtube.com/embed/E-E2wjfvbEE?si=4cwaqcL9twEyrbWU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+    `<iframe class="max" src="https://www.youtube.com/embed/CF2fwuf9TNk?si=8NpgUP1p_KH4FAh4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+    `<iframe class="max" src="https://www.youtube.com/embed/bocxIfCGB7g?si=4_PqmSOBMvCpjvtB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+]

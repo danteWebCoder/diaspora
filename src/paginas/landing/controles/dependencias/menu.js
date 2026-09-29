@@ -1,4 +1,4 @@
-import { estado } from "../estadoReactivo.js"
+import { estado } from "../reactivo.js"
 import * as nav from "./nav.js"
 
 const lineasBoton = document.querySelectorAll(".lineaBoton")

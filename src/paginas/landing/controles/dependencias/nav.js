@@ -1,4 +1,4 @@
-import { estado } from "../estadoReactivo.js"
+import { estado } from "../reactivo.js"
 
 const grupoNav = document.querySelectorAll(".grupoNav")
 const subMenus = document.querySelectorAll(".subMenu")

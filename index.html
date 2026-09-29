@@ -99,15 +99,14 @@
                 </ul>
             </div>
         </section>
-        <!--  -->
+        <!-- intro -->
         <section class="info seccionBlanca" id="infoSection">
             <div class="capaFondo"></div>
             <div class="capaContenido columnaCen">
                 <div class="contenedorInfo" id="contenedorInfo">
-                    <div class="cajaImagen subContenedor" id="cajaImagen">
-                        <div class="imagen max" id="imagen_info">
-                            <!-- cambiar por check -->
-                            <span class="iconoAbrir centrado"></span>
+                    <div class="cajaImagen subContenedor tempo700" id="cajaImagen">
+                        <div class="imagen max relativo" id="imagen_info">
+                            <span id="introExpandir" class="introExpandir centrado tempo700 invisible"></span>
                         </div>
                         <div class="barraAcciones">
                             <div class="cajaContador max">
@@ -118,8 +117,8 @@
                         </div>
                     </div>
                     <div class="contenedorDescripcion subContenedor">
-                        <div class="cajaDescripcion max" id="cajaDescripcion">
-                            <div class="cajaExpand max ">
+                        <div class="cajaDescripcion max tempo700" id="cajaDescripcion">
+                            <div class="cajaExpand max">
                                 <div class="expansorFlex max"></div>
                                 <div class="titulo">Fundación La Diáspora</div>
                                 <p class="intro">Somos una Organización sin ánimo de lucro con domicilio principal en el
@@ -157,23 +156,23 @@
                     </div>
                     <div class="contenedorEstadisticas subContenedor" id="contenedorEstadisticas">
                         <ul class="listaEstadisticas max" id="listaEstadisticas">
-                            <li class="tarjeta max">
+                            <li class="tarjeta max tempo700">
                                 <div class="cajaComponente"><circulo-progreso id="participacion"></circulo-progreso>
                                 </div>
                                 <div class="titulo">Participación juvenil</div>
                                 <div class="icono"></div>
                             </li>
-                            <li class="tarjeta max">
+                            <li class="tarjeta max tempo700">
                                 <div class="cajaComponente"><circulo-progreso id="formacion"></circulo-progreso></div>
                                 <div class="titulo">Formación en derechos humanos </div>
                                 <div class="icono"></div>
                             </li>
-                            <li class="tarjeta max">
+                            <li class="tarjeta max tempo700">
                                 <div class="cajaComponente"><circulo-progreso id="presencia"></circulo-progreso></div>
                                 <div class="titulo">Presencia en el territorio</div>
                                 <div class="icono"></div>
                             </li>
-                            <li class="tarjeta max">
+                            <li class="tarjeta max tempo700">
                                 <div class="cajaComponente"><circulo-progreso id="trabajo"></circulo-progreso></div>
                                 <div class="titulo">Trabajo con NNAJ </div>
                                 <div class="icono"></div>
@@ -181,7 +180,7 @@
                         </ul>
                     </div>
                 </div>
-
+                <!-- slider -->
                 <div class="contenedorSlider filaCenVertical">
                     <slider-vertical-multiple
                         info="./../../src/paginas/landing/configuracion/slider.js"></slider-vertical-multiple>
@@ -240,9 +239,11 @@
     </div>
 
     <!-- controles -->
-    <script type="module" src="./src/paginas/landing/controles/estadoReactivo.js"></script>
+    <script type="module" src="./src/paginas/landing/controles/reactivo.js"></script>
     <script type="module" src="./src/paginas/landing/controles/scroll.js"></script>
-    <!-- componentes -->
+    <script type="module" src="./src/paginas/landing/controles/subscribir.js"></script>
+    <!--     <script type="module" src="./src/paginas/landing/controles/videos.js"></script>
+ --> <!-- componentes -->
     <script type="module" src="./src/componentes/circuloProgreso.js"></script>
     <script type="module" src="./src/componentes/barraSegmentada.js"></script>
     <script type="module" src="./src/componentes/sliderVerticalMultiple.js"></script>

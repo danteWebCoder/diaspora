@@ -149,6 +149,11 @@
     pointer-events: auto;
 }
 
+.invisible {
+    opacity: 0;
+    pointer-events: none;
+}
+
 /* inputs */
 .inputOculto {
     position: absolute;
@@ -169,5 +174,9 @@
 }
 
 .tempo400 {
-    transition: 400ms ease-out;
+    transition: 400ms ease-in-out;
+}
+
+.tempo700 {
+    transition: 700ms ease-in-out;
 }
