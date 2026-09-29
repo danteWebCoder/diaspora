@@ -23,7 +23,7 @@
     justify-content: center;
     height: var(--nav_height);
 
-    .logo {
+    .logoNav {
         display: flex;
         align-items: center;
         position: relative;
@@ -31,12 +31,12 @@
         max-width: 160px;
         min-width: 120px;
         height: 100%;
-        margin-right: 40px;
         background-image: url("/src/recursos/imagenes/logoText-blanco.webp");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
         filter: brightness(0.2);
+        margin-right: 60px;
     }
 
     .menuLista {
@@ -44,6 +44,7 @@
         align-items: center;
         width: auto;
         height: 100%;
+        margin-right: 60px;
 
         .listaTexto {
             display: flex;

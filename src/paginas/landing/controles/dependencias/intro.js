@@ -29,7 +29,8 @@ const iniciarEstadisticasHorizontal = async () => {
     for (let i = 0; i <= barras.length - 1; i++) {
         barras[i].actualizar(Object.values(datosEstadisticas)[i])
     }
-    await utilidad.sleep(1000) /* a ojo necesita que el componente avise al terminar la actualizacion */
+    await utilidad.sleep(1000) 
+    /* a ojo necesita que el componente avise al terminar la actualizacion */
     /* lo mismo para el componente de estadistica circulo */
 }
 
@@ -55,7 +56,7 @@ const alternarLayout = async () => {
         }
         !barrasCargadas && await iniciarEstadisticasHorizontal()
         barrasCargadas = true
-        await utilidad.sleepTempo(estadisticasHor[0])
+        await utilidad.sleepTempo(estadisticasHor[0]) /* no necesario cuando el componente avise */
     }
 
     const animacionCierre = async () => {
