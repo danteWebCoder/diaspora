@@ -178,6 +178,7 @@
         top: 100%;
         height: 50%;
         width: 100%;
+
         .cajaEstadisticas {
             padding: 20px;
 
@@ -186,11 +187,11 @@
                 left: calc(100% + 20px);
                 width: 100%;
                 height: 40px;
+                transition: 400ms ease-in-out;
             }
 
             .estadisticasHor_izq {
                 left: 0;
-                transition: 400ms ease-in-out;
             }
         }
     }

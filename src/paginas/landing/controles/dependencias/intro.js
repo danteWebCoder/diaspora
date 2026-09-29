@@ -29,15 +29,20 @@ const iniciarEstadisticasHorizontal = async () => {
     for (let i = 0; i <= barras.length - 1; i++) {
         barras[i].actualizar(Object.values(datosEstadisticas)[i])
     }
+    await new Promise(resolve => setTimeout(resolve, 1000)) /* a ojo necesita que el componente avise al terminar la actualizacion */
+    /* lo mismo para el componente de estadistica circulo */
 }
 
-const alternarLayout = (estados) => {
+let barrasCargadas = false
+const alternarLayout = async () => {
     const cajaImagen = document.querySelector("#cajaImagen")
     const cajaImagen_tempo = parseFloat(getComputedStyle(cajaImagen).getPropertyValue("transition")) * 1000
     const cajaDescripcion = document.querySelector("#cajaDescripcion")
     const cajaDescripcion_tempo = parseFloat(getComputedStyle(cajaDescripcion).getPropertyValue("transition")) * 1000
     const contenedorEstadisticasHor = document.querySelector("#contenedorEstadisticasHor")
     const estadisticasHor = contenedorEstadisticasHor.querySelectorAll(".estadisticasHor")
+    const estadisticasHor_tempo = parseFloat(getComputedStyle(estadisticasHor[0]).getPropertyValue("transition")) * 1000
+    const imagenExpandida = cajaImagen.classList.contains("cajaImagen_abierta")
 
     const animacionApertura = async () => {
         cajaImagen.classList.add("cajaImagen_abierta")
@@ -51,8 +56,9 @@ const alternarLayout = (estados) => {
             item.classList.add("estadisticasHor_izq")
             await new Promise(resolve => setTimeout(resolve, 150))
         }
-        !estados.barrasCargadas && iniciarEstadisticasHorizontal()
-        estados.barrasCargadas = true
+        !barrasCargadas && await iniciarEstadisticasHorizontal()
+        barrasCargadas = true
+        await new Promise(resolve => setTimeout(resolve, estadisticasHor_tempo))
     }
 
     const animacionCierre = async () => {
@@ -65,23 +71,24 @@ const alternarLayout = (estados) => {
         }
 
         cajaImagen.classList.remove("cajaImagen_abierta")
+        await new Promise(resolve => setTimeout(resolve, cajaImagen_tempo))
     }
 
-    estados.imagenExpandida
-        ? animacionApertura()
-        : animacionCierre()
+    imagenExpandida
+        ? await animacionCierre()
+        : await animacionApertura()
 }
 
 const activarEventoImagen = () => {
     const imagen = document.querySelector("#imagen_info")
-    const estados = {
-        imagenExpandida: false,
-        barrasCargadas: false
-    }
+    let clickBloqueado = false
 
     imagen.addEventListener("click", async (e) => {
-        estados.imagenExpandida = !estados.imagenExpandida
-        alternarLayout(estados)
+        if (!clickBloqueado) {
+            clickBloqueado = true
+            await alternarLayout()
+            clickBloqueado = false
+        }
     })
 }
 
