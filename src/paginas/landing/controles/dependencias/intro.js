@@ -31,7 +31,7 @@ const iniciarEstadisticasHorizontal = async () => {
     }
 }
 
-const alternarLayout = (bol) => {
+const alternarLayout = (estados) => {
     const cajaImagen = document.querySelector("#cajaImagen")
     const cajaImagen_tempo = parseFloat(getComputedStyle(cajaImagen).getPropertyValue("transition")) * 1000
     const cajaDescripcion = document.querySelector("#cajaDescripcion")
@@ -51,7 +51,8 @@ const alternarLayout = (bol) => {
             item.classList.add("estadisticasHor_izq")
             await new Promise(resolve => setTimeout(resolve, 150))
         }
-        iniciarEstadisticasHorizontal()
+        !estados.barrasCargadas && iniciarEstadisticasHorizontal()
+        estados.barrasCargadas = true
     }
 
     const animacionCierre = async () => {
@@ -66,18 +67,21 @@ const alternarLayout = (bol) => {
         cajaImagen.classList.remove("cajaImagen_abierta")
     }
 
-    bol
+    estados.imagenExpandida
         ? animacionApertura()
         : animacionCierre()
 }
 
 const activarEventoImagen = () => {
     const imagen = document.querySelector("#imagen_info")
-    let imagenExpandida = false
+    const estados = {
+        imagenExpandida: false,
+        barrasCargadas: false
+    }
 
     imagen.addEventListener("click", async (e) => {
-        imagenExpandida = !imagenExpandida
-        alternarLayout(imagenExpandida)
+        estados.imagenExpandida = !estados.imagenExpandida
+        alternarLayout(estados)
     })
 }
 
