@@ -1,5 +1,4 @@
 .menuBoton {
-    position: fixed;
     z-index: 6;
     top: 30px;
     right: 30px;
@@ -42,8 +41,6 @@
 }
 
 .menuPantalla {
-    position: fixed;
-    z-index: 5;
     top: 0;
     right: -100%;
     width: 100vw;
@@ -70,8 +67,6 @@
         height: calc(100% - var(--nav_height));
         padding: 50px;
         font-size: 34px;
-        /*         font-weight: 500;
- */
         color: white;
 
         .lista {
