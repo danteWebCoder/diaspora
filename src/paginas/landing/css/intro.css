@@ -1,9 +1,6 @@
 .info .capaContenido {
     --sectionMargin: 4%;
-    /* only % */
     --sectionWidth: calc((100% - 2 * var(--sectionMargin)) / 3);
-
-    /*  */
 
     .subContenedor {
         flex-shrink: 0;
@@ -17,8 +14,6 @@
     }
 
     .contenedorInfo {
-        position: relative;
-        display: flex;
         width: 100%;
         min-width: 900px;
         max-width: 1400px;
@@ -27,7 +22,6 @@
         transition: 350ms ease-in-out;
 
         .cajaImagen {
-            position: relative;
             border-radius: 14px;
             overflow: hidden;
 
@@ -38,7 +32,6 @@
                 background-size: cover;
 
                 .introExpandir {
-                    position: absolute;
                     right: 10px;
                     top: 6px;
                     width: 30px;
@@ -60,10 +53,7 @@
             }
 
             .barraAcciones {
-                position: absolute;
                 bottom: 0;
-                display: flex;
-                align-items: center;
                 width: 100%;
                 height: 30px;
                 padding: 0 20px;
@@ -71,8 +61,6 @@
                 transition: 350ms;
 
                 .cajaContador {
-                    display: flex;
-                    align-items: center;
                     border-radius: 0 0 14px 14px;
 
                     .icono {
@@ -127,23 +115,15 @@
     }
 
     .contenedorDescripcion {
-        position: relative;
-        display: flex;
-        flex-direction: column;
         border: 1px solid var(--blancoMedio);
 
         --infoMargin: 20px;
 
         .cajaDescripcion {
-            position: absolute;
-            top: 0;
             padding: 20px;
             text-align: justify;
 
             .cajaExpand {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
                 overflow: auto;
                 scrollbar-width: none;
 
@@ -172,7 +152,6 @@
     }
 
     .contenedorEstadisticasHor {
-        position: absolute;
         top: 100%;
         height: 50%;
         width: 100%;
@@ -181,7 +160,6 @@
             padding: 20px;
 
             .estadisticasHor {
-                position: relative;
                 left: calc(100% + 20px);
                 width: 100%;
                 height: 40px;
@@ -276,7 +254,6 @@
 }
 
 .contenedorSlider {
-    position: relative;
     width: 90%;
     height: 100px;
     margin-top: 160px;

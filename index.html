@@ -100,7 +100,9 @@
                     <span class="logoTit">Facebook</span>
                 </li>
             </ul>
-            <div class="cajaSeparador max FRow FCenter"><hr></div>
+            <div class="cajaSeparador max FRow FCenter">
+                <hr>
+            </div>
             <ul class="listaTarjetas max">
                 <li class="tarjetaMenu"></li>
                 <li class="tarjetaMenu"></li>
@@ -148,22 +150,22 @@
         <section class="info seccionBlanca" id="infoSection">
             <div class="capaFondo"></div>
             <div class="capaContenido columnaCen">
-                <div class="contenedorInfo" id="contenedorInfo">
-                    <div class="cajaImagen subContenedor tempo500" id="cajaImagen">
+                <div class="contenedorInfo FRow relative" id="contenedorInfo">
+                    <div class="cajaImagen subContenedor tempo500 relative" id="cajaImagen">
                         <div class="imagen max relative" id="imagen_info">
-                            <span id="introExpandir" class="introExpandir FRow FCenter invisible"></span>
+                            <span id="introExpandir" class="introExpandir FRow FCenter absolute invisible"></span>
                         </div>
-                        <div class="barraAcciones">
-                            <div class="cajaContador max">
+                        <div class="barraAcciones FRow FA_center absolute">
+                            <div class="cajaContador FRow FA_center max">
                                 <span class="icono FRow FCenter"></span>
                                 <span class="contador">1479</span>
                             </div>
                             <span class="compartir FRow FCenter"></span>
                         </div>
                     </div>
-                    <div class="contenedorDescripcion subContenedor">
+                    <div class="contenedorDescripcion subContenedor FCol relative">
                         <div class="cajaDescripcion max tempo500" id="cajaDescripcion">
-                            <div class="cajaExpand max">
+                            <div class="cajaExpand FCol max">
                                 <div class="expansorFlex max"></div>
                                 <div class="titulo">Fundación La Diáspora</div>
                                 <p class="intro">Somos una Organización sin ánimo de lucro con domicilio principal en el
@@ -186,16 +188,16 @@
                                 <div class="expansorFlex max"></div>
                             </div>
                         </div>
-                        <div class="contenedorEstadisticasHor alturaMin tempo500" id="contenedorEstadisticasHor">
+                        <div class="contenedorEstadisticasHor alturaMin tempo500 absolute" id="contenedorEstadisticasHor">
                             <ul class="cajaEstadisticas max columnaEsp">
-                                <li class="estadisticasHor tempo400"><barra-segmentada titulo="Participación juvenil"
+                                <li class="estadisticasHor tempo400 relative"><barra-segmentada titulo="Participación juvenil"
                                         icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
-                                <li class="estadisticasHor tempo400"><barra-segmentada titulo="Fromación en derechos"
+                                <li class="estadisticasHor tempo400 relative"><barra-segmentada titulo="Fromación en derechos"
                                         icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
-                                <li class="estadisticasHor tempo400"><barra-segmentada
+                                <li class="estadisticasHor tempo400 relative"><barra-segmentada
                                         titulo="Presencia en el territorio"
                                         icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
-                                <li class="estadisticasHor tempo400"><barra-segmentada titulo="Trabajo con NNAJ"
+                                <li class="estadisticasHor tempo400 relative"><barra-segmentada titulo="Trabajo con NNAJ"
                                         icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
                             </ul>
                         </div>
@@ -228,7 +230,7 @@
                     </div>
                 </div>
                 <!-- slider -->
-                <div class="contenedorSlider filaCenVertical">
+                <div class="contenedorSlider">
                     <slider-vertical-multiple
                         info="./../../src/paginas/landing/configuracion/slider.js"></slider-vertical-multiple>
                 </div>
@@ -260,21 +262,23 @@
         <!-- subscribir -->
         <section class="subscribir seccionBlanca FRow FCenter">
             <div class="capaContenido">
-                <form class="subscribirFlex" action="" method="GET">
-                    <div class="cajaSubscribir">
+                <form class="subscribirFlex FRow FJ_between" action="" method="GET">
+                    <div class="cajaTexto">
                         <h2 class="subscribirH2">Subscríbete</h2>
-                        <p class="citaSubscribir relative">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p class="citaSubscribir relative">Lorem ipsum dolor sit amet consectetur adipisicing elit ipsum
+                            dolor sit.</p>
                     </div>
-                    <div class="cajaSubscribir relative">
+                    <div class="cajaForm relative">
                         <input class="inputMail" type="email" name="mail" id="mail"
-                            placeholder="tuCorreoElectronico@mail.com" required>
+                            placeholder="escribetucorreo@mail.com" required>
                         <label class="condicionesCaja relative">
                             <input id="condicionesInput" class="condicionesInput" type="checkbox" name="condiciones"
                                 id="condiciones">
                             <span class="condiciones">Acepto el uso de mi correo electrónico con fines
                                 informativos</span>
                         </label>
-                        <button id="enviar" type="submit" class="botonMail FRow FCenter absolute" disabled>Enviar</button>
+                        <button id="enviar" type="submit" class="botonMail FRow FCenter absolute"
+                            disabled>Enviar</button>
                     </div>
                 </form>
             </div>
