@@ -1,11 +1,7 @@
 .presentacion {
 
     .cajaTitulos {
-        position: relative;
         top: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         width: auto;
         height: auto;
         color: var(--textoClaroMedio);
@@ -23,8 +19,6 @@
         }
 
         .tituloPrincipal {
-            position: relative;
-            left: 6px;
             font-size: 86px;
             font-weight: 500;
             letter-spacing: 6px;
@@ -36,13 +30,10 @@
             font-size: 14px;
             font-weight: 500;
             letter-spacing: 2px;
-            text-indent: 10px;
             margin-bottom: 40px;
         }
 
         .palabrasClave {
-            display: flex;
-            align-items: center;
             width: fit-content;
             height: 40px;
             font-size: var(--tipoNormal);
@@ -58,8 +49,6 @@
         }
 
         .antiguedad {
-            display: flex;
-            align-items: center;
             width: auto;
             height: 20px;
             margin-top: 30px;
