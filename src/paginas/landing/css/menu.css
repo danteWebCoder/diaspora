@@ -60,7 +60,7 @@
     .contenidoMenu {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 60% 15% 25%;
+        grid-template-rows: 65% 10% 25%;
         grid-template-areas:
             "lista1 lista2 iconos"
             "separador separador separador"
@@ -69,8 +69,9 @@
         width: 100%;
         height: calc(100% - var(--nav_height));
         padding: 50px;
-        font-size: 28px;
-        font-weight: 500;
+        font-size: 34px;
+        /*         font-weight: 500;
+ */
         color: white;
 
         .lista {
@@ -87,7 +88,60 @@
 
         .listaIconos {
             grid-area: iconos;
-            border: 1px solid rgb(255, 0, 64);
+            display: grid;
+            grid-template-columns: repeat(2, 220px);
+            grid-template-rows: repeat(3, 80px);
+            justify-content: space-between;
+            border: 1px solid red;
+
+            .social {
+                width: 220px;
+                height: 80px;
+                background-color: var(--blanco);
+                border-radius: 6px;
+                color: var(--negro);
+
+                .logoSocial {
+                    margin-left: 20px;
+                    width: 50px;
+                    height: 50px;
+                    background-color: var(--negro);
+                    border-radius: 6px;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+
+                    &:nth-child(1 of &) {
+                        background-image: url("./../../../recursos/iconos/facebook.webp");
+                    }
+
+                    &:nth-child(2 of &) {
+                        background-image: url("./../../../recursos/iconos/instagram.webp");
+                    }
+
+                    &:nth-child(3 of &) {
+                        background-image: url("./../../../recursos/iconos/twitter.webp");
+                    }
+
+                    &:nth-child(4 of &) {
+                        background-image: url("./../../../recursos/iconos/youtube.webp");
+                    }
+
+                    &:nth-child(5 of &) {
+                        background-image: url("./../../../recursos/iconos/youtube.webp");
+                    }
+
+                    &:nth-child(6 of &) {
+                        background-image: url("./../../../recursos/iconos/facebook.webp");
+                    }
+
+                }
+
+                .logoTit {
+                    font-size: 20px;
+                    margin-left: 10px;
+                }
+            }
         }
 
         .cajaSeparador {

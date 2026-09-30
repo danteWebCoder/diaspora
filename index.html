@@ -25,29 +25,29 @@
 
 <body>
     <!-- nav y falso fondo nav -->
-    <div class="grupoNav capaSolido z2 oculto"></div>
-    <div class="grupoNav capaDesenfoque z4 oculto"></div>
-    <nav class="grupoNav nav z5 oculto">
+    <div class="grupoNav fixed capaSolido z2 oculto"></div>
+    <div class="grupoNav fixed capaDesenfoque z4 oculto"></div>
+    <nav class="grupoNav fixed FRow FJ_center nav z5 oculto">
         <div class="logoNav"></div>
-        <div class="menuLista">
-            <ul class="listaTexto">
-                <li class="botonNav centrado">Quienes somos</li>
-                <li class="botonNav centrado relativo">
-                    <span class="textoBoton centrado relativo tempo200">Nuestros proyectos</span>
-                    <input type="checkbox" id="proyectos" class="inputNav inputOculto max absoluto">
+        <div class="menuLista FRow FA_center">
+            <ul class="listaTexto FRow">
+                <li class="botonNav FRow FCenter">Quienes somos</li>
+                <li class="botonNav FRow FCenter relative">
+                    <span class="textoBoton FRow FCenter relative tempo200">Nuestros proyectos</span>
+                    <input type="checkbox" id="proyectos" class="inputNav inputOculto max absolute">
 
-                    <ul class="subMenu proyectos columnaEspAr absoluto tempo200" id="subMenuProyectos">
-                        <li class="subItem">Mundo código abierto</li>
-                        <li class="subItem">Aprende </li>
-                        <li class="subItem">Red Neuronal</li>
-                        <li class="subItem">Mundo Digital</li>
-                        <li class="subItem">Sombra Nocturna</li>
+                    <ul class="subMenu proyectos absolute tempo200" id="subMenuProyectos">
+                        <li class="subItem FRow FA_center">Mundo código abierto</li>
+                        <li class="subItem FRow FA_center">Aprende </li>
+                        <li class="subItem FRow FA_center">Red Neuronal</li>
+                        <li class="subItem FRow FA_center">Mundo Digital</li>
+                        <li class="subItem FRow FA_center">Sombra Nocturna</li>
                     </ul>
                 </li>
-                <li class="botonNav centrado">Contacto</li>
-                <li class="botonNav centrado">Quiero colaborar</li>
+                <li class="botonNav FRow FCenter">Contacto</li>
+                <li class="botonNav FRow FCenter">Quiero colaborar</li>
             </ul>
-            <ul class="listaIconos">
+            <ul class="listaIconos FRow FJ_between">
                 <li class="iconoCaja"><img class="icono" src="./src/recursos/iconos/facebook.webp"></li>
                 <li class="iconoCaja"><img class="icono" src="./src/recursos/iconos/instagram.webp"></li>
                 <li class="iconoCaja"><img class="icono" src="./src/recursos/iconos/twitter.webp"></li>
@@ -74,8 +74,33 @@
                 <li>Item 4</li>
                 <li>Item 5</li>
             </ul>
-            <ul class="listaIconos">LISTAICONOS</ul>
-            <div class="cajaSeparador max centrado"><hr></div>
+            <ul class="listaIconos">
+                <li class="social fila FRow FCenterV ce">
+                    <div class="logoSocial"></div>
+                    <span class="logoTit">Facebook</span>
+                </li>
+                <li class="social fila FRow FCenterV">
+                    <div class="logoSocial"></div>
+                    <span class="logoTit">Facebook</span>
+                </li>
+                <li class="social fila FRow FCenterV">
+                    <div class="logoSocial"></div>
+                    <span class="logoTit">Facebook</span>
+                </li>
+                <li class="social fila FRow FCenterV">
+                    <div class="logoSocial"></div>
+                    <span class="logoTit">Facebook</span>
+                </li>
+                <li class="social fila FRow FCenterV">
+                    <div class="logoSocial"></div>
+                    <span class="logoTit">Facebook</span>
+                </li>
+                <li class="social fila FRow FCenterV">
+                    <div class="logoSocial"></div>
+                    <span class="logoTit">Facebook</span>
+                </li>
+            </ul>
+            <div class="cajaSeparador max FRow FCenter"><hr></div>
             <ul class="listaTarjetas max">
                 <li class="tarjetaMenu"></li>
                 <li class="tarjetaMenu"></li>
@@ -85,8 +110,8 @@
         </div>
     </section>
 
-    <div class="menuBoton centrado"> <!-- desaparece al actualizar -->
-        <ul class="cajaIcono max columnaEspCen relativo">
+    <div class="menuBoton FRow FCenter"> <!-- desaparece al actualizar -->
+        <ul class="cajaIcono max columnaEspCen relative">
             <li class="lineaBoton"></li>
             <li class="lineaBoton"></li>
             <li class="lineaBoton"></li>
@@ -98,7 +123,7 @@
     <div class="fondoEstatico" id="fondoEstatico"></div> <!-- default z -->
     <div class="capaDesplazamiento">
         <!-- bienvenida -->
-        <section class="presentacion maxVisual z2 relativo centrado"> <!-- z2 -->
+        <section class="presentacion maxVisual z2 relative FRow FCenter"> <!-- z2 -->
             <div class="cajaTitulos">
                 <h1 class="subTitulo">FUNDACION</h1>
                 <h2 class="h tituloPrincipal">LA DIASPORA</h2>
@@ -125,15 +150,15 @@
             <div class="capaContenido columnaCen">
                 <div class="contenedorInfo" id="contenedorInfo">
                     <div class="cajaImagen subContenedor tempo500" id="cajaImagen">
-                        <div class="imagen max relativo" id="imagen_info">
-                            <span id="introExpandir" class="introExpandir centrado invisible"></span>
+                        <div class="imagen max relative" id="imagen_info">
+                            <span id="introExpandir" class="introExpandir FRow FCenter invisible"></span>
                         </div>
                         <div class="barraAcciones">
                             <div class="cajaContador max">
-                                <span class="icono centrado"></span>
+                                <span class="icono FRow FCenter"></span>
                                 <span class="contador">1479</span>
                             </div>
-                            <span class="compartir centrado"></span>
+                            <span class="compartir FRow FCenter"></span>
                         </div>
                     </div>
                     <div class="contenedorDescripcion subContenedor">
@@ -175,8 +200,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="contenedorEstadisticas subContenedor relativo" id="contenedorEstadisticas">
-                        <div class="fondoAlpha max absoluto"></div>
+                    <div class="contenedorEstadisticas subContenedor relative" id="contenedorEstadisticas">
+                        <div class="fondoAlpha max absolute"></div>
                         <ul class="listaEstadisticas max" id="listaEstadisticas">
                             <li class="tarjeta max tempo500">
                                 <div class="cajaComponente"><circulo-progreso id="participacion"></circulo-progreso>
@@ -211,16 +236,16 @@
         </section>
         <!-- video -->
         <section class="video seccionTransparente">
-            <div class="capaContenido centrado">
+            <div class="capaContenido FRow FCenter">
                 <div class="contenedorVideos filaEsp">
                     <ul class="cajaSeleccion columnaEsp">
                         <li class="cajaMiniatura"></li>
                         <li class="cajaMiniatura"></li>
                         <li class="cajaMiniatura"></li>
                     </ul>
-                    <div class="cajaReproductorIcono centrado relativo">
-                        <div class="imagenReproductor absoluto"></div>
-                        <div id="cajaReproductor" class="cajaReproductor absoluto max"></div>
+                    <div class="cajaReproductorIcono FRow FCenter relative">
+                        <div class="imagenReproductor absolute"></div>
+                        <div id="cajaReproductor" class="cajaReproductor absolute max"></div>
                     </div>
                 </div>
             </div>
@@ -228,34 +253,34 @@
         <!-- comunidad -->
         <section class="comunidad seccionBlanca">
             <div class="capaFondo"></div>
-            <div class="capaContenido centrado">
+            <div class="capaContenido FRow FCenter">
                 <h1>COMUNIDAD</h1>
             </div>
         </section>
         <!-- subscribir -->
-        <section class="subscribir seccionBlanca centrado">
+        <section class="subscribir seccionBlanca FRow FCenter">
             <div class="capaContenido">
                 <form class="subscribirFlex" action="" method="GET">
                     <div class="cajaSubscribir">
                         <h2 class="subscribirH2">Subscríbete</h2>
-                        <p class="citaSubscribir relativo">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p class="citaSubscribir relative">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
-                    <div class="cajaSubscribir relativo">
+                    <div class="cajaSubscribir relative">
                         <input class="inputMail" type="email" name="mail" id="mail"
                             placeholder="tuCorreoElectronico@mail.com" required>
-                        <label class="condicionesCaja relativo">
+                        <label class="condicionesCaja relative">
                             <input id="condicionesInput" class="condicionesInput" type="checkbox" name="condiciones"
                                 id="condiciones">
                             <span class="condiciones">Acepto el uso de mi correo electrónico con fines
                                 informativos</span>
                         </label>
-                        <button id="enviar" type="submit" class="botonMail centrado absoluto" disabled>Enviar</button>
+                        <button id="enviar" type="submit" class="botonMail FRow FCenter absolute" disabled>Enviar</button>
                     </div>
                 </form>
             </div>
         </section>
 
-        <footer class="footer centrado">
+        <footer class="footer FRow FCenter">
             <h1>FOOTER</h1>
         </footer>
     </div>
