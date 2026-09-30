@@ -5,9 +5,11 @@
     aspect-ratio: 20/9.4;
     border-radius: 12px;
 
-    .cajaReproductorIcono {
+    .cajaReproductor {
         width: 70%;
         height: 100%;
+        backDrop-filter: blur(5px);
+        background-color: rgba(255, 255, 255, 0.1);
         border-radius: var(--radiusGeneral);
         overflow: hidden;
 
@@ -61,10 +63,6 @@
         height: fit-content;
 
         .contenedorVideos {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 86%;
             min-width: 700px;
             max-width: 1400px;
             aspect-ratio: 16/11;

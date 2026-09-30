@@ -71,6 +71,7 @@
 }
 
 .FCol {
+    display: flex;
     flex-direction: column;
 }
 

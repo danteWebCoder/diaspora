@@ -3,7 +3,7 @@ import { videos } from "../configuracion/listaVideos.js"
 
 const cajasMiniaturas = [...document.querySelectorAll(".cajaMiniatura")]
 /* const miniaturas = [...cajasMiniaturas].map(caja => getComputedStyle(caja).getPropertyValue("background-image"))
- */const reproductor = document.querySelector("#cajaReproductor")
+ */const reproductor = document.querySelector("#reproductor")
 
 const restaurarMiniaturas = (indexSeleccion) => {
     cajasMiniaturas.forEach((item, index) => {
