@@ -1,6 +1,5 @@
 .menuBoton {
-/*     z-index: 6;
- */    top: 30px;
+    top: 30px;
     right: 30px;
     width: 40px;
     height: 40px;
@@ -46,7 +45,14 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(214, 172, 55, 0.6);
-    backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(40px);
+
+    .fondo {
+
+        opacity: 0.1;
+        filter: blur(10px);
+    }
 
     .cajaTitulo {
         width: 100%;
@@ -65,13 +71,11 @@
 
         width: 100%;
         height: calc(100% - var(--nav_height));
-        padding: 50px;
+        padding: 40px 80px;
         font-size: 34px;
         color: white;
 
         .lista {
-            border: 1px solid blue;
-
             &:nth-child(1 of &) {
                 grid-area: lista1;
             }
@@ -81,20 +85,16 @@
             }
         }
 
-        .listaIconos {
+        .socialCont {
             grid-area: iconos;
             display: grid;
-            grid-template-columns: repeat(2, 220px);
-            grid-template-rows: repeat(3, 80px);
-            justify-content: space-between;
-            border: 1px solid red;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
 
             .social {
-                width: 220px;
-                height: 80px;
-                background-color: var(--blanco);
+                background-color: rgba(255, 255, 255, 0.2);
                 border-radius: 6px;
-                color: var(--negro);
+                color: var(--blanco);
 
                 .logoSocial {
                     margin-left: 20px;
@@ -139,23 +139,19 @@
             }
         }
 
-        .cajaSeparador {
+        hr {
             grid-area: separador;
-            border: 1px solid white;
-
-            hr {
-                width: 100%;
-                height: 1px;
-                border: none;
-                background-color: rgba(255, 255, 255, 0.3);
-            }
+            place-self: center;
+            width: 100%;
+            height: 1px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.3);
         }
 
         .listaTarjetas {
             grid-area: tarjeta;
             display: flex;
             justify-content: space-between;
-            border: 1px solid green;
 
             .tarjetaMenu {
                 width: 20%;

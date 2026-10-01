@@ -178,7 +178,7 @@
     .fondoAlpha {
         top: 0;
         left: 0;
-        background-image: url("./../../../recursos/imagenes/estadisticas.jpg");
+        background-image: url("../../../recursos/imagenes/estadisticas.jpg");
         background-position: center;
         background-size: 70%;
         background-repeat: no-repeat;

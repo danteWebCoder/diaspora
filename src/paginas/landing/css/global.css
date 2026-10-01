@@ -117,50 +117,6 @@
     align-items: flex-end;
 }
 
-/* .columnaCen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.columnaEsp {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.columnaEspCen {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.columnaEspAr {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.fila {
-    display: flex;
-}
-
-.filaEsp {
-    display: flex;
-    justify-content: space-between;
-}
-
-.filaCenVertical {
-    display: flex;
-    align-items: center;
-}
-
-.filaCenHorizontal {
-    display: flex;
-    justify-content: center;
-} */
-
 /* efectos */
 .cristal {
     backdrop-filter: blur(8px);
