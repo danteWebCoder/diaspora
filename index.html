@@ -130,7 +130,7 @@
                 <h1 class="subTitulo">FUNDACION</h1>
                 <h2 class="h tituloPrincipal">LA DIASPORA</h2>
                 <h3 class="h nota">EL ARTE COMO MEDIO DE REINDIVICACION DE LOS DERECHOS HUMANOS</h3>
-                <ul class="palabrasClave filaEsp">
+                <ul class="palabrasClave FRow">
                     <li>COMUNIDAD</li>
                     <li class="separador"></li>
                     <li>ARTE</li>
@@ -149,7 +149,7 @@
         <!-- intro -->
         <section class="info seccionBlanca" id="infoSection">
             <div class="capaFondo"></div>
-            <div class="capaContenido columnaCen">
+            <div class="capaContenido FCol FA_center">
                 <div class="contenedorInfo FRow relative" id="contenedorInfo">
                     <div class="cajaImagen subContenedor tempo500 relative" id="cajaImagen">
                         <div class="imagen max relative" id="imagen_info">
@@ -189,15 +189,18 @@
                             </div>
                         </div>
                         <div class="contenedorEstadisticasHor alturaMin tempo500 absolute" id="contenedorEstadisticasHor">
-                            <ul class="cajaEstadisticas max columnaEsp">
-                                <li class="estadisticasHor tempo400 relative"><barra-segmentada titulo="Participación juvenil"
+                            <ul class="cajaEstadisticas max FCol FJ_between">
+                                <li class="estadisticasHor tempo400 relative"><barra-segmentada
+                                        titulo="Participación juvenil"
                                         icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
-                                <li class="estadisticasHor tempo400 relative"><barra-segmentada titulo="Fromación en derechos"
+                                <li class="estadisticasHor tempo400 relative"><barra-segmentada
+                                        titulo="Fromación en derechos"
                                         icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
                                 <li class="estadisticasHor tempo400 relative"><barra-segmentada
                                         titulo="Presencia en el territorio"
                                         icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
-                                <li class="estadisticasHor tempo400 relative"><barra-segmentada titulo="Trabajo con NNAJ"
+                                <li class="estadisticasHor tempo400 relative"><barra-segmentada
+                                        titulo="Trabajo con NNAJ"
                                         icono="./src/recursos/iconos/imagen.png"></barra-segmentada></li>
                             </ul>
                         </div>
@@ -261,24 +264,25 @@
         </section>
         <!-- subscribir -->
         <section class="subscribir seccionBlanca FRow FCenter">
+            <div class="fondo max absolute"></div>
             <div class="capaContenido">
-                <form class="subscribirFlex FRow FJ_between" action="" method="GET">
+                <form class="subscribirFlex FRow FJ_between FA_end" action="" method="GET">
                     <div class="cajaTexto">
-                        <h2 class="subscribirH2">Subscríbete</h2>
+                        <h2 class="subscribirH2">@ Subscríbete</h2>
                         <p class="citaSubscribir relative">Lorem ipsum dolor sit amet consectetur adipisicing elit ipsum
                             dolor sit.</p>
                     </div>
-                    <div class="cajaForm relative">
+                    <div class="cajaForm FCol FA_end FJ_between">
                         <input class="inputMail" type="email" name="mail" id="mail"
                             placeholder="escribetucorreo@mail.com" required>
-                        <label class="condicionesCaja relative">
-                            <input id="condicionesInput" class="condicionesInput" type="checkbox" name="condiciones"
-                                id="condiciones">
-                            <span class="condiciones">Acepto el uso de mi correo electrónico con fines
-                                informativos</span>
+                        <label class="condicionesCaja FRow FA_end FJ_between relative">
+                            <div class="condicionesCheck FRow FA_end">
+                                <input id="condicionesInput" class="condicionesInput" type="checkbox" name="condiciones"
+                                    id="condiciones">
+                                <span class="condiciones">Acepto recibir información por email</span>
+                            </div>
+                            <button id="enviar" type="submit" class="botonMail FCenter" disabled>Enviar</button>
                         </label>
-                        <button id="enviar" type="submit" class="botonMail FRow FCenter absolute"
-                            disabled>Enviar</button>
                     </div>
                 </form>
             </div>

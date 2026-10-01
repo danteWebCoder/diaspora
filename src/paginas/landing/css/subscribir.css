@@ -1,6 +1,14 @@
 .subscribir {
     background-color: var(--enfasis);
 
+    .fondo {
+        background-image: url("./../../../recursos/imagenes/email2.png");
+        background-repeat: no-repeat;
+        background-size: 800px;
+        background-position: -10% center;
+        opacity: 0.06;
+    }
+
     .capaContenido .subscribirFlex {
         width: 100%;
         min-width: 700px;
@@ -10,27 +18,24 @@
         .cajaTexto,
         .cajaForm {
             width: 45%;
-            height: auto;
+            height: fit-content;
+            color: var(--negro);
         }
 
         .cajaTexto {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            height: auto;
-            color: var(--negro);
 
             .subscribirH2 {
                 font-size: 40px;
-                font-weight: bolder;
+                font-weight: 500;
                 margin-bottom: 20px;
+                transform-origin: left;
             }
 
             .citaSubscribir {
                 top: 10px;
                 font-size: 26px;
                 font-weight: lighter;
-                line-height: 46px;
+                line-height: 40px;
             }
         }
 
@@ -43,52 +48,54 @@
                 background-color: var(--blanco);
                 border-radius: 8px;
                 text-indent: 15px;
-                margin-bottom: 80px;
+                margin-bottom: 48px;
             }
 
             .condicionesCaja {
-                display: flex;
-                align-items: center;
-                width: calc(100% - 140px);
+                width: 100%;
                 height: auto;
                 cursor: pointer;
 
-                .condicionesInput {
-                    bottom: 10px;
-                    right: 0;
-                    width: 20px;
-                    height: 20px;
-                    margin-right: 10px;
+                .condicionesCheck {
+                    width: auto;
+                    height: 100%;
+
+                    .condicionesInput {
+                        bottom: 10px;
+                        right: 0;
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    .condiciones {
+                        font-size: 16px;
+                        margin-left: 10px;
+                    }
                 }
 
-                .condiciones {
-                    font-size: 12px;
-                }
-            }
-
-            .botonMail {
-                border: none;
-                bottom: 0;
-                right: 0;
-                width: 120px;
-                height: 50px;
-                background-color: rgb(from var(--blanco) r g b / 0.3);
-                border-radius: 8px;
-                font-size: 16px;
-                color: grey;
-                transition: 100ms;
-            }
-
-            .botonActivado {
-                cursor: pointer;
-                background-color: var(--blanco);
-
-                &:hover {
-                    box-shadow: 2px 2px 5px black;
+                .botonMail {
+                    border: none;
+                    bottom: 0;
+                    width: 120px;
+                    height: 50px;
+                    background-color: rgb(from var(--blanco) r g b / 0.3);
+                    border-radius: 8px;
+                    font-size: 16px;
+                    color: grey;
+                    transition: 100ms;
                 }
 
-                &:active {
-                    box-shadow: inset 2px 2px 5px black;
+                .botonActivado {
+                    cursor: pointer;
+                    background-color: var(--blanco);
+
+                    &:hover {
+                        box-shadow: 2px 2px 5px black;
+                    }
+
+                    &:active {
+                        box-shadow: inset 2px 2px 5px black;
+                    }
                 }
             }
         }
