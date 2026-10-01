@@ -1,12 +1,13 @@
-const fuenteGeneral = "https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-const colorSimbolosHover = "rgb(252, 201, 31)"
+const fuenteGeneral = null
 const tempo1 = 200
 const tempo2 = 5000 /* tiempo de aparacion entre grupos */
 const tamañoFuente = "15px"
 const color = "var(--negro)"
 const tamañoIcono = "26px"
+const borderColor = "var(--blancoMedio)"
+const borderRadius = "var(--general_radius)"
 
-class SliderVerticalMultiple extends HTMLElement {
+class verticalSliderSegmented extends HTMLElement {
     #info = null
     #grupos = []
     #pausa = false
@@ -62,8 +63,6 @@ class SliderVerticalMultiple extends HTMLElement {
                             height: 100%;
                             opacity: 0;
                             transition: 350ms ease-in-out;
-
-                            border: 1px solid blue;
                         }
 
                         .logoCaja {
@@ -77,8 +76,11 @@ class SliderVerticalMultiple extends HTMLElement {
                         .textoCaja {
                             width: var(--textoWidth);
                             text-align: justify;
+                            border: 1px solid ${borderColor};
+                            border-radius: ${borderRadius};
+                            padding: 15px;
 
-                            .texto:last-of-type {
+                            .textoContenido:last-of-type {
                                 text-align: right;
                             }
                         }
@@ -86,19 +88,34 @@ class SliderVerticalMultiple extends HTMLElement {
                         .infoCaja {
                             width: var(--infoWidth);
                             height: 100%;
+                            border: 1px solid ${borderColor};
+                            border-radius: ${borderRadius};
+                            padding: 15px;
+
+                            .cajaContacto {
+                                width: auto;
+
+                                .contacto {
+                                    align-items: center;
+                                    width: 100%;
+                                }
+                            }
 
                             .redes {
                                 display: flex;
-                                width: 100%;
+                                width: auto;
                                 height: ${tamañoIcono};
 
                                 .cajaIconoIndividual {
                                     width: ${tamañoIcono};
                                     aspect-ratio: 1/1;
-                                    margin-right: 12px;
                                     border: 1px solid grey;
                                     border-radius: 4px;
                                     cursor: pointer;
+
+                                    &:not(:nth-child(1)) {
+                                        margin-left: 10px;
+                                    }
 
                                     .icono {
                                         background-position: center;
@@ -108,28 +125,11 @@ class SliderVerticalMultiple extends HTMLElement {
                                     }
                                 }
                             }
-
-                            .cajaContacto {
-                                width: 100%;
-
-                                .contacto {
-                                    display: flex;
-                                    align-items: center;
-                                    width: 100%;
-
-                                    .numero {
-                                        display: flex;
-                                        align-items: center;
-                                        width: calc(100% - ${tamañoIcono} + 14px);
-                                        height: 100%;
-                                    }
-                                }
-                            }
                         }
                     }
                 }
             }
-        
+
             .max {
                 width: 100%;
                 height: 100%;
@@ -185,7 +185,7 @@ class SliderVerticalMultiple extends HTMLElement {
                 if (key === "texto") {
                     caja.classList.add("columnaEsp")
                     value.forEach(item => {
-                        const texto = this.#crearTag("div", caja, "texto")
+                        const texto = this.#crearTag("div", caja, "textoContenido")
                         texto.textContent = item
                     })
                 }
@@ -241,14 +241,13 @@ class SliderVerticalMultiple extends HTMLElement {
     }
 
     async connectedCallback() {
-        this.#importarFuente(fuenteGeneral)
+        this.fuenteGeneral && this.#importarFuente(fuenteGeneral)
         this.#info = (await import(this.getAttribute("info"))).info
         this.#dibujarContenido()
         await new Promise(resolve => setTimeout(resolve, 1000))
         this.#animarGrupos()
 
-        this.addEventListener("mouseenter", () => this.#pausa = true)
-        this.addEventListener("mouseleave", () => this.#pausa = false)
+        this.addEventListener("click", () => this.#pausa = !this.#pausa)
     }
 }
-customElements.define("slider-vertical-multiple", SliderVerticalMultiple)
+customElements.define("verticalslider-segmented", verticalSliderSegmented)

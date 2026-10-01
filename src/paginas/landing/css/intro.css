@@ -6,7 +6,7 @@
         flex-shrink: 0;
         width: var(--sectionWidth);
         height: 100%;
-        border-radius: 14px;
+        border-radius: var(--general_radius);
 
         &:not(:first-of-type) {
             margin-left: 4%;
@@ -22,7 +22,6 @@
         transition: 350ms ease-in-out;
 
         .cajaImagen {
-            border-radius: 14px;
             overflow: hidden;
 
             .imagen {
@@ -61,7 +60,7 @@
                 transition: 350ms;
 
                 .cajaContador {
-                    border-radius: 0 0 14px 14px;
+                    border-radius: 0 0 var(--general_radius) var(--general_radius);
 
                     .icono {
                         width: 18px;
@@ -255,7 +254,6 @@
 
 .contenedorSlider {
     width: 90%;
-    height: 100px;
+    height: 120px;
     margin-top: 160px;
-    border: 1px solid red;
 }

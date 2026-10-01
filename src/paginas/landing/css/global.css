@@ -13,10 +13,12 @@
     --landingFondo1_filtro: grayScale(0.6) brightness(0.8);
     --nav_height: 100px;
     --general_padding: 10%;
+    --general_radius: 12px;
+    --medium_radius: 8px;
 
     /* paleta */
     --blanco: rgb(240, 240, 240);
-    --blancoMedio: rgb(180, 180, 180);
+    --blancoMedio: rgb(200, 200, 200);
     --negro: rgb(60, 60, 60);
     --enfasis: rgb(252, 201, 31);
     --textoClaro: var(--blanco);
@@ -26,7 +28,6 @@
     --fondoClaro: var(--blanco);
     --fondoOscuro: var(--negroOscuro);
 
-    --radiusGeneral: 12px;
 
     /* fuentes */
     --tipoNormal: 14px;
@@ -63,6 +64,10 @@
 
 .z5 {
     z-index: 5;
+}
+
+.z6 {
+    z-index: 6;
 }
 
 /* display flex */
