@@ -25,9 +25,9 @@
 
 <body>
     <!-- nav y falso fondo nav -->
-    <div class="grupoNav fixed capaSolido z2 oculto"></div>
-    <div class="grupoNav fixed capaDesenfoque z4 oculto"></div>
-    <nav class="grupoNav fixed FRow FJ_center nav z5 oculto">
+    <div class="navGroup fixed capaSolido z2 oculto"></div>
+    <div class="navGroup fixed capaDesenfoque z4 oculto"></div>
+    <nav class="navGroup fixed FRow FJ_center nav z5 oculto">
         <div class="logoNav"></div>
         <div class="menuLista FRow FA_center">
             <ul class="listaTexto FRow">
@@ -154,8 +154,8 @@
             </div>
         </section>
         <!-- intro -->
-        <section class="info seccionBlanca" id="infoSection">
-            <div class="capaFondo"></div>
+        <section class="info backSection" id="infoSection">
+            <div class="backLayer"></div>
             <div class="capaContenido FCol FA_center">
                 <div class="contenedorInfo FRow relative" id="contenedorInfo">
                     <div class="cajaImagen subContenedor tempo500 relative" id="cajaImagen">
@@ -264,15 +264,16 @@
             </div>
         </section>
         <!-- comunidad -->
-        <section class="comunidad seccionBlanca">
-            <div class="capaFondo"></div>
+        <section class="comunidad backSection">
+            <div class="backLayer"></div>
             <div class="capaContenido FRow FCenter">
                 <h1>COMUNIDAD</h1>
             </div>
         </section>
         <!-- subscribir -->
-        <section class="subscribir seccionBlanca FRow FCenter">
-            <div class="fondo max absolute"></div>
+        <section class="subscribir backSection FRow FCenter">
+            <div class="backLayer max"></div>
+            <div class="fondo max absolute z3"></div>
             <div class="capaContenido">
                 <form class="subscribirFlex FRow FJ_between FA_end" action="" method="GET">
                     <div class="cajaTexto">

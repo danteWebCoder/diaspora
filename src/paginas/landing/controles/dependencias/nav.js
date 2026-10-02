@@ -1,6 +1,7 @@
 import { estado } from "../reactivo.js"
+import { sleep } from "../../../../helpers/utilidades.js"
 
-const grupoNav = document.querySelectorAll(".grupoNav")
+const navGroup = document.querySelectorAll(".navGroup")
 const subMenus = document.querySelectorAll(".subMenu")
 const subInputs = document.querySelectorAll(".inputNav")
 
@@ -8,10 +9,16 @@ export const cerrarSubMenus = () => subInputs.forEach(item => item.checked = fal
 
 export const alternarNav = () => {
     if (estado.scroll > estado.altura) {
-        grupoNav.forEach(item => item.classList.replace("oculto", "visible"))
+        navGroup.forEach(async (item, index) => {
+            index === 2 && item.classList.add("tempo300")
+            item.classList.replace("oculto", "visible")
+        })
     }
     if (estado.scroll <= estado.altura) {
-        grupoNav.forEach(item => item.classList.replace("visible", "oculto"))
+        navGroup.forEach((item, index) => {
+            index === 2 && item.classList.remove("tempo300")
+            item.classList.replace("visible", "oculto")
+        })
     }
 }
 

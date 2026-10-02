@@ -17,12 +17,12 @@
     }
 }
 
-.seccionBlanca {
+.backSection {
     position: relative;
     width: 100%;
     height: fit-content;
 
-    .capaFondo {
+    .backLayer {
         position: absolute;
         z-index: 1;
         width: 100%;

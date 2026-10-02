@@ -1,12 +1,15 @@
 .subscribir {
-    background-color: var(--enfasis);
+
+    .backLayer {
+        background-color: var(--enfasis);
+    }
 
     .fondo {
         background-image: url("./../../../recursos/imagenes/email2.png");
         background-repeat: no-repeat;
         background-size: 600px;
         background-position: -10% center;
-        opacity: 0.06;
+        opacity: 0.08;
     }
 
     .capaContenido .subscribirFlex {
