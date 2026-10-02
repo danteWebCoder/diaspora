@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="./src/paginas/landing/css/main.css">
     <link rel="stylesheet" href="./src/paginas/landing/css/nav.css">
     <link rel="stylesheet" href="./src/paginas/landing/css/menu.css">
-    <link rel="stylesheet" href="./src/paginas/landing/css/bienvenida.css">
-    <link rel="stylesheet" href="./src/paginas/landing/css/intro.css">
+    <link rel="stylesheet" href="./src/paginas/landing/css/wellcome.css">
+    <link rel="stylesheet" href="./src/paginas/landing/css/info.css">
     <link rel="stylesheet" href="./src/paginas/landing/css/video.css">
     <link rel="stylesheet" href="./src/paginas/landing/css/subscribir.css">
     <!-- ojo especifidad por orden, siempre despues del style principal por las clases que pisan -->
@@ -62,18 +62,18 @@
         <div class="cajaTitulo relative"></div>
         <div class="contenidoMenu relative">
             <ul class="lista max FCol FJ_between">
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Our Programs</li>
-                <li>Artist Network</li>
-                <li>Events</li>
+                <li class="textLink">Home</li>
+                <li class="textLink">About Us</li>
+                <li class="textLink">Our Programs</li>
+                <li class="textLink">Artist Network</li>
+                <li class="textLink">Events</li>
             </ul>
             <ul class="lista max FCol FJ_between">
-                <li>Contact Us</li>
-                <li>Book Unity</li>
-                <li>Get Involved</li>
-                <li>UNITY Studio</li>
-                <li>Colabora</li>
+                <li class="textLink">Contact Us</li>
+                <li class="textLink">Book Unity</li>
+                <li class="textLink">Get Involved</li>
+                <li class="textLink">UNITY Studio</li>
+                <li class="textLink">Colabora</li>
             </ul>
             <ul class="socialCont max">
                 <li class="social fila FRow FA_center max">
@@ -129,10 +129,10 @@
     </div>
 
     <!-- contenido pagina -->
-    <div class="fondoEstatico" id="fondoEstatico"></div> <!-- default z -->
+    <div class="staticBack back1 fixed z1" id="staticBack"></div> <!-- default z -->
     <div class="capaDesplazamiento">
         <!-- bienvenida -->
-        <section class="presentacion maxVP z2 relative FRow FCenter"> <!-- z2 -->
+        <section class="wellcome maxVP z2 relative FRow FCenter"> <!-- z2 -->
             <div class="cajaTitulos FCol FA_center">
                 <h1 class="subTitulo">FUNDACION</h1>
                 <h2 class="h tituloPrincipal">LA DIASPORA</h2>
@@ -305,8 +305,8 @@
     <script type="module" src="./src/paginas/landing/controles/reactivo.js"></script>
     <script type="module" src="./src/paginas/landing/controles/scroll.js"></script>
     <script type="module" src="./src/paginas/landing/controles/subscribir.js"></script>
-    <!--     <script type="module" src="./src/paginas/landing/controles/videos.js"></script>
- --> <!-- componentes -->
+        <script type="module" src="./src/paginas/landing/controles/videos.js"></script>
+ <!-- componentes -->
     <script type="module" src="./src/componentes/circuloProgreso.js"></script>
     <script type="module" src="./src/componentes/barraSegmentada.js"></script>
     <script type="module" src="./src/componentes/verticalSliderSegmented.js"></script>

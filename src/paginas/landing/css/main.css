@@ -41,15 +41,21 @@
     }
 }
 
-.fondoEstatico {
-    position: fixed;
+.staticBack {
     width: 100vw;
     height: 100vh;
-    background-image: var(--landingFondo1);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: var(--landingFondo1_filtro);
+    filter: var(--wellcomeBack1_filter);
+}
+
+.back1 {
+    background-image: var(--wellcomeBack1);
+}
+
+.back2 {
+    background-image: var(--wellcomeBack2);
 }
 
 /* scroll layer */

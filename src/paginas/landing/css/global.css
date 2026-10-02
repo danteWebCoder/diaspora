@@ -8,9 +8,9 @@
 
 :root {
     /* wellcome color */
-    --landingFondo1: url("../../../../src/recursos/imagenes/montanas-minimalista-arte-low-poly-3354.webp");
-    --landingFondo2: url("../../../../src/recursos/imagenes/fondoVideos.jpg");
-    --landingFondo1_filtro: grayScale(0.6) brightness(0.8);
+    --wellcomeBack1: url("../../../../src/recursos/imagenes/montanas-minimalista-arte-low-poly-3354.webp");
+    --wellcomeBack1_filter: grayScale(0.6) brightness(0.8);
+    --wellcomeBack2: url("../../../../src/recursos/imagenes/fondoVideos.jpg");
     --nav_height: 100px;
     --general_padding: 10%;
     --general_radius: 12px;
