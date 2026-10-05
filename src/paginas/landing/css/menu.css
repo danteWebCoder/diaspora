@@ -29,14 +29,22 @@
     }
 }
 
-&:has(.menuBoton .inputOculto:checked) {
+&:has(.menuBoton .hiddenInput:checked) {
     .menuBoton .cajaIcono .lineaBoton {
         background-color: var(--blanco);
     }
 }
 
-&:has(.menuBoton .inputOculto:checked) .menuPantalla {
+&:has(.menuBoton .hiddenInput:checked) .menuPantalla {
     right: 0;
+}
+
+.fondoPause {
+    width: 40px;
+    height: 40px;
+    top: 30px;
+    right: 130px;
+    border: 1px solid red;
 }
 
 .menuPantalla {
@@ -49,13 +57,7 @@
     backdrop-filter: blur(6px);
 
     .fondo {
-        /*         opacity: 0.1;
-        filter: blur(10px);
-        
- */
-        square-back {
-            
-        }
+        square-back {}
     }
 
     .cajaTitulo {
@@ -105,8 +107,8 @@
             gap: 20px;
 
             .social {
-                background-color: rgba(255, 255, 255, 0.2);
-                border-radius: 6px;
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 8px;
                 color: var(--blanco);
                 cursor: pointer;
 

@@ -34,7 +34,7 @@
                 <li class="botonNav FRow FCenter">Quienes somos</li>
                 <li class="botonNav FRow FCenter relative">
                     <span class="textoBoton FRow FCenter relative tempo200">Nuestros proyectos</span>
-                    <input type="checkbox" id="proyectos" class="inputNav inputOculto max absolute">
+                    <input type="checkbox" id="proyectos" class="inputNav hiddenInput max absolute">
 
                     <ul class="subMenu proyectos absolute tempo200" id="subMenuProyectos">
                         <li class="subItem FRow FA_center">Mundo código abierto</li>
@@ -42,7 +42,7 @@
                         <li class="subItem FRow FA_center">Red Neuronal</li>
                         <li class="subItem FRow FA_center">Mundo Digital</li>
                         <li class="subItem FRow FA_center">Sombra Nocturna</li>
-                    </ul> 
+                    </ul>
                 </li>
                 <li class="botonNav FRow FCenter">Contacto</li>
                 <li class="botonNav FRow FCenter">Quiero colaborar</li>
@@ -58,7 +58,7 @@
 
     <!-- menu pantalla completa -->
     <section id="menuPantalla" class="menuPantalla fixed tempo700 z5">
-        <div class="fondo max absolute"><cloud-back></cloud-back></div>
+        <div class="fondo max absolute"><cloud-back id="fondoComponente"></cloud-back></div>
         <div class="cajaTitulo relative"></div>
         <div class="contenidoMenu relative">
             <ul class="lista max FCol FJ_between">
@@ -124,9 +124,17 @@
             <li class="lineaBoton"></li>
             <li class="lineaBoton"></li>
             <li class="lineaBoton"></li>
+            <input id="menuInput" type="checkBox" class="hiddenInput">
         </ul>
-        <input id="menuInput" type="checkBox" class="inputOculto">
     </div>
+
+    <!-- test -->
+    <div class="fondoPause fixed z6" id="pause">
+        <div class="inputBox max relative">
+            <input type="checkbox" name="" id="inputFondo" class="hiddenInput">
+        </div>
+    </div>
+
 
     <!-- contenido pagina -->
     <div class="staticBack back1 fixed z1" id="staticBack"></div> <!-- default z -->
@@ -306,8 +314,10 @@
     <script type="module" src="./src/paginas/landing/controles/reactivo.js"></script>
     <script type="module" src="./src/paginas/landing/controles/scroll.js"></script>
     <script type="module" src="./src/paginas/landing/controles/subscribir.js"></script>
-        <script type="module" src="./src/paginas/landing/controles/videos.js"></script>
- <!-- componentes -->
+    <script type="module" src="./src/paginas/landing/controles/videos.js"></script>
+    <!-- test -->
+     <script type="module" src="./src/paginas/landing/controles/testpause.js"></script>
+    <!-- componentes -->
     <script type="module" src="./src/componentes/circuloProgreso.js"></script>
     <script type="module" src="./src/componentes/barraSegmentada.js"></script>
     <script type="module" src="./src/componentes/verticalSliderSegmented.js"></script>
